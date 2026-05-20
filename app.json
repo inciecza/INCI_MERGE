@@ -1,0 +1,52 @@
+{
+  "id": "ea3b628b-f474-4b86-94ae-e7450d7bb537",
+  "name": "İnci Ecza Merge Customizations",
+  "publisher": "InciEcza_Merge",
+  "version": "27.1.2026.1",
+  "brief": "Inci Ecza Merge Customizations",
+  "description": "Inci Ecza Merge Customizations",
+  "privacyStatement": "https://www.incieczadeposu.com/",
+  "EULA":  "https://www.incieczadeposu.com/",
+  "help": "https://www.incieczadeposu.com/contact",
+  "url": "https://www.incieczadeposu.com/",
+  "logo": "",
+  "dependencies": [
+          {
+          "id": "c799d67c-5352-4405-af5c-e9afca90780b",
+          "name": "B2F İnci Ecza Customizations",
+          "publisher": "B2F",
+          "version": "27.0.0.0"
+          },
+          {
+          "id": "98e81544-3f34-4945-ab57-b58377aab312",
+          "name": "İnci Ecza Customizations",
+          "publisher": "InciEcza",
+          "version": "28.0.0.0"
+          }
+                ]
+,
+  "screenshots": [],
+  "platform": "28.0.0.0",
+  "application": "28.0.0.0",
+  "idRanges": [
+    {
+      "from": 70800,
+      "to": 70999
+    }
+  ],
+  "contextSensitiveHelpUrl": "https://docs.microsoft.com/{0}/dynamics365/business-central",
+  "supportedLocales": [
+    "tr-TR",
+    "en-NZ"
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "17.0",
+  "features": [
+    "TranslationFile"
+  ],
+  "target": "Cloud"
+}
