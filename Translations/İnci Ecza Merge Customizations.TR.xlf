@@ -13,8 +13,21 @@
           <source>Print Bid Price Request Report</source>
           <target>İhale Fiyat Talebi Raporunu Yazdır</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Direct Supply Bid Card-INC_Inc - Action PrintBidPriceRequestReport_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3682656129 - Action 4016521241 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3083113384">
+          <source>Print Bid Price Request Report</source>
+          <target>İhale Fiyat Talebi Raporunu Yazdır</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DMO Bid Card-INC_Inc - Action PrintBidPriceRequestReport_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4211282970 - Action 4016521241 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4211282970">
+          <source>Print Bid Price Request Report</source>
+          <target>İhale Fiyat Talebi Raporunu Yazdır</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Open Bid Card-INC - Action PrintBidPriceRequestReport_Inc - Property Caption</note>
         </trans-unit>
       </group>
     </body>
