@@ -1,16 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
-  <file datatype="xml" source-language="en-US" target-language="en-US" original="İnci Ecza Merge Customizations">
+  <file datatype="xml" source-language="en-US" target-language="TR" original="İnci Ecza Merge Customizations.g.xlf">
     <body>
       <group id="body">
         <trans-unit id="Report 2927139786 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Bid Price Request Report</source>
+          <target>İhale Fiyat Talebi Raporu</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Bid Price Request Report_Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 98148185 - Action 4016521241 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2092962352">
           <source>Print Bid Price Request Report</source>
+          <target>İhale Fiyat Talebi Raporunu Yazdır</target>
           <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Direct Supply Bid Card-INC_Inc - Action PrintBidPriceRequestReport_Inc - Property Caption</note>
         </trans-unit>
       </group>
