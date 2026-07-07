@@ -3,11 +3,79 @@
   <file datatype="xml" source-language="en-US" target-language="TR" original="İnci Ecza Merge Customizations.g.xlf">
     <body>
       <group id="body">
+        <trans-unit id="Report 1921341338 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>AB Sales Report</source>
+          <target>AB Satış Raporu</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report AB Sales Report_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1921341338 - Control 4112584152 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the customer region to filter the report.</source>
+          <target>Müşteri bölgesini raporlamak için seçin.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report AB Sales Report_Inc - Control CustomerRegion - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1921341338 - Control 4112584152 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Region</source>
+          <target>Müşteri Bölgesi</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report AB Sales Report_Inc - Control CustomerRegion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1921341338 - Control 845401037 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the end date to filter the report.</source>
+          <target>Raporlamak için bitiş tarihini seçin.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report AB Sales Report_Inc - Control EndDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1921341338 - Control 845401037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>End Date</source>
+          <target>Bitiş Tarihi</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report AB Sales Report_Inc - Control EndDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1921341338 - Control 1430222053 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the segment to filter the report.</source>
+          <target>Segmenti raporlamak için seçin.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report AB Sales Report_Inc - Control Segment - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1921341338 - Control 1430222053 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Segment</source>
+          <target>Segment</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report AB Sales Report_Inc - Control Segment - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1921341338 - Control 3605153064 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the start date to filter the report.</source>
+          <target>Raporlamak için başlangıç tarihini seçin.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report AB Sales Report_Inc - Control StartDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1921341338 - Control 3605153064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Start Date</source>
+          <target>Başlangıç Tarihi</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report AB Sales Report_Inc - Control StartDate - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 2927139786 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Bid Price Request Report</source>
           <target>İhale Fiyat Talebi Raporu</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Bid Price Request Report_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1826625051 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bid Purchase Order DT</source>
+          <target></target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bid Purchase Order DT_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2898735113 - Action 3540844402 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2898735113">
+          <source>Bid Purchase Order DT</source>
+          <target>Sipariş Formu</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Dir. Bid Purch.Req. Sub.-INC - Action PurchaseOrderDT_Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 98148185 - Action 4016521241 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2092962352">
           <source>Print Bid Price Request Report</source>
@@ -19,14 +87,12 @@
           <source>Print Bid Price Request Report</source>
           <target>İhale Fiyat Talebi Raporunu Yazdır</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension DMO Bid Card-INC_Inc - Action PrintBidPriceRequestReport_Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 4211282970 - Action 4016521241 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4211282970">
           <source>Print Bid Price Request Report</source>
           <target>İhale Fiyat Talebi Raporunu Yazdır</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Open Bid Card-INC - Action PrintBidPriceRequestReport_Inc - Property Caption</note>
         </trans-unit>
       </group>

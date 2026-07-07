@@ -34,6 +34,23 @@
             "longRunningSqlStatementsThreshold": 500,
             "numberOfSqlStatements": 10,
             "schemaUpdateMode": "ForceSync"
+        },
+                {
+            "name": "Inci Azure SandboxTest2",
+            "type": "al",
+            "request": "launch",
+            "environmentType": "Sandbox",
+            "environmentName": "Test2",
+            "startupObjectId": 22,
+            "breakOnError": true,
+            "tenant": "6fe2fb39-fdf2-44e7-a257-46840013dbe3",
+            "breakOnRecordWrite": false,
+            "launchBrowser": true,
+            "enableSqlInformationDebugger": true,
+            "enableLongRunningSqlStatements": true,
+            "longRunningSqlStatementsThreshold": 500,
+            "numberOfSqlStatements": 10,
+            "schemaUpdateMode": "ForceSync"
         }
     ]
 }
