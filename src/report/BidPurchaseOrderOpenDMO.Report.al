@@ -1,10 +1,10 @@
-report 70802 "Bid Purchase Order DT_Inc"
+report 70803 "Bid Purchase Order Open-DMO"
 {
     ApplicationArea = All;
-    Caption = 'Bid Purchase Order DT';
+    Caption = 'Bid Purchase Order Open-DMO';
     UsageCategory = ReportsAndAnalysis;
     DefaultLayout = RDLC;
-    RDLCLayout = './src/layout/Bid Purchase Order DT.rdlc';
+    RDLCLayout = './src/layout/Bid Purchase Order Open-DMO.rdlc';
     dataset
     {
         dataitem(BidPurchaseRequestLineINC; "Bid Purchase Request Line-INC")
@@ -69,6 +69,15 @@ report 70802 "Bid Purchase Order DT_Inc"
                 }
                 column(SonTeslimTarihi; "Last Delivery Date")
                 {
+
+                }
+                column(SozlesmeBitisTaihi; "Contract Ending Date")
+                {
+
+                }
+                column(SozlesmeImzaTarihi; "Contr.Sign.Due Date")
+                {
+
 
                 }
                 column(Price_Diff__Will_be_Applied; "Price Diff. Will be Applied")

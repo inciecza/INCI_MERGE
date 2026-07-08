@@ -6,7 +6,7 @@ pageextension 70800 "Direct Supply Bid Card-INC_Inc" extends "Direct Supply Bid 
     }
     actions
     {
-        addfirst(Navigation)
+        addlast(Navigation)
         {
             action(PrintBidPriceRequestReport_Inc)
             {

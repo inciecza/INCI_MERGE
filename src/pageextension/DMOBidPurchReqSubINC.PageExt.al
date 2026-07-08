@@ -1,9 +1,5 @@
-pageextension 70803 "Dir. Bid Purch.Req. Sub.-INC" extends "Dir. Bid Purch.Req. Sub.-INC"
+pageextension 70805 "DMO Bid Purch.Req. Sub.-INC" extends "DMO Bid Purch.Req. Sub.-INC"
 {
-    layout
-    {
-
-    }
     actions
     {
         addlast(Processing)
@@ -16,11 +12,11 @@ pageextension 70803 "Dir. Bid Purch.Req. Sub.-INC" extends "Dir. Bid Purch.Req. 
 
                 trigger OnAction()
                 var
-                    LPurchaseReportDT: report "Bid Purchase Order DT_Inc";
+                    LPurchaseReportOpenDMO: report "Bid Purchase Order Open-DMO";
                 begin
-                    Clear(LPurchaseReportDT);
-                    LPurchaseReportDT.SetParameters(Rec."Bid No.", Rec."Vendor No.");
-                    LPurchaseReportDT.Run();
+                    Clear(LPurchaseReportOpenDMO);
+                    LPurchaseReportOpenDMO.SetParameters(Rec."Bid No.", Rec."Vendor No.");
+                    LPurchaseReportOpenDMO.Run();
 
                 end;
             }
