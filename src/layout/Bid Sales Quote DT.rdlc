@@ -11,7 +11,7 @@
       <am:Name>MSRB</am:Name>
       <am:Version>15.1.30001.02</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2026-07-08T10:58:12.1272061Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2026-07-08T14:32:06.7739890Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -516,6 +516,7 @@ Açıklaması</Value>
                                   <Value>=Fields!Unit_of_Measure_Code.Value</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
+                                    <Format>n2</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -551,6 +552,7 @@ Açıklaması</Value>
                                   <Value>=Fields!Quantity.Value</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -586,6 +588,7 @@ Açıklaması</Value>
                                   <Value>=Fields!Unit_Price.Value</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
+                                    <Format>n2</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -621,6 +624,7 @@ Açıklaması</Value>
                                   <Value>=Fields!Amount.Value</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
+                                    <Format>n2</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -705,6 +709,7 @@ Açıklaması</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -758,7 +763,7 @@ Açıklaması</Value>
             </TablixRowHierarchy>
             <DataSetName>DataSet_Result</DataSetName>
             <Top>0.04167in</Top>
-            <Left>0.13302in</Left>
+            <Left>0.21634in</Left>
             <Height>1.02778in</Height>
             <Width>7.54282in</Width>
             <Style>
@@ -768,13 +773,13 @@ Açıklaması</Value>
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>2.19395in</Height>
+        <Height>1.1002in</Height>
         <Style />
       </Body>
-      <Width>7.82166in</Width>
+      <Width>7.93624in</Width>
       <Page>
         <PageHeader>
-          <Height>5.17931in</Height>
+          <Height>4.85639in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -828,8 +833,8 @@ Açıklaması</Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>2.30778in</Top>
-              <Left>0.13302in</Left>
+              <Top>2.33555in</Top>
+              <Left>0.21634in</Left>
               <Height>0.25in</Height>
               <Width>3.2825in</Width>
               <ZIndex>1</ZIndex>
@@ -860,8 +865,8 @@ Açıklaması</Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>2.89111in</Top>
-              <Left>0.13302in</Left>
+              <Top>2.91888in</Top>
+              <Left>0.21634in</Left>
               <Height>0.25in</Height>
               <Width>3.2825in</Width>
               <ZIndex>2</ZIndex>
@@ -893,8 +898,8 @@ Açıklaması</Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>3.60292in</Top>
-              <Left>0.13302in</Left>
+              <Top>3.63069in</Top>
+              <Left>0.21634in</Left>
               <Height>0.25in</Height>
               <Width>0.82639in</Width>
               <ZIndex>3</ZIndex>
@@ -926,8 +931,8 @@ Açıklaması</Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>4.1307in</Top>
-              <Left>0.13302in</Left>
+              <Top>4.15847in</Top>
+              <Left>0.21634in</Left>
               <Height>0.25in</Height>
               <Width>0.82639in</Width>
               <ZIndex>4</ZIndex>
@@ -959,8 +964,8 @@ Açıklaması</Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>3.86681in</Top>
-              <Left>0.13302in</Left>
+              <Top>3.89458in</Top>
+              <Left>0.21634in</Left>
               <Height>0.25in</Height>
               <Width>0.82639in</Width>
               <ZIndex>5</ZIndex>
@@ -992,8 +997,8 @@ Açıklaması</Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>4.39459in</Top>
-              <Left>0.13302in</Left>
+              <Top>4.42236in</Top>
+              <Left>0.21634in</Left>
               <Height>0.25in</Height>
               <Width>0.82639in</Width>
               <ZIndex>6</ZIndex>
@@ -1228,8 +1233,8 @@ Açıklaması</Value>
               <Source>Embedded</Source>
               <Value>İnciLogoEtiket</Value>
               <Sizing>FitProportional</Sizing>
-              <Top>0.45361in</Top>
-              <Left>0.13302in</Left>
+              <Top>0.48138in</Top>
+              <Left>0.21634in</Left>
               <Height>1.78472in</Height>
               <Width>2.82292in</Width>
               <ZIndex>14</ZIndex>
@@ -1259,8 +1264,8 @@ Açıklaması</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>3.60292in</Top>
-              <Left>1.06358in</Left>
+              <Top>3.63069in</Top>
+              <Left>1.1469in</Left>
               <Height>0.25in</Height>
               <Width>2.1875in</Width>
               <ZIndex>15</ZIndex>
@@ -1292,8 +1297,8 @@ Açıklaması</Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>3.60292in</Top>
-              <Left>0.95941in</Left>
+              <Top>3.63069in</Top>
+              <Left>1.04273in</Left>
               <Height>0.25in</Height>
               <Width>0.10417in</Width>
               <ZIndex>16</ZIndex>
@@ -1325,8 +1330,8 @@ Açıklaması</Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>3.86681in</Top>
-              <Left>0.95941in</Left>
+              <Top>3.89458in</Top>
+              <Left>1.04273in</Left>
               <Height>0.25in</Height>
               <Width>0.10417in</Width>
               <ZIndex>17</ZIndex>
@@ -1358,8 +1363,8 @@ Açıklaması</Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>4.1307in</Top>
-              <Left>0.95941in</Left>
+              <Top>4.15847in</Top>
+              <Left>1.04273in</Left>
               <Height>0.25in</Height>
               <Width>0.10417in</Width>
               <ZIndex>18</ZIndex>
@@ -1391,8 +1396,8 @@ Açıklaması</Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>4.39459in</Top>
-              <Left>0.95941in</Left>
+              <Top>4.42236in</Top>
+              <Left>1.04273in</Left>
               <Height>0.25in</Height>
               <Width>0.10417in</Width>
               <ZIndex>19</ZIndex>
@@ -1426,8 +1431,8 @@ Açıklaması</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>3.86681in</Top>
-              <Left>1.06358in</Left>
+              <Top>3.89458in</Top>
+              <Left>1.1469in</Left>
               <Height>0.25in</Height>
               <Width>2.1875in</Width>
               <ZIndex>20</ZIndex>
@@ -1461,8 +1466,8 @@ Açıklaması</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>4.1307in</Top>
-              <Left>1.06358in</Left>
+              <Top>4.15847in</Top>
+              <Left>1.1469in</Left>
               <Height>0.25in</Height>
               <Width>2.1875in</Width>
               <ZIndex>21</ZIndex>
@@ -1496,8 +1501,8 @@ Açıklaması</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>4.39459in</Top>
-              <Left>1.06358in</Left>
+              <Top>4.42236in</Top>
+              <Left>1.1469in</Left>
               <Height>0.25in</Height>
               <Width>2.1875in</Width>
               <ZIndex>22</ZIndex>
@@ -1519,7 +1524,7 @@ Açıklaması</Value>
           </Style>
         </PageHeader>
         <PageFooter>
-          <Height>1.15972in</Height>
+          <Height>1.45139in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -1541,8 +1546,8 @@ Açıklaması</Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>0.06944in</Top>
-              <Left>0.13302in</Left>
+              <Top>0.05556in</Top>
+              <Left>0.21634in</Left>
               <Height>0.1875in</Height>
               <Width>7.54282in</Width>
               <Style>
@@ -1573,8 +1578,8 @@ Açıklaması</Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>0.27083in</Top>
-              <Left>0.13302in</Left>
+              <Top>0.25695in</Top>
+              <Left>0.21634in</Left>
               <Height>0.1875in</Height>
               <Width>7.54282in</Width>
               <ZIndex>1</ZIndex>
@@ -1606,8 +1611,8 @@ Açıklaması</Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>0.47222in</Top>
-              <Left>0.13302in</Left>
+              <Top>0.45834in</Top>
+              <Left>0.21634in</Left>
               <Height>0.1875in</Height>
               <Width>7.54282in</Width>
               <ZIndex>2</ZIndex>
@@ -1639,8 +1644,8 @@ Açıklaması</Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>0.67361in</Top>
-              <Left>0.13302in</Left>
+              <Top>0.65973in</Top>
+              <Left>0.21634in</Left>
               <Height>0.1875in</Height>
               <Width>7.54282in</Width>
               <ZIndex>3</ZIndex>
@@ -1672,8 +1677,8 @@ Açıklaması</Value>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>0.875in</Top>
-              <Left>0.13302in</Left>
+              <Top>0.86112in</Top>
+              <Left>0.21634in</Left>
               <Height>0.1875in</Height>
               <Width>7.54282in</Width>
               <ZIndex>4</ZIndex>

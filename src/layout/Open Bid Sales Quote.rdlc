@@ -11,7 +11,7 @@
       <am:Name>MSRB</am:Name>
       <am:Version>15.1.30001.02</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2026-07-08T11:56:16.2726735Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2026-07-08T13:05:01.1526724Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -665,6 +665,7 @@ Açıklaması</Value>
                                   <Value>=Fields!Quantity.Value</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -735,6 +736,7 @@ Açıklaması</Value>
                                   <Value>=Fields!Unit_Price.Value</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
+                                    <Format>n2</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -770,6 +772,7 @@ Açıklaması</Value>
                                   <Value>=Fields!Amount.Value</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
+                                    <Format>n2</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
