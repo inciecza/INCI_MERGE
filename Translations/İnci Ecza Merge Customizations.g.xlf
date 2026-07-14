@@ -73,6 +73,21 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Open Bid Sales Quote_Inc - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Report 1773478501 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Balance Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Sales Balance Report_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1773478501 - Control 845401037 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the end date to filter the report.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Sales Balance Report_Inc - Control EndDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1773478501 - Control 845401037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Sales Balance Report_Inc - Control EndDate - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 2898735113 - Action 3540844402 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2898735113">
           <source>Bid Purchase Order DT</source>
           <note from="Developer" annotates="general" priority="2"></note>
