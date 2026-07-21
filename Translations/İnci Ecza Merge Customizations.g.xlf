@@ -68,6 +68,31 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Bid Sales Quote DT_Inc - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Report 1984224290 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Checks Collec. Payment Rep2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Checks Collec. Payment Rep2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1984224290 - Control 1875409398 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Consolide Company</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Checks Collec. Payment Rep2 - Control Consolide - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1984224290 - Control 845401037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>End Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Checks Collec. Payment Rep2 - Control EndDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1984224290 - Control 3115007730 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Report Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Checks Collec. Payment Rep2 - Control ReportType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1984224290 - Control 3605153064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Start Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Checks Collec. Payment Rep2 - Control StartDate - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 1129619406 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Open Bid Sales Quote</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -127,6 +152,11 @@
           <source>Open Bid Sales Quote</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Open Bid Quote Worksheet-INC - Action PurchaseOrderDT_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 236938974 - Action 3346821871 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2026081320">
+          <source>Item Miad Location Page</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Order SubformM_Inc - Action ItemMiad2_Inc - Property Caption</note>
         </trans-unit>
       </group>
     </body>

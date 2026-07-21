@@ -81,6 +81,41 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Bid Sales Quote DT_Inc - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Report 1984224290 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Checks Collec. Payment Rep2</source>
+          <target>Çek Ödeme ve Tahsilat Raporu</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Checks Collec. Payment Rep2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1984224290 - Control 1875409398 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Consolide Company</source>
+          <target>Konsolide Şirket</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Checks Collec. Payment Rep2 - Control Consolide - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1984224290 - Control 845401037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>End Date</source>
+          <target>Bitiş Tarihi</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Checks Collec. Payment Rep2 - Control EndDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1984224290 - Control 3115007730 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Report Type</source>
+          <target>Rapor Tipi</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Checks Collec. Payment Rep2 - Control ReportType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1984224290 - Control 3605153064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Start Date</source>
+          <target>Başlangıç Tarihi</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Checks Collec. Payment Rep2 - Control StartDate - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 1129619406 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Open Bid Sales Quote</source>
           <target>Satış Teklif Formu (AH)</target>
@@ -91,21 +126,18 @@
           <source>Sales Balance Report</source>
           <target>Özel Satış Bakiye Raporu</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Sales Balance Report_Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 1773478501 - Control 845401037 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Select the end date to filter the report.</source>
           <target>Raporlamak için tarih seçin.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Sales Balance Report_Inc - Control EndDate - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Report 1773478501 - Control 845401037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Posting Date</source>
           <target>Deftere Nakil Tarihi</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Sales Balance Report_Inc - Control EndDate - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 2898735113 - Action 3540844402 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2898735113">
@@ -155,6 +187,13 @@
           <target>Satış Teklif Formu (AH)</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Open Bid Quote Worksheet-INC - Action PurchaseOrderDT_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 236938974 - Action 3346821871 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2026081320">
+          <source>Item Miad Location Page</source>
+          <target>Madde Miad Sayfası</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Order SubformM_Inc - Action ItemMiad2_Inc - Property Caption</note>
         </trans-unit>
       </group>
     </body>
