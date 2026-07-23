@@ -19,7 +19,7 @@ report 70807 "Checks Collec. Payment Rep2"
             column(Banka_Ad; "External Document No.") { }
             column(Tutar; "Sales Amount (Actual)") { }
             column(Doviz_Cinsi; "Location Code") { }
-            column(Rapor_Tipi; "Item Charge No.") { }
+            column(Rapor_Tipi; ReportName) { }
             column(Sirket; "Job Task No.") { }
             column(Cek_No; "Gen. Bus. Posting Group") { }
             column(Konsolice; Consolide) { }
@@ -104,7 +104,7 @@ report 70807 "Checks Collec. Payment Rep2"
         // Banka hareketleri
         Clear(LCheque);
         case ReportType of
-            ReportType::"Porföy":
+            ReportType::"Müşteri-Tahsil Edilecek":
                 begin
                     LCheque.SetRange("Our Cheque", false);
                     LCheque.Setfilter("Cheque Number", '<>%1', '');
@@ -115,7 +115,7 @@ report 70807 "Checks Collec. Payment Rep2"
                     LCheque.SetRange("Exists in unposted document", false);
                     LCheque.Setfilter("Transaction Standard Type", '<>%1&<>%2', LCheque."Transaction Standard Type"::Payment, LCheque."Transaction Standard Type"::Paid);
                 end;
-            ReportType::"Ödeme":
+            ReportType::"Firma-Ödenecek":
                 begin
                     LCheque.SetRange("Our Cheque", true);
                     LCheque.Setfilter("Cheque Number", '<>%1', '');
@@ -125,7 +125,7 @@ report 70807 "Checks Collec. Payment Rep2"
                     LCheque.SetRange("Exists in unposted document", false);
                     LCheque.Setfilter("Transaction Standard Type", '<>%1&<>%2', LCheque."Transaction Standard Type"::Payment, LCheque."Transaction Standard Type"::Paid);
                 end;
-            ReportType::"Tahsil Edildi":
+            ReportType::"Müşteri-Tahsil Edildi":
                 begin
                     LCheque.SetRange("Our Cheque", false);
                     LCheque.Setfilter("Cheque Number", '<>%1', '');
@@ -134,6 +134,17 @@ report 70807 "Checks Collec. Payment Rep2"
                     LCheque.SetRange("Exists in unposted document", false);
                     LCheque.SetRange("Transaction Standard Type", LCheque."Transaction Standard Type"::Receipt);
                     LCheque.SetRange("Due Date", StartDate, EndDate);
+                end;
+            ReportType::"Firma Ödendi":
+                begin
+                    LCheque.SetRange("Our Cheque", true);
+                    LCheque.Setfilter("Cheque Number", '<>%1', '');
+                    LCheque.Setfilter("Bank Account Code", '<>%1', '');
+                    LCheque.Setfilter("Due Date", '<>%1', 0D);
+                    LCheque.Setfilter(Amount, '<>%1', 0);
+                    LCheque.SetRange("Exists in unposted document", false);
+                    LCheque.SetRange("Transaction Standard Type", LCheque."Transaction Standard Type"::Paid);
+
                 end;
         end;
         if LCheque.FindSet() then
@@ -161,12 +172,14 @@ report 70807 "Checks Collec. Payment Rep2"
                     TempVLE."Location Code" := LCheque."Currency Code";
 
                 case ReportType of
-                    ReportType::"Porföy":
-                        TempVLE."Item Charge No." := 'TAHSİLDEKİ ÇEKLER';
-                    ReportType::"Ödeme":
-                        TempVLE."Item Charge No." := 'ÇEK ÖDEMELERİ';
-                    ReportType::"Tahsil Edildi":
-                        TempVLE."Item Charge No." := 'TAHSİL EDİLENLER';
+                    ReportType::"Müşteri-Tahsil Edilecek":
+                        ReportName := 'TAHSİL EDİLECEK ÇEKLER';
+                    ReportType::"Firma-Ödenecek":
+                        ReportName := 'ÖDENECEK ÇEKLER';
+                    ReportType::"Müşteri-Tahsil Edildi":
+                        ReportName := 'TAHSİL EDİLENLER';
+                    ReportType::"Firma Ödendi":
+                        ReportName := 'ÖDENEN ÇEKLER';
                 end;
                 if pCompanyName = 'INC' then
                     TempVLE."Job Task No." := 'INC'
@@ -197,5 +210,6 @@ report 70807 "Checks Collec. Payment Rep2"
         StartDate: Date;
         EndDate: Date;
         Consolide: Boolean;
-        ReportType: Option "Porföy","Ödeme","Tahsil Edildi";
+        ReportName: Text[30];
+        ReportType: Option "Müşteri-Tahsil Edilecek","Müşteri-Tahsil Edildi","Firma-Ödenecek","Firma Ödendi";
 }

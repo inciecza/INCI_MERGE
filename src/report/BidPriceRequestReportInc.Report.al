@@ -64,6 +64,7 @@ report 70800 "Bid Price Request Report_Inc"
             trigger OnPreDataItem()
             begin
                 SetRange("Bid No.", GeneralBidNo);
+                SetRange("Vendor No.", VendorNo);
             end;
         }
 
@@ -86,9 +87,10 @@ report 70800 "Bid Price Request Report_Inc"
             }
         }
     }
-    procedure SetBidNo(pBidNo: Code[20])
+    procedure SetBidNo(pBidNo: Code[20]; pVendorNo: Code[20])
     begin
         GeneralBidNo := pBidNo;
+        VendorNo := pVendorNo;
     end;
 
     local procedure GetManufacturerName(pNo: code[20]): Text[100]
@@ -104,6 +106,7 @@ report 70800 "Bid Price Request Report_Inc"
     var
         GeneralBidNo: Code[20];
         GeneralBidName: Text[100];
+        VendorNo: code[20];
 
 
 }

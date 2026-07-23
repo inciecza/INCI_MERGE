@@ -24,6 +24,20 @@ pageextension 70803 "Dir. Bid Purch.Req. Sub.-INC" extends "Dir. Bid Purch.Req. 
 
                 end;
             }
+            action(PrintBidPriceRequestReport_Inc)
+            {
+                ApplicationArea = All;
+                Caption = 'Print Bid Price Request Report';
+                Image = Print;
+                trigger OnAction()
+                var
+                    LBidPriceRequestReport: Report "Bid Price Request Report_Inc";
+                begin
+                    LBidPriceRequestReport.SetBidNo(Rec."Bid No.", Rec."Vendor No.");
+                    LBidPriceRequestReport.Run();
+
+                end;
+            }
         }
     }
 }

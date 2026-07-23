@@ -3,6 +3,81 @@
   <file datatype="xml" source-language="en-US" target-language="en-US" original="İnci Ecza Merge Customizations">
     <body>
       <group id="body">
+        <trans-unit id="Table 972512850 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Separate Invoice Creation</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Separate Invoice Creation_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972512850 - Field 2363328873 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Separate Invoice Creation_Inc - Field Document Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972512850 - Field 329134311 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry No</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Separate Invoice Creation_Inc - Field Entry No - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972512850 - Field 1878130204 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Separate Invoice Creation_Inc - Field Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972512850 - Field 1099762570 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Separate Invoice Creation_Inc - Field Type Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972512850 - Field 1456366475 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type No</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Separate Invoice Creation_Inc - Field Type No - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3345055386 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>jokerMalzemeKartlar</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page jokerMalzemeKartlar_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3345055386 - Control 4232699882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page jokerMalzemeKartlar_Inc - Control description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3345055386 - Control 2962728448 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>GTIN</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page jokerMalzemeKartlar_Inc - Control gtin - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3345055386 - Control 3790834230 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Manufacturer Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page jokerMalzemeKartlar_Inc - Control manufacturerCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1079881948 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>jokerCariKartlar</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Joker_Cari_Kartlar_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1079881948 - Control 2754366897 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>City</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Joker_Cari_Kartlar_Inc - Control city - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1079881948 - Control 891674134 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Old Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Joker_Cari_Kartlar_Inc - Control customerOldCodeInc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1079881948 - Control 1556082719 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>GLN</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Joker_Cari_Kartlar_Inc - Control gln - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1079881948 - Control 3591622255 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Name 2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Joker_Cari_Kartlar_Inc - Control name2 - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 1921341338 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>AB Sales Report</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -113,6 +188,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Sales Balance Report_Inc - Control EndDate - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 2898735113 - Action 4016521241 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2898735113">
+          <source>Print Bid Price Request Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Dir. Bid Purch.Req. Sub.-INC - Action PrintBidPriceRequestReport_Inc - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 2898735113 - Action 3540844402 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2898735113">
           <source>Bid Purchase Order DT</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -123,25 +203,20 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Dir. Supply Quote Worksht.-INC - Action PurchaseOrderDT_Inc - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 98148185 - Action 4016521241 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2092962352">
+        <trans-unit id="PageExtension 1440679476 - Action 4016521241 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1440679476">
           <source>Print Bid Price Request Report</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Direct Supply Bid Card-INC_Inc - Action PrintBidPriceRequestReport_Inc - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 3682656129 - Action 4016521241 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3083113384">
-          <source>Print Bid Price Request Report</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DMO Bid Card-INC_Inc - Action PrintBidPriceRequestReport_Inc - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DMO Bid Purch.Req. Sub.-INC - Action PrintBidPriceRequestReport_Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 1440679476 - Action 3540844402 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1440679476">
           <source>Bid Purchase Order DT</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension DMO Bid Purch.Req. Sub.-INC - Action PurchaseOrderDT_Inc - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 4211282970 - Action 4016521241 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4211282970">
+        <trans-unit id="PageExtension 3459154614 - Action 4016521241 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3459154614">
           <source>Print Bid Price Request Report</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Open Bid Card-INC - Action PrintBidPriceRequestReport_Inc - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Open Bid Purch.Req. Sub.-INC - Action PrintBidPriceRequestReport_Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 3459154614 - Action 3540844402 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3459154614">
           <source>Bid Purchase Order DT</source>
@@ -157,6 +232,11 @@
           <source>Item Miad Location Page</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Order SubformM_Inc - Action ItemMiad2_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 883498421 - Field 374050185 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4097962492">
+          <source>Bid Guaranty</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Guaranty-B2F_Inc - Field Bid Guaranty_Inc - Property Caption</note>
         </trans-unit>
       </group>
     </body>
