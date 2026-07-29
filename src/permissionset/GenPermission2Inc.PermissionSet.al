@@ -11,5 +11,6 @@ permissionset 70800 "Gen.Permission2_Inc"
         report "Checks Collec. Payment Rep2" = X,
         report "Open Bid Sales Quote_Inc" = X,
         report "Sales Balance Report_Inc" = X,
-        page Joker_Cari_Kartlar_Inc = X;
+        page Joker_Cari_Kartlar_Inc = X,
+        page jokerMalzemeKartlar_Inc = X;
 }

@@ -3,6 +3,146 @@
   <file datatype="xml" source-language="en-US" target-language="TR" original="İnci Ecza Merge Customizations.g.xlf">
     <body>
       <group id="body">
+        <trans-unit id="Table 2529585740 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Joker Cari Satislar Buffer</source>
+          <target>Joker Cari Satislar Buffer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Joker Cari Satislar Buffer_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2529585740 - Field 3541346156 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ağustos</source>
+          <target>Ağustos</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Joker Cari Satislar Buffer_Inc - Field Agustos - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2529585740 - Field 622154432 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Aralık</source>
+          <target>Aralık</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Joker Cari Satislar Buffer_Inc - Field Aralik - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2529585740 - Field 1477836238 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ekim</source>
+          <target>Ekim</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Joker Cari Satislar Buffer_Inc - Field Ekim - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2529585740 - Field 883711285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry No.</source>
+          <target>Giriş No</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Joker Cari Satislar Buffer_Inc - Field Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2529585740 - Field 1772629611 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Eylül</source>
+          <target>Eylül</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Joker Cari Satislar Buffer_Inc - Field Eylul - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2529585740 - Field 1394199468 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Hastane Adı</source>
+          <target>Hastane Adı</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Joker Cari Satislar Buffer_Inc - Field Hastane Adi - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2529585740 - Field 1605518171 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Hastane Kodu</source>
+          <target>Hastane Kodu</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Joker Cari Satislar Buffer_Inc - Field Hastane Kodu - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2529585740 - Field 4091668793 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Haziran</source>
+          <target>Haziran</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Joker Cari Satislar Buffer_Inc - Field Haziran - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2529585740 - Field 4095476663 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Kasım</source>
+          <target>Kasım</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Joker Cari Satislar Buffer_Inc - Field Kasim - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2529585740 - Field 4291225261 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Malzeme Adı</source>
+          <target>Malzeme Adı</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Joker Cari Satislar Buffer_Inc - Field Malzeme Adi - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2529585740 - Field 2211213894 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Malzeme Kodu</source>
+          <target>Malzeme Kodu</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Joker Cari Satislar Buffer_Inc - Field Malzeme Kodu - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2529585740 - Field 1558470726 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mart</source>
+          <target>Mart</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Joker Cari Satislar Buffer_Inc - Field Mart - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2529585740 - Field 4073905065 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mayıs</source>
+          <target>Mayıs</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Joker Cari Satislar Buffer_Inc - Field Mayis - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2529585740 - Field 3941880429 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Nisan</source>
+          <target>Nisan</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Joker Cari Satislar Buffer_Inc - Field Nisan - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2529585740 - Field 3514770082 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ocak</source>
+          <target>Ocak</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Joker Cari Satislar Buffer_Inc - Field Ocak - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2529585740 - Field 3958668931 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Şubat</source>
+          <target>Şubat</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Joker Cari Satislar Buffer_Inc - Field Subat - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2529585740 - Field 4184805898 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Temmuz</source>
+          <target>Temmuz</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Joker Cari Satislar Buffer_Inc - Field Temmuz - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2529585740 - Field 2911034994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Toplam Satış Miktarı</source>
+          <target>Toplam Satış Miktarı</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Joker Cari Satislar Buffer_Inc - Field Toplam Satis Miktari - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2529585740 - Field 3434453848 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Yıl</source>
+          <target>Yıl</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Joker Cari Satislar Buffer_Inc - Field Yil - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 972512850 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Separate Invoice Creation</source>
           <target>Ayrı Fatura Oluşturma Kurulum</target>
@@ -39,32 +179,161 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Separate Invoice Creation_Inc - Field Type No - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 1661655205 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Joker Cari Satislar API</source>
+          <target>Joker Cari Satislar API</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Joker Cari Satislar API - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1661655205 - Control 4204178060 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>agustos</source>
+          <target>agustos</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Joker Cari Satislar API - Control agustos - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1661655205 - Control 2591100064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>aralik</source>
+          <target>aralik</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Joker Cari Satislar API - Control aralik - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1661655205 - Control 2033520046 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ekim</source>
+          <target>ekim</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Joker Cari Satislar API - Control ekim - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1661655205 - Control 2908031883 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>eylul</source>
+          <target>eylul</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Joker Cari Satislar API - Control eylul - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1661655205 - Control 1690549396 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>hastaneAdi</source>
+          <target>hastaneAdi</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Joker Cari Satislar API - Control hastaneAdi - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1661655205 - Control 2238205427 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>hastaneKodu</source>
+          <target>hastaneKodu</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Joker Cari Satislar API - Control hastaneKodu - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1661655205 - Control 501110105 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>haziran</source>
+          <target>haziran</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Joker Cari Satislar API - Control haziran - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1661655205 - Control 894334935 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>kasim</source>
+          <target>kasim</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Joker Cari Satislar API - Control kasim - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1661655205 - Control 589143581 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>malzemeAdi</source>
+          <target>malzemeAdi</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Joker Cari Satislar API - Control malzemeAdi - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1661655205 - Control 826627350 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>malzemeKodu</source>
+          <target>malzemeKodu</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Joker Cari Satislar API - Control malzemeKodu - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1661655205 - Control 2114154534 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>mart</source>
+          <target>mart</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Joker Cari Satislar API - Control mart - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1661655205 - Control 1656670665 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>mayis</source>
+          <target>mayis</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Joker Cari Satislar API - Control mayis - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1661655205 - Control 782315405 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>nisan</source>
+          <target>nisan</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Joker Cari Satislar API - Control nisan - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1661655205 - Control 4070453890 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ocak</source>
+          <target>ocak</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Joker Cari Satislar API - Control ocak - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1661655205 - Control 1499857827 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>subat</source>
+          <target>subat</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Joker Cari Satislar API - Control subat - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1661655205 - Control 4094618602 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>temmuz</source>
+          <target>temmuz</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Joker Cari Satislar API - Control temmuz - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1661655205 - Control 1687102258 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>toplamSatisMiktari</source>
+          <target>toplamSatisMiktari</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Joker Cari Satislar API - Control toplamSatisMiktari - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1661655205 - Control 4140308600 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>yil</source>
+          <target>yil</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Joker Cari Satislar API - Control yil - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 3345055386 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>jokerMalzemeKartlar</source>
           <target>jokerMalzemeKartlar</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page jokerMalzemeKartlar_Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3345055386 - Control 4232699882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description</source>
           <target>Açıklama</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page jokerMalzemeKartlar_Inc - Control description - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3345055386 - Control 2962728448 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>GTIN</source>
           <target>GTIN</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page jokerMalzemeKartlar_Inc - Control gtin - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3345055386 - Control 3790834230 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Manufacturer Code</source>
           <target>Üretici Kodu</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page jokerMalzemeKartlar_Inc - Control manufacturerCode - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1079881948 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">

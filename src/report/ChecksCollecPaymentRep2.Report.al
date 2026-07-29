@@ -123,7 +123,7 @@ report 70807 "Checks Collec. Payment Rep2"
                     LCheque.Setfilter("Due Date", '<>%1', 0D);
                     LCheque.Setfilter(Amount, '<>%1', 0);
                     LCheque.SetRange("Exists in unposted document", false);
-                    LCheque.Setfilter("Transaction Standard Type", '<>%1&<>%2', LCheque."Transaction Standard Type"::Payment, LCheque."Transaction Standard Type"::Paid);
+                    LCheque.Setfilter("Transaction Standard Type", '<>%1', LCheque."Transaction Standard Type"::Paid);
                 end;
             ReportType::"Müşteri-Tahsil Edildi":
                 begin

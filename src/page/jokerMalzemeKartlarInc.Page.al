@@ -1,15 +1,16 @@
 page 70801 "jokerMalzemeKartlar_Inc"
 {
     APIGroup = 'apiGroup';
-    APIPublisher = 'publisherName';
+    APIPublisher = 'InciEcza';
     APIVersion = 'v1.0';
     ApplicationArea = All;
     Caption = 'jokerMalzemeKartlar';
     DelayedInsert = true;
-    EntityName = 'Joker';
+    EntityName = 'Joker_Malzeme_Kartlar';
     EntitySetName = 'Malzeme_Kartlar';
     PageType = API;
     SourceTable = Item;
+    Permissions = TableData Item = R;
 
     layout
     {

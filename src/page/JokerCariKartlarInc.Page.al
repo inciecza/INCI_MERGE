@@ -10,6 +10,7 @@ page 70800 "Joker_Cari_Kartlar_Inc"
     EntitySetName = 'Cari_Kartlar';
     PageType = API;
     SourceTable = Customer;
+    Permissions = TableData Customer = R;
 
     layout
     {
@@ -17,7 +18,7 @@ page 70800 "Joker_Cari_Kartlar_Inc"
         {
             repeater(General)
             {
-                field(customerOldCodeInc; Rec."Customer Old Code_Inc")
+                field(customerOldCodeInc; CustomerOldCodeIncValue)
                 {
                     Caption = 'Customer Old Code';
                 }
@@ -36,4 +37,15 @@ page 70800 "Joker_Cari_Kartlar_Inc"
             }
         }
     }
+
+    trigger OnAfterGetRecord()
+    begin
+        if Rec."Customer Old Code_Inc" = '' then
+            CustomerOldCodeIncValue := Rec."No."
+        else
+            CustomerOldCodeIncValue := Rec."Customer Old Code_Inc";
+    end;
+
+    var
+        CustomerOldCodeIncValue: Code[20];
 }
