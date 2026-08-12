@@ -383,6 +383,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Sales Balance Report_Inc - Control EndDate - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Report 1407255427 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Quote Export Report2_Inc</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Sales Quote Export Report2_Inc - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 2898735113 - Action 4016521241 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2898735113">
           <source>Print Bid Price Request Report</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -437,6 +442,11 @@
           <source>Start Date</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Outgoing PTS Packages-B2F_Inc - Control Sdate_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 236938974 - Action 249095212 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2026081320">
+          <source>Item Data Export Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Order SubformM_Inc - Action ItemDataExport2_Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 236938974 - Action 3346821871 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2026081320">
           <source>Item Miad Location Page</source>

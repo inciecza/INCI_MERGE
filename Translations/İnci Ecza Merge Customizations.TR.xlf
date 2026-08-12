@@ -511,21 +511,18 @@
           <source>XML Downloand</source>
           <target>XML İndir</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Outgoing PTS Packages-B2F_Inc - Action Generate_Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 3714774100 - Control 1209680414 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4002585069">
           <source>End Date</source>
           <target>Bitiş Tarihi</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Outgoing PTS Packages-B2F_Inc - Control Edate_Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 3714774100 - Control 1665423800 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4002585069">
           <source>Start Date</source>
           <target>Başlangıç Tarihi</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Outgoing PTS Packages-B2F_Inc - Control Sdate_Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 236938974 - Action 3346821871 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2026081320">
@@ -538,7 +535,6 @@
           <source>Separate Shipments</source>
           <target>Sevkiyatları Böl</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Warehouse Shipment2_Inc - Action Separate Shipments_Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 883498421 - Field 374050185 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4097962492">
@@ -551,28 +547,24 @@
           <source>Direct Supply Bid</source>
           <target>Doğrudan Temin</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension Item Category_Inc - Field Direct Supply Bid_Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 551539442 - Field 4242676406 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1487222247">
           <source>DMO Bid</source>
           <target>DMO İHale</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension Item Category_Inc - Field DMO Bid_Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 551539442 - Field 4012985844 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1487222247">
           <source>Open Bid</source>
           <target>Açık İhale</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension Item Category_Inc - Field Open Bid_Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 551539442 - Field 2826407998 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1487222247">
           <source>Private hospital</source>
           <target>Özel Hastane</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension Item Category_Inc - Field Private hospital_Inc - Property Caption</note>
         </trans-unit>
       </group>
