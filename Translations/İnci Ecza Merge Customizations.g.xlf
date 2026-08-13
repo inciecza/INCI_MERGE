@@ -278,16 +278,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report AB Sales Report_Inc - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Report 1921341338 - Control 4112584152 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Select the customer region to filter the report.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Report AB Sales Report_Inc - Control CustomerRegion - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Report 1921341338 - Control 4112584152 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Customer Region</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Report AB Sales Report_Inc - Control CustomerRegion - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Report 1921341338 - Control 845401037 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Select the end date to filter the report.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -297,6 +287,16 @@
           <source>End Date</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report AB Sales Report_Inc - Control EndDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1921341338 - Control 2459107755 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the responsibility center to filter the report.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report AB Sales Report_Inc - Control ResponsibilityCode - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1921341338 - Control 2459107755 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Responsibility Center</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report AB Sales Report_Inc - Control ResponsibilityCode - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 1921341338 - Control 1430222053 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Select the segment to filter the report.</source>

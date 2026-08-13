@@ -44,12 +44,19 @@ report 70801 "AB Sales Report_Inc"
             column(MusteriBolgesi; "External Document No.")
             {
             }
+            column(SevkBekleyenMiktar; "Valued Quantity")
+            {
+            }
+            column(SevkBekleyenTutar; "Cost Amount (Non-Invtbl.)")
+            {
+            }
 
             trigger OnPreDataItem()
             begin
                 FillTempVLE();
             end;
         }
+
     }
     requestpage
     {
@@ -60,12 +67,13 @@ report 70801 "AB Sales Report_Inc"
                 group(GroupName)
                 {
 
-                    field(CustomerRegion; CustomerRegionCode)
+                    field(ResponsibilityCode; ResponsibilityCode)
                     {
                         ApplicationArea = All;
-                        Caption = 'Customer Region';
-                        ToolTip = 'Select the customer region to filter the report.';
-                        TableRelation = "Customer Regions_Inc";
+                        Caption = 'Responsibility Center';
+                        ToolTip = 'Select the responsibility center to filter the report.';
+                        TableRelation = "Responsibility Center";
+                        Editable = ResponsControl;
                     }
                     field(Segment; SegmentOption)
                     {
@@ -73,18 +81,19 @@ report 70801 "AB Sales Report_Inc"
                         Caption = 'Segment';
                         ToolTip = 'Select the segment to filter the report.';
                     }
-                    field(StartDate; Stardate)
+                    field(StartDate; StartDate)
                     {
                         ApplicationArea = All;
                         Caption = 'Start Date';
                         ToolTip = 'Select the start date to filter the report.';
                     }
-                    field(EndDate; Enddate)
+                    field(EndDate; EndDate)
                     {
                         ApplicationArea = All;
                         Caption = 'End Date';
                         ToolTip = 'Select the end date to filter the report.';
                     }
+
 
                 }
             }
@@ -95,23 +104,52 @@ report 70801 "AB Sales Report_Inc"
             {
             }
         }
+        trigger OnOpenPage()
+        var
+            LUserSetup: Record "User Setup";
+        begin
+            StartDate := Today;
+            EndDate := Today;
+
+            Clear(LUserSetup);
+            LUserSetup.Get(UserId);
+            if LUserSetup."Sales Lines and Qty Contrl_Inc" then begin
+                ResponsibilityCode := LUserSetup."Sales Resp. Ctr. Filter";
+                ResponsControl := false;
+            end
+            else
+                ResponsControl := true;
+
+        end;
     }
 
     local procedure FillTempVLE()
     var
         LSalesInvoiceHeader: Record "Sales Invoice Header";
         LSalesInvoiceLine: Record "Sales Invoice Line";
+        LUserSetup: Record "User Setup";
     begin
         Clear(TempVLE);
         LSalesInvoiceHeader.SetRange("Cancelled", false);
-        if Stardate <> 0D then
+        if StartDate = 0D then
             error('Start Date cannot be empty. Please select a valid start date.');
-        if enddate <> 0D then
+        if EndDate = 0D then
             error('End Date cannot be empty. Please select a valid end date.');
-        if customerRegionCode = '' then
-            error('Customer Region cannot be empty. Please select a valid customer region.');
-        LSalesInvoiceHeader.SetRange("Posting Date", Stardate, Enddate);
-        LSalesInvoiceHeader.SetRange("Customer Region Code_Inc", CustomerRegionCode);
+
+        /* if ResponsibilityCode = '' then
+             error('Responsibility Center cannot be empty. Please select a valid responsibility center.');
+             */
+
+        Clear(LUserSetup);
+        LUserSetup.Get(UserId);
+        if LUserSetup."Sales Lines and Qty Contrl_Inc" then
+            if LUserSetup."Sales Resp. Ctr. Filter" <> ResponsibilityCode then
+                ResponsibilityCode := LUserSetup."Sales Resp. Ctr. Filter";
+
+
+        LSalesInvoiceHeader.SetRange("Posting Date", StartDate, EndDate);
+        if ResponsibilityCode <> '' then
+            LSalesInvoiceHeader.SetRange("Responsibility Center", ResponsibilityCode);
         if LSalesInvoiceHeader.FindSet() then
             repeat
                 LSalesInvoiceLine.SetRange("Document No.", LSalesInvoiceHeader."No.");
@@ -125,16 +163,56 @@ report 70801 "AB Sales Report_Inc"
                         TempVLE."User ID" := CopyStr(LSalesInvoiceHeader."User ID", 1, 50);
                         TempVLE."Document No." := LSalesInvoiceHeader."No.";
                         TempVLE.Description := LSalesInvoiceHeader."Sell-to Customer Name";
-                        TempVLE."Invoiced Quantity" := LSalesInvoiceLine."Quantity";
-                        TempVLE."Cost per Unit" := LSalesInvoiceLine."Unit Price";
-                        TempVLE."Purchase Amount (Actual)" := LSalesInvoiceLine."Amount";
-                        TempVLE."Cost per Unit (ACY)" := LSalesInvoiceLine."Amount Including VAT";
-                        TempVLE."External Document No." := LSalesInvoiceHeader."Customer Region Code_Inc";
+                        TempVLE."Invoiced Quantity" := LSalesInvoiceLine."Quantity"; // Miktar
+                        TempVLE."Cost per Unit" := LSalesInvoiceLine."Unit Price"; // Birim Fiyat
+                        TempVLE."Purchase Amount (Actual)" := LSalesInvoiceLine."Amount"; // Tutar Kdv Hariç
+                        TempVLE."Cost per Unit (ACY)" := LSalesInvoiceLine."Amount Including VAT"; // Tutar Kdv Dahil
+                        TempVLE."External Document No." := CopyStr(LSalesInvoiceHeader."Responsibility Center", 1, maxStrLen(LSalesInvoiceHeader."Responsibility Center"));
                         if SegmentCheck(LSalesInvoiceLine."No.") then
                             TempVLE.Insert();
                     until LSalesInvoiceLine.Next() = 0;
             until LSalesInvoiceHeader.Next() = 0;
+        InsertWarehouseShipment();
+    end;
 
+    local procedure InsertWarehouseShipment()
+    var
+        LWarehouseShipment: Record "Warehouse Shipment Header";
+        LWarehouseShipmentLine: Record "Warehouse Shipment Line";
+        LSalesHeader: Record "Sales Header";
+        LSalesLine: Record "Sales Line";
+    begin
+        Clear(LWarehouseShipmentLine);
+        LWarehouseShipmentLine.SetRange("Source Type", 37);
+        LWarehouseShipmentLine.SetRange("Source Subtype", LSalesHeader."Document Type"::Order);
+        LWarehouseShipmentLine.SetRange(SystemCreatedAt, CreateDateTime(StartDate, 000000T), CreateDateTime(EndDate, 235959T));
+        if LWarehouseShipmentLine.FindSet() then
+            repeat
+                Clear(LSalesLine);
+                LSalesLine.SetRange("Responsibility Center", ResponsibilityCode);
+                LSalesLine.SetRange("Document Type", LSalesLine."Document Type"::Order);
+                LSalesLine.SetRange("Document No.", LWarehouseShipmentLine."Source No.");
+                LSalesLine.SetRange("Line No.", LWarehouseShipmentLine."Source Line No.");
+                LSalesLine.SetRange("Order/Document Type-B2F", 'ST-ÖZEL HASTANE');
+                if LSalesLine.FindSet() then begin
+                    TempVLE.Init();
+                    i += 1;
+                    TempVLE."Entry No." := i;
+                    TempVLE."Posting Date" := LSalesLine."Posting Date";
+                    TempVLE."Item No." := LSalesLine."No.";
+                    TempVLE."User ID" := '';
+                    TempVLE."Document No." := LSalesLine."Document No.";
+                    TempVLE.Description := LSalesLine."Sell-to Customer Name";
+                    TempVLE."Valued Quantity" := LSalesLine.Quantity; // Miktar
+                    TempVLE."Cost per Unit" := 0; // Birim Fiyat
+                    TempVLE."Cost Amount (Non-Invtbl.)" := LSalesLine.Amount; // Tutar Kdv Hariç
+                    TempVLE."Cost per Unit (ACY)" := 0; // Tutar Kdv Dahil
+                    TempVLE."External Document No." := CopyStr(LSalesLine."Responsibility Center", 1, maxStrLen(LSalesLine."Responsibility Center"));
+                    if SegmentCheck(LSalesLine."No.") then
+                        TempVLE.Insert();
+                end;
+
+            until LWarehouseShipmentLine.Next() = 0;
     end;
 
     local procedure SegmentCheck(pItemNo: Code[20]) rtnvalue: boolean
@@ -165,11 +243,13 @@ report 70801 "AB Sales Report_Inc"
 
 
 
+
     var
         i: Integer;
-        CustomerRegionCode: code[20];
-        Stardate: Date;
-        Enddate: Date;
+        ResponsibilityCode: code[10];
+        StartDate: Date;
+        EndDate: Date;
         SegmentOption: Option "AB","REÇETELİ";
+        ResponsControl: boolean;
 
 }
