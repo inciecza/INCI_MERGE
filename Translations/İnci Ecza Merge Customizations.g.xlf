@@ -318,6 +318,41 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report AB Sales Report_Inc - Control StartDate - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Report 4190877523 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ABC Sales Report Summary</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report ABC Sales Report Summary_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4190877523 - Control 845401037 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the end date to filter the report.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report ABC Sales Report Summary_Inc - Control EndDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 4190877523 - Control 845401037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>End Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report ABC Sales Report Summary_Inc - Control EndDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4190877523 - Control 2459107755 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the responsibility center to filter the report.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report ABC Sales Report Summary_Inc - Control ResponsibilityCode - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 4190877523 - Control 2459107755 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Responsibility Center</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report ABC Sales Report Summary_Inc - Control ResponsibilityCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4190877523 - Control 3605153064 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the start date to filter the report.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report ABC Sales Report Summary_Inc - Control StartDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 4190877523 - Control 3605153064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Start Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report ABC Sales Report Summary_Inc - Control StartDate - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 2927139786 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Bid Price Request Report</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -363,10 +398,135 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Checks Collec. Payment Rep2 - Control StartDate - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Report 1041366843 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Download PTS Packages</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Download PTS Packages_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1041366843 - Method 2611183486 - NamedType 2868149410" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No package files were found.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Download PTS Packages_Inc - Method CreatePTSPackages - NamedType NoFileMsg</note>
+        </trans-unit>
+        <trans-unit id="Report 1041366843 - Control 845401037 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the end date to filter the report.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Download PTS Packages_Inc - Control EndDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1041366843 - Control 845401037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>End Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Download PTS Packages_Inc - Control EndDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1041366843 - Control 332802016 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the item number to filter the report.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Download PTS Packages_Inc - Control ItemNo - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1041366843 - Control 332802016 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Download PTS Packages_Inc - Control ItemNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1041366843 - Control 3605153064 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the start date to filter the report.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Download PTS Packages_Inc - Control StartDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1041366843 - Control 3605153064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Start Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Download PTS Packages_Inc - Control StartDate - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 1129619406 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Open Bid Sales Quote</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Open Bid Sales Quote_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 813613792 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pending Order Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 813613792 - Control 845401037 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the end date to filter the report.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control EndDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 813613792 - Control 845401037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>End Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control EndDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 813613792 - Control 2459107755 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the responsibility center to filter the report.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control ResponsibilityCode - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 813613792 - Control 2459107755 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Responsibility Center</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control ResponsibilityCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 813613792 - Control 3605153064 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the start date to filter the report.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control StartDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 813613792 - Control 3605153064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Start Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control StartDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 813613792 - Control 3277387576 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select to include View Detail Data in the report.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control viewDetailData - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 813613792 - Control 3277387576 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View Detail Data</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control viewDetailData - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3007758371 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Qr Code List Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Qr Code List Report_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3007758371 - Control 3689535207 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Qr Code List Report_Inc - Control CustomerNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3007758371 - Control 845401037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>End Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Qr Code List Report_Inc - Control EndDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3007758371 - Control 332802016 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Qr Code List Report_Inc - Control ItemNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3007758371 - Control 3517558817 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Party No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Qr Code List Report_Inc - Control PartyNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3007758371 - Control 1255575728 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Seri No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Qr Code List Report_Inc - Control SeriNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3007758371 - Control 1885440168 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SKT</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Qr Code List Report_Inc - Control SKT - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3007758371 - Control 3605153064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Start Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Qr Code List Report_Inc - Control StartDate - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 1773478501 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Sales Balance Report</source>
@@ -428,20 +588,10 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Open Bid Quote Worksheet-INC - Action PurchaseOrderDT_Inc - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 3714774100 - Action 1131331556 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4002585069">
-          <source>XML Downloand</source>
+        <trans-unit id="PageExtension 3714774100 - Action 4181106251 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4002585069">
+          <source>Create PTS Packages</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Outgoing PTS Packages-B2F_Inc - Action Generate_Inc - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 3714774100 - Control 1209680414 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4002585069">
-          <source>End Date</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Outgoing PTS Packages-B2F_Inc - Control Edate_Inc - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 3714774100 - Control 1665423800 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4002585069">
-          <source>Start Date</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Outgoing PTS Packages-B2F_Inc - Control Sdate_Inc - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Outgoing PTS Packages-B2F_Inc - Action Create PTS Packages_Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 236938974 - Action 249095212 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2026081320">
           <source>Item Data Export Report</source>

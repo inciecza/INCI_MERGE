@@ -1,5 +1,5 @@
 // =============================================================
-// Page : Joker Cari Satislar API_Inc_Inc_Inc
+// Page : Joker Cari Satislar API_Inc_Inc_Inc_Inc
 // Tip  : API Page (OData / REST)
 // ID   : 50100
 //
@@ -35,7 +35,7 @@ page 70802 "Joker Cari Satislar API"
 
     SourceTable = "Joker Cari Satislar Buffer_Inc";
     SourceTableTemporary = true;
-    ODataKeyFields = "Entry No.";
+    //ODataKeyFields = "Entry No.";
 
     Caption = 'Joker Cari Satislar API';
     Editable = false;
