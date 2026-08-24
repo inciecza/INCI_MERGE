@@ -46,6 +46,13 @@ report 70809 "Download PTS Packages_Inc"
                         Caption = 'End Date';
                         ToolTip = 'Select the end date to filter the report.';
                     }
+                    field(SendSMTP; SendSMTP)
+                    {
+                        Caption = 'Send SMTP';
+                        ApplicationArea = All;
+                        ToolTip = 'Select whether to send the report via SMTP.';
+                    }
+
                 }
             }
         }
@@ -234,10 +241,8 @@ report 70809 "Download PTS Packages_Inc"
 
                 EntryNo := pPTSPackageEntry."Entry No.";
 
-                // ZIP içindeki bütün dosyaları dolaş
                 foreach EntryName in EntryList do begin
 
-                    // Çıkarılan dosya için Temp Blob
                     Clear(SourceTempBlob);
 
                     SourceDataCompression.ExtractEntry(
@@ -245,20 +250,13 @@ report 70809 "Download PTS Packages_Inc"
                         SourceTempBlob
                     );
 
-                    // Yeni ZIP içerisindeki klasör yapısı
-                    NewEntryName :=
-                        StrSubstNo(
-                            '%1/%2',
-                            Format(EntryNo),
-                            EntryName
-                        );
+                    // XML dosyasını ZIP'in ana dizinine ekle
+                    NewEntryName := EntryName;
 
-                    // Çıkarılan dosyayı oku
                     SourceTempBlob.CreateInStream(
                         SourceInStr
                     );
 
-                    // Ana ZIP'e ekle
                     DataCompression.AddEntry(
                         SourceInStr,
                         NewEntryName
@@ -302,4 +300,5 @@ report 70809 "Download PTS Packages_Inc"
         ItemNo: Code[20];
         StartDate: Date;
         EndDate: Date;
+        SendSMTP: Boolean;
 }

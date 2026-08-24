@@ -531,6 +531,69 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Open Bid Sales Quote_Inc - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Report 813613792 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pending Order Report</source>
+          <target>Bekleyen Siparişler (Depo Çıkışı)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 813613792 - Control 845401037 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the end date to filter the report.</source>
+          <target>Raporlamak için bitiş tarihini seçin.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control EndDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 813613792 - Control 845401037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>End Date</source>
+          <target>Bitiş Tarihi</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control EndDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 813613792 - Control 2459107755 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the responsibility center to filter the report.</source>
+          <target>Select the responsibility center to filter the report.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control ResponsibilityCode - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 813613792 - Control 2459107755 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Responsibility Center</source>
+          <target>Sorumluluk Merkezi</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control ResponsibilityCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 813613792 - Control 3605153064 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the start date to filter the report.</source>
+          <target>Raporlamak için başlangıç tarihini seçin.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control StartDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 813613792 - Control 3605153064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Start Date</source>
+          <target>Başlangıç Tarihi</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control StartDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 813613792 - Control 3277387576 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select to include View Detail Data in the report.</source>
+          <target>Raporun içine Detaylı Verileri Görüntüle seçeneğini ekleyin.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control viewDetailData - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 813613792 - Control 3277387576 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View Detail Data</source>
+          <target>Detay Göster</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control viewDetailData - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 3007758371 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Qr Code List Report</source>
           <target>Karekod Çıkış Raporu</target>
@@ -559,21 +622,18 @@
           <source>Party No.</source>
           <target>Parti No</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Qr Code List Report_Inc - Control PartyNo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 3007758371 - Control 1255575728 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Seri No.</source>
           <target>Seri No</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Qr Code List Report_Inc - Control SeriNo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 3007758371 - Control 1885440168 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>SKT</source>
           <target>SKT</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Qr Code List Report_Inc - Control SKT - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 3007758371 - Control 3605153064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">

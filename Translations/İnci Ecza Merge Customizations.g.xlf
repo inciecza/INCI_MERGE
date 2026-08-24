@@ -459,7 +459,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control EndDate - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 813613792 - Control 2459107755 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Select the responsibility center to filter the report.</source>
+          <source>Select the responsibility center or enter a filter.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control ResponsibilityCode - Property ToolTip</note>
         </trans-unit>

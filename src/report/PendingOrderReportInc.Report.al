@@ -20,7 +20,7 @@ report 70812 "Pending Order Report_Inc"
             column(MaddeNo; "Item No.")
             {
             }
-            column(MaddeAdi; "User ID")
+            column(MaddeAdi; GetItemDescription("Item No."))
             {
             }
             column(FaturaNo; "Document No.")
@@ -80,9 +80,18 @@ report 70812 "Pending Order Report_Inc"
                     {
                         ApplicationArea = All;
                         Caption = 'Responsibility Center';
-                        ToolTip = 'Select the responsibility center to filter the report.';
-                        TableRelation = "Responsibility Center";
+                        ToolTip = 'Select the responsibility center or enter a filter.';
                         Editable = ResponsControl;
+
+                        trigger OnLookup(var Text: Text): Boolean
+                        var
+                            ResponsibilityCenter: Record "Responsibility Center";
+                        begin
+                            if Page.RunModal(Page::"Responsibility Center List", ResponsibilityCenter) = Action::LookupOK then begin
+                                ResponsibilityCode := ResponsibilityCenter.Code;
+                                exit(true);
+                            end;
+                        end;
                     }
                     field(StartDate; StartDate)
                     {
@@ -178,7 +187,8 @@ report 70812 "Pending Order Report_Inc"
                     TempVLE."Entry No." := i;
                     TempVLE.SystemCreatedAt := LWarehouseShipmentLine.SystemCreatedAt;
                     TempVLE."Item No." := LSalesLine."No.";
-                    TempVLE."User ID" := '';
+                    //   TempVLE.CalcFields("Item Description");
+                    // TempVLE."User ID" := TempVLE."Item Description";
                     TempVLE."Document No." := LSalesLine."Document No.";
                     TempVLE.Description := LSalesLine."Sell-to Customer Name";
                     TempVLE."Valued Quantity" := LWarehouseShipmentLine.Quantity; // Miktar
@@ -226,7 +236,14 @@ report 70812 "Pending Order Report_Inc"
                 exit(LItem."Segmentfor Private HospitalINC");
     end;
 
-
+    local procedure GetItemDescription(pItemNo: Code[20]) rtnvalue: Text[100]
+    var
+        LItem: record Item;
+    begin
+        Clear(LItem);
+        if LItem.Get(pItemNo) then
+            exit(LItem.Description);
+    end;
 
 
     var
