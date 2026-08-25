@@ -513,6 +513,18 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Download PTS Packages_Inc - Control ItemNo - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Report 1041366843 - Control 3848913170 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select whether to send the report via SMTP.</source>
+          <target>Raporun SMTP üzerinden gönderilip gönderilmeyeceğini seçin.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Download PTS Packages_Inc - Control SendSMTP - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1041366843 - Control 3848913170 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Send SMTP</source>
+          <target>SMTP ye Gönder</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Download PTS Packages_Inc - Control SendSMTP - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 1041366843 - Control 3605153064 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Select the start date to filter the report.</source>
           <target>Raporlamak için başlangıç tarihini seçin.</target>
@@ -525,6 +537,36 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Download PTS Packages_Inc - Control StartDate - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Report 2954935281 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Export EInvoice Documents</source>
+          <target>E-Fatura Dökümanlarını Dışarı Aktar</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Export EInvoice Documents_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2954935281 - Control 845401037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>End Date</source>
+          <target>Bitiş Tarihi</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Export EInvoice Documents_Inc - Control EndDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2954935281 - Control 332802016 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the item number to filter the report.</source>
+          <target>Raporu filtrelemek için öğe numarasını seçin.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Export EInvoice Documents_Inc - Control ItemNo - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2954935281 - Control 332802016 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <target>Madde No</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Export EInvoice Documents_Inc - Control ItemNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2954935281 - Control 3605153064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Start Date</source>
+          <target>Başlangıç Tarihi</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Export EInvoice Documents_Inc - Control StartDate - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 1129619406 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Open Bid Sales Quote</source>
           <target>Satış Teklif Formu (AH)</target>
@@ -535,63 +577,68 @@
           <source>Pending Order Report</source>
           <target>Bekleyen Siparişler (Depo Çıkışı)</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 813613792 - Control 845401037 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Select the end date to filter the report.</source>
           <target>Raporlamak için bitiş tarihini seçin.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control EndDate - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Report 813613792 - Control 845401037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>End Date</source>
           <target>Bitiş Tarihi</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control EndDate - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Report 813613792 - Control 41249075 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the order document type to filter the report.</source>
+          <target>Raporu filtrelemek için sipariş belgesi türünü seçin.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control OrderDocumentType - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 813613792 - Control 41249075 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Order Document Type</source>
+          <target>Sipariş Belge Türü</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control OrderDocumentType - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 813613792 - Control 2459107755 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Select the responsibility center to filter the report.</source>
+          <source>Select the responsibility center or enter a filter.</source>
           <target>Select the responsibility center to filter the report.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control ResponsibilityCode - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Report 813613792 - Control 2459107755 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Responsibility Center</source>
           <target>Sorumluluk Merkezi</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control ResponsibilityCode - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 813613792 - Control 3605153064 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Select the start date to filter the report.</source>
           <target>Raporlamak için başlangıç tarihini seçin.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control StartDate - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Report 813613792 - Control 3605153064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Start Date</source>
           <target>Başlangıç Tarihi</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control StartDate - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 813613792 - Control 3277387576 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Select to include View Detail Data in the report.</source>
           <target>Raporun içine Detaylı Verileri Görüntüle seçeneğini ekleyin.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control viewDetailData - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Report 813613792 - Control 3277387576 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>View Detail Data</source>
           <target>Detay Göster</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control viewDetailData - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 3007758371 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -713,6 +760,12 @@
           <target>Satış Teklif Formu (AH)</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Open Bid Quote Worksheet-INC - Action PurchaseOrderDT_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1276608768 - Action 3357475139 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3052258361">
+          <source>Download Filtered HTML Invoices</source>
+          <target>Faturaları İndir</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Outgoing E-Invoices-B2F_Inc - Action DownloadFilteredHTMLInvoices_Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 3714774100 - Action 4181106251 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4002585069">
           <source>Create PTS Packages</source>

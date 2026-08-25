@@ -428,6 +428,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Download PTS Packages_Inc - Control ItemNo - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Report 1041366843 - Control 3848913170 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select whether to send the report via SMTP.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Download PTS Packages_Inc - Control SendSMTP - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1041366843 - Control 3848913170 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Send SMTP</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Download PTS Packages_Inc - Control SendSMTP - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 1041366843 - Control 3605153064 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Select the start date to filter the report.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -437,6 +447,31 @@
           <source>Start Date</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Download PTS Packages_Inc - Control StartDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2954935281 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Export EInvoice Documents</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Export EInvoice Documents_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2954935281 - Control 845401037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>End Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Export EInvoice Documents_Inc - Control EndDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2954935281 - Control 332802016 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the item number to filter the report.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Export EInvoice Documents_Inc - Control ItemNo - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2954935281 - Control 332802016 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Export EInvoice Documents_Inc - Control ItemNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2954935281 - Control 3605153064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Start Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Export EInvoice Documents_Inc - Control StartDate - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 1129619406 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Open Bid Sales Quote</source>
@@ -457,6 +492,16 @@
           <source>End Date</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control EndDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 813613792 - Control 41249075 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the order document type to filter the report.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control OrderDocumentType - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 813613792 - Control 41249075 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Order Document Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control OrderDocumentType - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 813613792 - Control 2459107755 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Select the responsibility center or enter a filter.</source>
@@ -588,6 +633,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Open Bid Quote Worksheet-INC - Action PurchaseOrderDT_Inc - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 1276608768 - Action 3357475139 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3052258361">
+          <source>Download Filtered HTML Invoices</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Outgoing E-Invoices-B2F_Inc - Action DownloadFilteredHTMLInvoices_Inc - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 3714774100 - Action 4181106251 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4002585069">
           <source>Create PTS Packages</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -602,6 +652,11 @@
           <source>Item Miad Location Page</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Order SubformM_Inc - Action ItemMiad2_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2736622123 - Action 3346821871 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 416138076">
+          <source>Item Miad Location Page</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Quote Subform2_Inc - Action ItemMiad2_Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 2973108816 - Action 2644261591 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2938519335">
           <source>Separate Shipments</source>

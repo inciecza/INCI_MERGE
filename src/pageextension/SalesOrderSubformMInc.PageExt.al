@@ -27,12 +27,27 @@ pageextension 70809 "Sales Order SubformM_Inc" extends "Sales Order Subform"
 
         addafter("&Line")
         {
+            action(ItemDataExport2_Inc)
+            {
+                ApplicationArea = All;
+                Caption = 'Item Data Export Report';
+                Image = Export;
+
+                trigger OnAction()
+                var
+                    LSalesQuoteReport: Report "Sales Quote Export Report2_Inc";
+                begin
+                    Clear(LSalesQuoteReport);
+                    LSalesQuoteReport.SetParameters(Rec."Sell-to Customer No.", Rec."Document No.", 1);
+                    LSalesQuoteReport.Run();
+                end;
+            }
             action(ItemMiad2_Inc)
             {
                 ApplicationArea = All;
                 Caption = 'Item Miad Location Page';
                 Image = Form;
-                ShortcutKey = 'Ctrl+F8';
+                ShortcutKey = 'Ctrl+F11';
 
                 trigger OnAction()
                 var
@@ -50,24 +65,9 @@ pageextension 70809 "Sales Order SubformM_Inc" extends "Sales Order Subform"
 
                         Rec.Validate("No.", LValueEntry."Item No.");
                         Rec."Requested Exp. Date-B2F" := LValueEntry."Document Date";
-
+                        Rec."Location Code" := LValueEntry."Location Code";
                         CurrPage.Update();
                     end;
-                end;
-            }
-            action(ItemDataExport2_Inc)
-            {
-                ApplicationArea = All;
-                Caption = 'Item Data Export Report';
-                Image = Export;
-
-                trigger OnAction()
-                var
-                    LSalesQuoteReport: Report "Sales Quote Export Report2_Inc";
-                begin
-                    Clear(LSalesQuoteReport);
-                    LSalesQuoteReport.SetParameters(Rec."Sell-to Customer No.", Rec."Document No.", 1);
-                    LSalesQuoteReport.Run();
                 end;
             }
         }

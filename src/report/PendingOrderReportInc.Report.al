@@ -105,6 +105,13 @@ report 70812 "Pending Order Report_Inc"
                         Caption = 'End Date';
                         ToolTip = 'Select the end date to filter the report.';
                     }
+                    field(OrderDocumentType; OrderDocumentType)
+                    {
+                        ApplicationArea = All;
+                        Caption = 'Order Document Type';
+                        ToolTip = 'Select the order document type to filter the report.';
+                        TableRelation = "Order/Document Type-B2F";
+                    }
                     field(viewDetailData; ViewDetailData)
                     {
                         ApplicationArea = All;
@@ -179,7 +186,9 @@ report 70812 "Pending Order Report_Inc"
                 LSalesLine.SetRange("Document Type", LSalesLine."Document Type"::Order);
                 LSalesLine.SetRange("Document No.", LWarehouseShipmentLine."Source No.");
                 LSalesLine.SetRange("Line No.", LWarehouseShipmentLine."Source Line No.");
-                LSalesLine.SetRange("Order/Document Type-B2F", 'ST-ÖZEL HASTANE');
+                if OrderDocumentType <> '' then
+                    LSalesLine.SetRange("Order/Document Type-B2F", OrderDocumentType);
+
                 if LSalesLine.FindSet() then begin
                     TempVLE.Init();
                     i += 1;
@@ -253,5 +262,6 @@ report 70812 "Pending Order Report_Inc"
         EndDate: Date;
         ResponsControl: boolean;
         ViewDetailData: boolean;
+        OrderDocumentType: code[20];
 
 }
