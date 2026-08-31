@@ -133,6 +133,31 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Separate Invoice Creation_Inc - Field Type No - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Codeunit 342169165 - Method 2811346053 - NamedType 3493454506" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Merhaba,</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Inci Job Queue Entry Mang2_Inc - Method SendMiadReportData - NamedType Text_Body1_Lbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 342169165 - Method 2811346053 - NamedType 3776874223" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Süresi yaklaşan stok kalemleri ektedir.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Inci Job Queue Entry Mang2_Inc - Method SendMiadReportData - NamedType Text_Body2_Lbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 342169165 - Method 2811346053 - NamedType 3635359480" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Saygılarımızla.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Inci Job Queue Entry Mang2_Inc - Method SendMiadReportData - NamedType Text_Body3_Lbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 342169165 - Method 2811346053 - NamedType 4122382041" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Miad Stok Bilgilendirme Raporu</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Inci Job Queue Entry Mang2_Inc - Method SendMiadReportData - NamedType Text_MailSubject</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 342169165 - Method 2811346053 - NamedType 1827992702" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Miad Stok Raporu</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Inci Job Queue Entry Mang2_Inc - Method SendMiadReportData - NamedType LText_FileName_Lbl</note>
+        </trans-unit>
         <trans-unit id="Page 1661655205 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Joker Cari Satislar API</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -473,6 +498,31 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Export EInvoice Documents_Inc - Control StartDate - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Report 2274554480 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Miad Stock Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Miad Stock Report_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2274554480 - Control 845401037 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the end date to filter the report.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Miad Stock Report_Inc - Control EndDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2274554480 - Control 845401037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>End Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Miad Stock Report_Inc - Control EndDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2274554480 - Control 3605153064 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the start date to filter the report.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Miad Stock Report_Inc - Control StartDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2274554480 - Control 3605153064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Start Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Miad Stock Report_Inc - Control StartDate - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 1129619406 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Open Bid Sales Quote</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -592,6 +642,41 @@
           <source>Sales Quote Export Report2_Inc</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Sales Quote Export Report2_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 578671723 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SKT Stock Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report SKT Stock Report_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 578671723 - Control 845401037 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the end date to filter the report.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report SKT Stock Report_Inc - Control EndDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 578671723 - Control 845401037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>End Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report SKT Stock Report_Inc - Control EndDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 578671723 - Control 2140734087 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the item category to filter the report.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report SKT Stock Report_Inc - Control ItemCategory - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 578671723 - Control 2140734087 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Category</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report SKT Stock Report_Inc - Control ItemCategory - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 578671723 - Control 3605153064 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the start date to filter the report.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report SKT Stock Report_Inc - Control StartDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 578671723 - Control 3605153064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Start Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report SKT Stock Report_Inc - Control StartDate - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 2898735113 - Action 4016521241 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2898735113">
           <source>Print Bid Price Request Report</source>
