@@ -668,6 +668,36 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report SKT Stock Report_Inc - Control ItemCategory - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Report 578671723 - Control 332802016 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the item number to filter the report.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report SKT Stock Report_Inc - Control ItemNo - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 578671723 - Control 332802016 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report SKT Stock Report_Inc - Control ItemNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 578671723 - Control 3891454143 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the location to filter the report.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report SKT Stock Report_Inc - Control Location - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 578671723 - Control 3891454143 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report SKT Stock Report_Inc - Control Location - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 578671723 - Control 3523677570 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the item charge number to filter the report.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report SKT Stock Report_Inc - Control LotNo - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 578671723 - Control 3523677570 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Charge No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report SKT Stock Report_Inc - Control LotNo - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 578671723 - Control 3605153064 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Select the start date to filter the report.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -702,6 +732,16 @@
           <source>Bid Purchase Order DT</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension DMO Bid Purch.Req. Sub.-INC - Action PurchaseOrderDT_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2097912207 - NamedType 974549674" size-unit="char" translate="yes" xml:space="preserve" al-object-target="PageExtension 2097912207">
+          <source>You are not allowed to change the status to Under Development.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Inspection Plan-B2F_Inc - NamedType Err01_Err</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2097912207 - NamedType 1914508431" size-unit="char" translate="yes" xml:space="preserve" al-object-target="PageExtension 2097912207">
+          <source>You are not allowed to change the status to Approved.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Inspection Plan-B2F_Inc - NamedType Err02_Err</note>
         </trans-unit>
         <trans-unit id="PageExtension 3459154614 - Action 4016521241 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3459154614">
           <source>Print Bid Price Request Report</source>

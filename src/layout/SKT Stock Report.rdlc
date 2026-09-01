@@ -11,7 +11,7 @@
       <am:Name>MSRB</am:Name>
       <am:Version>15.1.30001.02</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2026-08-27T13:43:48.8527961Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2026-09-01T10:20:04.7249178Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -38,13 +38,16 @@
                   <Width>1in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.15625in</Width>
+                  <Width>1.08333in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.29166in</Width>
+                  <Width>0.90625in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.57167in</Width>
+                  <Width>1.72916in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.4675in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1in</Width>
@@ -137,6 +140,42 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Uretici</Value>
+                                  <Style>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>Gray</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox4">
+                          <rd:DefaultName>Textbox4</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Lot No</Value>
                                   <Style>
                                     <Color>White</Color>
                                   </Style>
@@ -381,6 +420,40 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
+                        <Textbox Name="Lot_No">
+                          <rd:DefaultName>Lot_No</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Lot_No.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>Khaki</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
                         <Textbox Name="MaddeAd">
                           <rd:DefaultName>MaddeAd</rd:DefaultName>
                           <CanGrow>true</CanGrow>
@@ -495,6 +568,7 @@
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -519,7 +593,7 @@
             <Top>0in</Top>
             <Left>0in</Left>
             <Height>0.5in</Height>
-            <Width>8.01958in</Width>
+            <Width>8.18625in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -530,7 +604,7 @@
         <Height>0.51042in</Height>
         <Style />
       </Body>
-      <Width>8.01958in</Width>
+      <Width>8.18625in</Width>
       <Page>
         <Style />
       </Page>
@@ -599,6 +673,15 @@ End Function
         </Field>
         <Field Name="Uretici">
           <DataField>Uretici</DataField>
+        </Field>
+        <Field Name="Lot_No">
+          <DataField>Lot_No</DataField>
+        </Field>
+        <Field Name="LotKullan">
+          <DataField>LotKullan</DataField>
+        </Field>
+        <Field Name="LotKullanFormat">
+          <DataField>LotKullanFormat</DataField>
         </Field>
       </Fields>
       <Query>
