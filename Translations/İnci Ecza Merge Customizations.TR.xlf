@@ -817,14 +817,12 @@
           <source>Select the location to filter the report.</source>
           <target>Konum filtresi seçeneğidir.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report SKT Stock Report_Inc - Control Location - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Report 578671723 - Control 3891454143 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Location</source>
           <target>Konumlar</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report SKT Stock Report_Inc - Control Location - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 578671723 - Control 3523677570 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
