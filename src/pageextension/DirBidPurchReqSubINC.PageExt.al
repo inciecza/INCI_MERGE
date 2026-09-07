@@ -33,7 +33,7 @@ pageextension 70803 "Dir. Bid Purch.Req. Sub.-INC" extends "Dir. Bid Purch.Req. 
                 var
                     LBidPriceRequestReport: Report "Bid Price Request Report_Inc";
                 begin
-                    LBidPriceRequestReport.SetBidNo(Rec."Bid No.", Rec."Vendor No.");
+                    LBidPriceRequestReport.SetBidNo(Rec."Bid No.", Rec."Vendor No.", 0);
                     LBidPriceRequestReport.Run();
 
                 end;

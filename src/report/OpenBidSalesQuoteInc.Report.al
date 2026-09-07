@@ -42,7 +42,7 @@ report 70805 "Open Bid Sales Quote_Inc"
             { }
             column(ItemBarcode; ItemBarcode)
             { }
-            column(LineNo; LineNo)
+            column(LineNo; "Document Line No.")
             { }
             column(YerliMali; HomeProd)
             {
@@ -61,6 +61,8 @@ report 70805 "Open Bid Sales Quote_Inc"
                 { }
                 column(IhaleKayitNo; "Bid Registration No.")
                 { }
+                column(Hastane_Adi; "Sell-to Customer Name")
+                { }
 
             }
             trigger OnPreDataItem()
@@ -73,6 +75,7 @@ report 70805 "Open Bid Sales Quote_Inc"
             var
                 LItem: Record Item;
                 LVendor: Record Vendor;
+                LManufacturer: record Manufacturer;
             begin
                 Clear(ManufacturerCode);
                 Clear(ItemBarcode);
@@ -81,12 +84,12 @@ report 70805 "Open Bid Sales Quote_Inc"
                 LItem.SetLoadFields("No.", "GTIN");
                 if LItem.Get("Item No.") then begin
                     LineNo += 1;
-                    ItemBarcode := LItem.GTIN;
+                    ItemBarcode := CopyStr(LItem.GTIN, 2, 13);
                     if LItem."Home Product Document-INC" then
                         HomeProd := 'YM';
-                    Clear(LVendor);
-                    if LVendor.get(LItem."Vendor No.") then
-                        ManufacturerCode := LVendor.Name;
+                    Clear(LManufacturer);
+                    if LManufacturer.Get(LItem."Manufacturer Code") then
+                        ManufacturerCode := LManufacturer.Name;
                 end;
             end;
         }

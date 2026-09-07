@@ -31,7 +31,7 @@ report 70804 "Bid Sales Quote DT_Inc"
             column(Description; "Item Description")
             { }
 
-            column(Unit_of_Measure_Code; "Bid Unit of Measure")
+            column(Unit_of_Measure_Code; "Unit of Measure")
             { }
             column(Quantity; Quantity)
             { }
@@ -51,7 +51,7 @@ report 70804 "Bid Sales Quote DT_Inc"
                 DataItemLinkReference = BidQuoteLine;
                 DataItemLink = "No." = FIELD("Bid No.");
 
-                column(InciEczaID; "No.")
+                column(InciEczaID; "Bid Registration No.")
                 { }
                 column(IsinAdi; "Bid Name")
                 { }
@@ -71,6 +71,7 @@ report 70804 "Bid Sales Quote DT_Inc"
             var
                 LItem: Record Item;
                 LVendor: Record Vendor;
+                LManufacturer: Record Manufacturer;
             begin
                 Clear(ManufacturerCode);
                 Clear(ItemBarcode);
@@ -80,9 +81,9 @@ report 70804 "Bid Sales Quote DT_Inc"
                 if LItem.Get("Item No.") then begin
                     LineNo += 1;
                     ItemBarcode := LItem.GTIN;
-                    Clear(LVendor);
-                    if LVendor.get(LItem."Vendor No.") then
-                        ManufacturerCode := LVendor.Name;
+                    Clear(LManufacturer);
+                    if LManufacturer.Get(LItem."Manufacturer Code") then
+                        ManufacturerCode := LManufacturer.Name;
                 end;
             end;
         }

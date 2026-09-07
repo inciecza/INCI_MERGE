@@ -461,7 +461,7 @@
         </trans-unit>
         <trans-unit id="Report 1826625051 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Bid Purchase Order DT</source>
-          <target>Sipariş Formu</target>
+          <target>İhale Sipariş Formu</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Bid Purchase Order DT_Inc - Property Caption</note>
         </trans-unit>
@@ -857,7 +857,7 @@
         </trans-unit>
         <trans-unit id="PageExtension 2898735113 - Action 3540844402 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2898735113">
           <source>Bid Purchase Order DT</source>
-          <target>Sipariş Formu</target>
+          <target>Sipariş Formu DT</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Dir. Bid Purch.Req. Sub.-INC - Action PurchaseOrderDT_Inc - Property Caption</note>
         </trans-unit>
@@ -899,7 +899,7 @@
         </trans-unit>
         <trans-unit id="PageExtension 3459154614 - Action 3540844402 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3459154614">
           <source>Bid Purchase Order DT</source>
-          <target>Sipariş Formu</target>
+          <target>Sipariş Formu DT</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Open Bid Purch.Req. Sub.-INC - Action PurchaseOrderDT_Inc - Property Caption</note>
         </trans-unit>
@@ -944,6 +944,13 @@
           <target>Sevkiyatları Böl</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Warehouse Shipment2_Inc - Action Separate Shipments_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 76648678 - Field 3167235286 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3556015035">
+          <source>Bid Final Total</source>
+          <target>İhale Tutarı</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Bid Header-INC_Inc - Field Bid Final Total_Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 883498421 - Field 374050185 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4097962492">
           <source>Bid Guaranty</source>

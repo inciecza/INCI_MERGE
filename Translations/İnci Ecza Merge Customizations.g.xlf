@@ -788,10 +788,10 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Warehouse Shipment2_Inc - Action Separate Shipments_Inc - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 883498421 - Field 374050185 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4097962492">
-          <source>Bid Guaranty</source>
+        <trans-unit id="TableExtension 76648678 - Field 3167235286 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3556015035">
+          <source>Bid Final Total</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Guaranty-B2F_Inc - Field Bid Guaranty_Inc - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Bid Header-INC_Inc - Field Bid Final Total_Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 551539442 - Field 1655154494 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1487222247">
           <source>Direct Supply Bid</source>

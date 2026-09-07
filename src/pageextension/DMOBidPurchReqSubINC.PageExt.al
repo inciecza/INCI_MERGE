@@ -29,7 +29,7 @@ pageextension 70805 "DMO Bid Purch.Req. Sub.-INC" extends "DMO Bid Purch.Req. Su
                 var
                     LBidPriceRequestReport: Report "Bid Price Request Report_Inc";
                 begin
-                    LBidPriceRequestReport.SetBidNo(Rec."Bid No.", Rec."Vendor No.");
+                    LBidPriceRequestReport.SetBidNo(Rec."Bid No.", Rec."Vendor No.", 1);
                     LBidPriceRequestReport.Run();
 
                 end;
