@@ -81,6 +81,7 @@ report 70805 "Open Bid Sales Quote_Inc"
                 Clear(ItemBarcode);
                 Clear(LItem);
                 Clear(LineNo);
+                Clear(HomeProd);
                 LItem.SetLoadFields("No.", "GTIN");
                 if LItem.Get("Item No.") then begin
                     LineNo += 1;

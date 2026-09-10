@@ -17,7 +17,6 @@ pageextension 70806 "Dir. Supply Quote Worksht.-INC" extends "Dir. Supply Quote 
                     Clear(LBidSalesQuote);
                     LBidSalesQuote.SetParameters(Rec."Bid No.", Rec."Sell-to Customer No.");
                     LBidSalesQuote.Run();
-
                 end;
             }
         }

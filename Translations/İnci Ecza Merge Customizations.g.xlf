@@ -158,6 +158,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Inci Job Queue Entry Mang2_Inc - Method SendMiadReportData - NamedType LText_FileName_Lbl</note>
         </trans-unit>
+        <trans-unit id="Page 2011385462 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bid Balance Pages</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Balance Pages_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2369187226 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bid Sales Entry Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Entry Report_Inc - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 1661655205 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Joker Cari Satislar API</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -397,6 +407,31 @@
           <source>Bid Sales Quote DT</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Bid Sales Quote DT_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3830784638 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bid Sales Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bid Sales Report_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3830784638 - Control 845401037 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the end date to filter the report.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bid Sales Report_Inc - Control EndDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 3830784638 - Control 845401037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>End Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bid Sales Report_Inc - Control EndDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3830784638 - Control 3605153064 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the start date to filter the report.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bid Sales Report_Inc - Control StartDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 3830784638 - Control 3605153064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Start Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bid Sales Report_Inc - Control StartDate - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 1984224290 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Checks Collec. Payment Rep2</source>
@@ -723,6 +758,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Dir. Supply Quote Worksht.-INC - Action PurchaseOrderDT_Inc - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 3504287883 - Control 3167235286 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2097400806">
+          <source>Specifies the value of the Bid Final Total field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Direct Supply Bid List-INC_Inc - Control Bid Final Total_Inc - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3286591571 - Control 3167235286 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3888999998">
+          <source>Specifies the value of the Bid Final Total field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension DMO Bid List-INC_Inc - Control Bid Final Total_Inc - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="PageExtension 1440679476 - Action 4016521241 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1440679476">
           <source>Print Bid Price Request Report</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -742,6 +787,11 @@
           <source>You are not allowed to change the status to Approved.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Inspection Plan-B2F_Inc - NamedType Err02_Err</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3221568069 - Control 3167235286 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2309148588">
+          <source>Specifies the value of the Bid Final Total field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Open Bid List-INC_Inc - Control Bid Final Total_Inc - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 3459154614 - Action 4016521241 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3459154614">
           <source>Print Bid Price Request Report</source>

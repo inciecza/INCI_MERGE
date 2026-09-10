@@ -143,6 +143,7 @@ report 70815 "SKT Stock Report_Inc"
                 if not (StartDate = 0D) and (EndDate = 0D) then
                     LItemLedgerEntry.SetRange("Expiration Date", StartDate, EndDate);
 
+
                 if LItemLedgerEntry.FindSet() then
                     repeat
                         TempVLE.Reset();
