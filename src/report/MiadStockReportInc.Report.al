@@ -102,7 +102,7 @@ report 70814 "Miad Stock Report_Inc"
         if LCompany.Get(CompanyName) then
             if LCompany.Name = 'INC' then
                 LItemLedgerEntry.Setfilter("Item Category Code", 'BİTMİŞ ÜRÜN');
-        if not (StartDate = 0D) and (EndDate = 0D) then
+        if not (StartDate = 0D) and not (EndDate = 0D) then
             LItemLedgerEntry.SetRange("Expiration Date", StartDate, EndDate);
 
         if LItemLedgerEntry.FindSet() then

@@ -423,6 +423,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Bid Sales Report_Inc - Control EndDate - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Report 3830784638 - Control 979837602 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the order/document type to filter the report.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bid Sales Report_Inc - Control Order/Document Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 3830784638 - Control 979837602 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Order/Document Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bid Sales Report_Inc - Control Order/Document Type - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 3830784638 - Control 3605153064 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Select the start date to filter the report.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -432,6 +442,31 @@
           <source>Start Date</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Bid Sales Report_Inc - Control StartDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 33078871 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bid SAS Invoice Price Control</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bid SAS Invoice Price Control - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 33078871 - Control 845401037 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the end date to filter the report.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bid SAS Invoice Price Control - Control EndDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 33078871 - Control 845401037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>End Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bid SAS Invoice Price Control - Control EndDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 33078871 - Control 3605153064 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the start date to filter the report.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bid SAS Invoice Price Control - Control StartDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 33078871 - Control 3605153064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Start Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bid SAS Invoice Price Control - Control StartDate - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 1984224290 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Checks Collec. Payment Rep2</source>

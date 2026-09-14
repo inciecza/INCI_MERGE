@@ -98,6 +98,14 @@ report 70816 "Bid Sales Report_Inc"
             {
                 group(GroupName)
                 {
+                    field("Order/Document Type"; "Order/Document Type")
+                    {
+                        ApplicationArea = All;
+                        Caption = 'Order/Document Type';
+                        ToolTip = 'Select the order/document type to filter the report.';
+                        TableRelation = "Order/Document Type-B2F" where(Area = const(Sales),
+                                                        "Global Dimension 1 Code" = const('01.02.03'));
+                    }
 
                     field(StartDate; StartDate)
                     {
@@ -144,10 +152,11 @@ report 70816 "Bid Sales Report_Inc"
         if EndDate = 0D then
             error('End Date cannot be empty. Please select a valid end date.');
 
-
+        if "Order/Document Type" = '' then
+            error('Order/Document Type cannot be empty. Please select a valid order/document type.');
 
         LSalesInvoiceHeader.SetRange("Posting Date", StartDate, EndDate);
-        LSalesInvoiceHeader.SetRange("Responsibility Center", 'İHALE');
+        LSalesInvoiceHeader.SetRange("Order/Document Type-B2F", "Order/Document Type");
         if LSalesInvoiceHeader.FindSet() then
             repeat
                 LSalesInvoiceLine.SetRange("Document No.", LSalesInvoiceHeader."No.");
@@ -242,4 +251,5 @@ report 70816 "Bid Sales Report_Inc"
         i: Integer;
         StartDate: Date;
         EndDate: Date;
+        "Order/Document Type": Code[20];
 }

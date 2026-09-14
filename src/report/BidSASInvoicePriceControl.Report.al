@@ -1,65 +1,65 @@
-report 70810 "ABC Sales Report Summary_Inc"
+report 70817 "Bid SAS Invoice Price Control"
 {
-    Caption = 'ABC Sales Report Summary';
+    ApplicationArea = All;
+    Caption = 'Bid SAS Invoice Price Control';
     UsageCategory = ReportsAndAnalysis;
     DefaultLayout = RDLC;
-    ApplicationArea = All;
-    RDLCLayout = './src/layout/ABC Sales Report Summary.rdlc';
+    RDLCLayout = './src/layout/Bid SAS Invoice Price Control.rdlc';
     dataset
     {
         dataitem(TempVLE; "Value Entry")
         {
             UseTemporary = true;
-
-            column(GirisNo; "Entry No.")
+            column(Fark; "External Document No.")
             {
             }
-            column(Tarih; "Posting Date")
+            column(Fatura_Tarihi; "Posting Date")
             {
             }
-            column(MaddeNo; "Item No.")
+            column(Fatura_No; "Document No.")
             {
             }
-            column(MaddeAdi; "User ID")
+            column("Sipariş_Tarihi"; "Document Date")
             {
             }
-            column(FaturaNo; "Document No.")
+            column("Sipariş_No"; "Job Task No.")
             {
             }
-            column(MusteriAd; Description)
+            column("Chs_Ünvanı"; Description)
             {
             }
-            column(Miktar; "Invoiced Quantity")
+            column("Stok_Adı"; "Item Description")
             {
             }
-            column(BirimFiyat; "Cost per Unit")
+            column("Sipariş_Vadesi"; "Job No.")
             {
             }
-            column(Tutar; "Purchase Amount (Actual)")
+            column(Fatura_Vadesi; "Job Task No.")
             {
             }
-            column(TutarKdvDahil; "Cost per Unit (ACY)")
+            column("Sipariş_Miktarı"; "Valued Quantity")
             {
             }
-            column(MusteriBolgesi; "External Document No.")
+            column("Giriş_Miktarı"; "Invoiced Quantity")
             {
             }
-            column(SevkBekleyenMiktar; "Valued Quantity")
+            column("Fatura_Fiyatı"; "Cost per Unit")
             {
             }
-            column(SevkBekleyenTutar; "Cost Amount (Non-Invtbl.)")
+            column("Sipariş_Fiyatı"; "Cost per Unit (ACY)")
             {
             }
-            column(Segment; "Job Task No.")
+            column("Birim_Fiyat_Farkı"; "Purchase Amount (Actual)")
             {
             }
-            column(Merkez_Temsilci; "Order No.")
+            column("Toplam_Fiyat_Farkı"; "Purchase Amount (Expected)")
             {
-
             }
-            column(Saha_Temsilci; "Item Charge No.")
+            column(Chs_Kodu; "Source No.")
             {
-
+            }
+            column(Stok_Kodu; "Item No.")
+            {
             }
 
             trigger OnPreDataItem()
@@ -78,14 +78,6 @@ report 70810 "ABC Sales Report Summary_Inc"
                 group(GroupName)
                 {
 
-                    field(ResponsibilityCode; ResponsibilityCode)
-                    {
-                        ApplicationArea = All;
-                        Caption = 'Responsibility Center';
-                        ToolTip = 'Select the responsibility center to filter the report.';
-                        TableRelation = "Responsibility Center";
-                        Editable = ResponsControl;
-                    }
                     field(StartDate; StartDate)
                     {
                         ApplicationArea = All;
@@ -115,76 +107,90 @@ report 70810 "ABC Sales Report Summary_Inc"
         begin
             StartDate := Today;
             EndDate := Today;
-
-            Clear(LUserSetup);
-            LUserSetup.Get(UserId);
-            if LUserSetup."Sales Lines and Qty Contrl_Inc" then begin
-                ResponsibilityCode := LUserSetup."Sales Resp. Ctr. Filter";
-                ResponsControl := false;
-            end
-            else
-                ResponsControl := true;
-
         end;
     }
 
     local procedure FillTempVLE()
     var
-        LSalesInvoiceHeader: Record "Sales Invoice Header";
-        LSalesInvoiceLine: Record "Sales Invoice Line";
-        LUserSetup: Record "User Setup";
+        LPurcInvHeader: record "Purch. Inv. Header";
+        LPurcInvLine: record "Purch. Inv. Line";
+        LPurchHeaderArchive: Record "Purchase Header Archive";
+        LPurchLineArchive: Record "Purchase Line Archive";
     begin
         Clear(TempVLE);
-        LSalesInvoiceHeader.SetRange("Cancelled", false);
+        LPurcInvHeader.SetRange("Cancelled", false);
         if StartDate = 0D then
             error('Start Date cannot be empty. Please select a valid start date.');
         if EndDate = 0D then
             error('End Date cannot be empty. Please select a valid end date.');
 
-        /* if ResponsibilityCode = '' then
-             error('Responsibility Center cannot be empty. Please select a valid responsibility center.');
-             */
-
-        Clear(LUserSetup);
-        LUserSetup.Get(UserId);
-        if LUserSetup."Sales Lines and Qty Contrl_Inc" then
-            if LUserSetup."Sales Resp. Ctr. Filter" <> ResponsibilityCode then
-                ResponsibilityCode := LUserSetup."Sales Resp. Ctr. Filter";
-
-
-        LSalesInvoiceHeader.SetRange("Posting Date", StartDate, EndDate);
-        if ResponsibilityCode <> '' then
-            LSalesInvoiceHeader.SetRange("Responsibility Center", ResponsibilityCode);
-        if LSalesInvoiceHeader.FindSet() then
+        LPurcInvHeader.SetRange("Posting Date", StartDate, EndDate);
+        if LPurcInvHeader.FindSet() then
             repeat
-                LSalesInvoiceLine.Init();
-                LSalesInvoiceLine.SetRange("Document No.", LSalesInvoiceHeader."No.");
-                LSalesInvoiceLine.SetRange(Type, LSalesInvoiceLine.Type::Item);
-                if LSalesInvoiceLine.FindSet() then
+                if (LPurcInvHeader."Order/Document Type-B2F" = 'ST-DMO') or
+                (LPurcInvHeader."Order/Document Type-B2F" = 'ST-DMO KATALOG') or
+               (LPurcInvHeader."Order/Document Type-B2F" = 'ST-DOĞRUDAN TEMİN') or
+                (LPurcInvHeader."Order/Document Type-B2F" = 'ST-ÖZEL HASTANE') then begin
+
+
+                    LPurcInvLine.Init();
+                    LPurcInvLine.SetRange("Document No.", LPurcInvHeader."No.");
+                    LPurcInvLine.SetRange(Type, LPurcInvLine.Type::Item);
+                    if LPurcInvLine.FindSet() then begin
+                        LPurchHeaderArchive.Init();
+                        LPurchHeaderArchive.SetRange("Document Type", LPurchHeaderArchive."Document Type"::Order);
+                        LPurchHeaderArchive.SetRange("No.", LPurcInvLine."Order No.");
+                        LPurchHeaderArchive.SetCurrentKey("Version No.");
+                        if LPurchHeaderArchive.FindLast() then;
+                    end;
                     repeat
                         TempVLE.Init();
                         i += 1;
                         TempVLE."Entry No." := i;
-                        TempVLE."Posting Date" := LSalesInvoiceHeader."Posting Date";
-                        TempVLE."Item No." := LSalesInvoiceLine."No.";
+                        TempVLE."Posting Date" := LPurcInvHeader."Posting Date"; // Fatura Tarihi
+                        TempVLE."Document No." := LPurcInvHeader."Vendor Invoice No."; // Fatura No
+                        TempVLE."Document Date" := LPurchHeaderArchive."Order Date"; // Sipariş Tarihi
+                        TempVLE."Job Task No." := LPurchHeaderArchive."No."; // Sipariş No
+                        TempVLE."Source No." := LPurcInvHeader."Buy-from Vendor No."; // Chs Kodu
+                        TempVLE.Description := LPurcInvHeader."Buy-from Vendor Name"; //Chs Ünvanı
+                        TempVLE."Item No." := LPurcInvLine."No."; //Stok No
+                        TempVLE.CalcFields("Item Description"); // Stok Adı
+                        TempVLE."Job No." := LPurcInvLine."Payment Terms Code-INC"; //Sipariş Vadesi
+                        TempVLE."Job Task No." := LPurcInvLine."Payment Terms Code-INC";//Fatura Vadesi
+                        LPurchLineArchive.Init();
+                        LPurchLineArchive.SetRange("Document No.", LPurchHeaderArchive."No.");
+                        LPurchLineArchive.SetRange(Type, LPurchLineArchive.Type::Item);
+                        LPurchLineArchive.SetRange("Line No.", LPurcInvLine."Line No.");
+                        if LPurchLineArchive.FindSet() then begin
+                            TempVLE."Valued Quantity" := LPurchLineArchive."Quantity"; //Sipariş Miktarı
+                            TempVLE."Cost per Unit (ACY)" := LPurchLineArchive."Direct Unit Cost"; //Sipariş Fiyatı
+                        end;
+                        TempVLE."Invoiced Quantity" := LPurcInvLine."Quantity"; // Giriş Miktarı
+                        TempVLE."Cost per Unit" := LPurcInvLine."Direct Unit Cost"; // Fatura Fiyatı
+                        TempVLE."Purchase Amount (Actual)" := LPurcInvLine."Direct Unit Cost" - LPurchLineArchive."Direct Unit Cost";//Birim Fiyat Farkı
+                        TempVLE."Purchase Amount (Expected)" := TempVLE."Purchase Amount (Actual)" * TempVLE."Invoiced Quantity"; //Toplam Fiyat Farkı
+                        if TempVLE."Purchase Amount (Expected)" > 0 then
+                            TempVLE."External Document No." := 'Fazla kesilen'
+                        else if TempVLE."Purchase Amount (Expected)" < 0 then
+                            TempVLE."External Document No." := 'Eksik kesilen';
+
+                        /*
                         TempVLE."User ID" := CopyStr(LSalesInvoiceHeader."User ID", 1, 50);
-                        TempVLE."Document No." := LSalesInvoiceHeader."No.";
-                        TempVLE.Description := LSalesInvoiceHeader."Sell-to Customer Name";
-                        TempVLE."Invoiced Quantity" := LSalesInvoiceLine."Quantity"; // Miktar
-                        TempVLE."Cost per Unit" := LSalesInvoiceLine."Unit Price"; // Birim Fiyat
                         TempVLE."Purchase Amount (Actual)" := LSalesInvoiceLine."Amount"; // Tutar Kdv Hariç
-                        TempVLE."Cost per Unit (ACY)" := LSalesInvoiceLine."Amount Including VAT"; // Tutar Kdv Dahil
                         TempVLE."External Document No." := CopyStr(LSalesInvoiceLine."Responsibility Center", 1, maxStrLen(LSalesInvoiceHeader."Responsibility Center"));
-                        TempVLE."Job Task No." := SegmentCheck(LSalesInvoiceLine."No.");
+
                         TempVLE."Order No." := GetSalesRepresentatives(LSalesInvoiceLine."Responsibility Center", 1); //Merkez Temsilci
                         TempVLE."Item Charge No." := GetSalesRepresentatives(LSalesInvoiceLine."Responsibility Center", 2); // Saha Temsilci
+                        */
                         TempVLE.Insert();
-                    until LSalesInvoiceLine.Next() = 0;
-            until LSalesInvoiceHeader.Next() = 0;
+                    until LPurcInvLine.Next() = 0;
+                end;
+            until LPurcInvHeader.Next() = 0;
         //InsertWarehouseShipment();
     end;
 
-    local procedure GetSalesRepresentatives(SalesRepresentatives: code[10]; Index: Integer) rtnvalue: code[20]
+    local procedure GetSalesRepresentatives(SalesRepresentatives: code[10];
+Index: Integer) rtnvalue: code[20]
     var
         LResponsibilityCenter: Record "Responsibility Center";
         LCustomerRegion: record "Customer Regions_Inc";
@@ -215,7 +221,7 @@ report 70810 "ABC Sales Report Summary_Inc"
         if LWarehouseShipmentLine.FindSet() then
             repeat
                 Clear(LSalesLine);
-                LSalesLine.SetRange("Responsibility Center", ResponsibilityCode);
+                //  LSalesLine.SetRange("Responsibility Center", ResponsibilityCode);
                 LSalesLine.SetRange("Document Type", LSalesLine."Document Type"::Order);
                 LSalesLine.SetRange("Document No.", LWarehouseShipmentLine."Source No.");
                 LSalesLine.SetRange("Line No.", LWarehouseShipmentLine."Source Line No.");
@@ -258,9 +264,7 @@ report 70810 "ABC Sales Report Summary_Inc"
 
     var
         i: Integer;
-        ResponsibilityCode: code[10];
         StartDate: Date;
         EndDate: Date;
-        ResponsControl: boolean;
 
 }

@@ -39,8 +39,6 @@ codeunit 70800 "Inci Job Queue Entry Mang2_Inc"
         LItemLedgerEntry.Reset();
         LItemLedgerEntry.SetCurrentKey("Expiration Date");
         LItemLedgerEntry.SetAscending("Expiration Date", true);
-
-        LItemLedgerEntry.Setfilter("Item No.", '');
         LItemLedgerEntry.Setfilter("Location Code", '%1|%2', LIncGenSetup."Private Hospital Bagc.Location", LIncGenSetup."Private Hospital Malt.Location");
         LItemLedgerEntry.Setfilter("Remaining Quantity", '>0');
         Clear(LCompany);
