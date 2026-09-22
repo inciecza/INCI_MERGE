@@ -9,10 +9,11 @@ pageextension 70802 "Warehouse Shipment2_Inc" extends "Warehouse Shipment"
                 ApplicationArea = All;
                 Caption = 'Separate Shipments';
                 Image = Shipment;
+                Visible = true;
                 trigger OnAction()
                 begin
-                    WarehouseSeperate();
-                    CurrPage.Update();
+                    // WarehouseSeperate();
+                    // CurrPage.Update();
                 end;
 
             }

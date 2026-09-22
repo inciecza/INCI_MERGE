@@ -568,6 +568,31 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Export EInvoice Documents_Inc - Control StartDate - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Report 2008831331 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Financial Statements Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Financial Statements Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2008831331 - Control 845401037 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the end date to filter the report.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Financial Statements Report - Control EndDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2008831331 - Control 845401037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>End Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Financial Statements Report - Control EndDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2008831331 - Control 3605153064 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the start date to filter the report.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Financial Statements Report - Control StartDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2008831331 - Control 3605153064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Start Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Financial Statements Report - Control StartDate - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 2274554480 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Miad Stock Report</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -877,6 +902,16 @@
           <source>Bid Final Total</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension Bid Header-INC_Inc - Field Bid Final Total_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1779036939 - Field 1330574436 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3453140582">
+          <source>Customer Group</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Cash Flow Account_Inc - Field Customer Group_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1779036939 - Field 1330574436 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3453140582">
+          <source> ,Private Hospital,State Hospital,Univertsity Hospital,Pharmaceutical Distributor,Pharmacy,Companies,Export,Group Company,Foundation,DMO</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Cash Flow Account_Inc - Field Customer Group_Inc - Property OptionCaption</note>
         </trans-unit>
         <trans-unit id="TableExtension 551539442 - Field 1655154494 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1487222247">
           <source>Direct Supply Bid</source>

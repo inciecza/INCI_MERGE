@@ -18,7 +18,7 @@ pageextension 70811 "Incoming PTS Packages-B2F_Inc" extends "Incoming PTS Packag
                             Commit();
                         end;
                     '8680406000037':
-                        if LVendor.Get('ST00101002') then begin
+                        if LVendor.Get('ST00101001') then begin
                             LVendor.GLN := '8680406000037';
                             LVendor.Modify();
                             Commit();

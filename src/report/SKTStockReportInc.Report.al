@@ -124,7 +124,8 @@ report 70815 "SKT Stock Report_Inc"
         Clear(LItem);
         if ItemNo <> '' then
             LItem.Setfilter("No.", ItemNo);
-        LItem.Setfilter("Item Category Code", ItemCategory);
+        if ItemCategory <> '' then
+            LItem.Setfilter("Item Category Code", ItemCategory);
         if LItem.FindSet() then
             repeat
                 Clear(TempVLE);
@@ -137,7 +138,6 @@ report 70815 "SKT Stock Report_Inc"
                 LItemLedgerEntry.SetRange("Item No.", LItem."No.");
                 LItemLedgerEntry.SetCurrentKey("Expiration Date");
                 LItemLedgerEntry.SetAscending("Expiration Date", true);
-                LItemLedgerEntry.Setfilter("Location Code", '%1|%2', LIncGenSetup."Private Hospital Bagc.Location", LIncGenSetup."Private Hospital Malt.Location");
                 LItemLedgerEntry.Setfilter("Remaining Quantity", '>0');
                 Clear(LCompany);
                 if not (StartDate = 0D) and (EndDate = 0D) then
@@ -151,7 +151,6 @@ report 70815 "SKT Stock Report_Inc"
                         TempVLE.SetRange("Posting Date", LItemLedgerEntry."Expiration Date");
                         if LotNo then
                             TempVLE.SetRange("User ID", LItemLedgerEntry."Lot No.");
-
                         if TempVLE.FindFirst() then begin
                             TempVLE."Invoiced Quantity" += LItemLedgerEntry."Remaining Quantity";
                             TempVLE.Modify();
