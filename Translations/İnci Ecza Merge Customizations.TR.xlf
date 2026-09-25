@@ -685,35 +685,30 @@
           <source>Financial Statements Report</source>
           <target>Bilanço Raporu</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Financial Statements Report - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 2008831331 - Control 845401037 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Select the end date to filter the report.</source>
           <target>Raporlamak için bitiş tarihini seçin.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Financial Statements Report - Control EndDate - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Report 2008831331 - Control 845401037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>End Date</source>
           <target>Bitiş Tarihi</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Financial Statements Report - Control EndDate - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 2008831331 - Control 3605153064 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Select the start date to filter the report.</source>
           <target>Raporlamak için başlangıç tarihini seçin.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Financial Statements Report - Control StartDate - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Report 2008831331 - Control 3605153064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Start Date</source>
           <target>Başlangıç Tarihi</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Financial Statements Report - Control StartDate - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 2274554480 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -967,6 +962,13 @@
           <target>Başlangıç Tarihi</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report SKT Stock Report_Inc - Control StartDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1807068541 - Action 225290902 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 339962132">
+          <source>Dimension Update</source>
+          <target>Boyutları Güncelle</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Dimension Values_Inc - Action ActionName_Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 2898735113 - Action 4016521241 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2898735113">
           <source>Print Bid Price Request Report</source>

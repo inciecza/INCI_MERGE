@@ -19,11 +19,11 @@
             "schemaUpdateMode": "ForceSync"
         },
                 {
-            "name": "Inci Azure SandboxTest3",
+            "name": "Inci Azure SandboxTest",
             "type": "al",
             "request": "launch",
             "environmentType": "Sandbox",
-            "environmentName": "Test3",
+            "environmentName": "Test",
             "startupObjectId": 22,
             "breakOnError": true,
             "tenant": "6fe2fb39-fdf2-44e7-a257-46840013dbe3",
