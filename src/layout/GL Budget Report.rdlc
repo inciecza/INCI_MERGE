@@ -11,7 +11,7 @@
       <am:Name>MSRB</am:Name>
       <am:Version>15.1.30001.02</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2026-09-25T12:26:19.9867455Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2026-09-28T11:42:28.4059561Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -24,64 +24,6 @@
       <rd:DataSourceID>17fdeef1-bb56-4816-b96a-3ea3842680da</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="GirisNo">
-          <DataField>GirisNo</DataField>
-        </Field>
-        <Field Name="Tarih">
-          <DataField>Tarih</DataField>
-        </Field>
-        <Field Name="Bütçe_Kodu">
-          <DataField>Bütçe_Kodu</DataField>
-        </Field>
-        <Field Name="Bütçe_Ad">
-          <DataField>Bütçe_Ad</DataField>
-        </Field>
-        <Field Name="Bütçe_Genel_Ad">
-          <DataField>Bütçe_Genel_Ad</DataField>
-        </Field>
-        <Field Name="Bütçe_Tutar">
-          <DataField>Bütçe_Tutar</DataField>
-        </Field>
-        <Field Name="Bütçe_TutarFormat">
-          <DataField>Bütçe_TutarFormat</DataField>
-        </Field>
-        <Field Name="Gerçekleşen_Tutar">
-          <DataField>Gerçekleşen_Tutar</DataField>
-        </Field>
-        <Field Name="Gerçekleşen_TutarFormat">
-          <DataField>Gerçekleşen_TutarFormat</DataField>
-        </Field>
-        <Field Name="Önceki_Yıl_Tutar">
-          <DataField>Önceki_Yıl_Tutar</DataField>
-        </Field>
-        <Field Name="Önceki_Yıl_TutarFormat">
-          <DataField>Önceki_Yıl_TutarFormat</DataField>
-        </Field>
-        <Field Name="Rapor_Adı">
-          <DataField>Rapor_Adı</DataField>
-        </Field>
-        <Field Name="Ay_Yıl">
-          <DataField>Ay_Yıl</DataField>
-        </Field>
-        <Field Name="Rapor_Kodu">
-          <DataField>Rapor_Kodu</DataField>
-        </Field>
-        <Field Name="Faaliyet_Gideri">
-          <DataField>Faaliyet_Gideri</DataField>
-        </Field>
-        <Field Name="Faaliyet_GideriFormat">
-          <DataField>Faaliyet_GideriFormat</DataField>
-        </Field>
-      </Fields>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -166,6 +108,7 @@
                                   <Value>=Sum(Fields!Önceki_Yıl_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -203,6 +146,7 @@
                                   <Value>=Sum(Fields!Bütçe_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -241,6 +185,7 @@
                                   <Value>=Sum(Fields!Gerçekleşen_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -279,6 +224,7 @@
                                   <Value>=Sum(Fields!Önceki_Yıl_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -317,6 +263,7 @@
                                   <Value>=Sum(Fields!Bütçe_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -355,6 +302,7 @@
                                   <Value>=Sum(Fields!Gerçekleşen_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -437,6 +385,7 @@
                                   <Value>=Sum(Fields!Önceki_Yıl_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Normal</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -470,6 +419,7 @@
                                   <Value>=Sum(Fields!Bütçe_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Normal</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -503,6 +453,7 @@
                                   <Value>=Sum(Fields!Gerçekleşen_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Normal</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -536,6 +487,7 @@
                                   <Value>=Sum(Fields!Önceki_Yıl_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -569,6 +521,7 @@
                                   <Value>=Sum(Fields!Bütçe_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -602,6 +555,7 @@
                                   <Value>=Sum(Fields!Gerçekleşen_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -678,6 +632,7 @@
                                   <Value>=Sum(IIf(Fields!Rapor_Kodu.Value = "10" Or Fields!Rapor_Kodu.Value = "12",Fields!Önceki_Yıl_Tutar.Value, CDec(0)))</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -711,6 +666,7 @@
                                   <Value>=Sum(IIf(Fields!Rapor_Kodu.Value = "10" Or Fields!Rapor_Kodu.Value = "12", Fields!Bütçe_Tutar.Value, CDec(0)))</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -744,6 +700,7 @@
                                   <Value>=Sum(IIf(Fields!Rapor_Kodu.Value = "10" Or Fields!Rapor_Kodu.Value = "12",Fields!Gerçekleşen_Tutar.Value, CDec(0)))</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -777,6 +734,7 @@
                                   <Value>=Sum(IIf(Fields!Rapor_Kodu.Value = "10" Or Fields!Rapor_Kodu.Value = "12", Fields!Önceki_Yıl_Tutar.Value, CDec(0)))</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -810,6 +768,7 @@
                                   <Value>=Sum(IIf(Fields!Rapor_Kodu.Value = "10" Or Fields!Rapor_Kodu.Value = "12", Fields!Bütçe_Tutar.Value, CDec(0)))</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -843,6 +802,7 @@
                                   <Value>=Sum(IIf(Fields!Rapor_Kodu.Value = "10" Or Fields!Rapor_Kodu.Value = "12",Fields!Gerçekleşen_Tutar.Value, CDec(0)))</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -919,6 +879,7 @@
                                   <Value>=Sum(Fields!Önceki_Yıl_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -956,6 +917,7 @@
                                   <Value>=Sum(Fields!Bütçe_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -994,6 +956,7 @@
                                   <Value>=Sum(Fields!Gerçekleşen_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -1032,6 +995,7 @@
                                   <Value>=Sum(Fields!Önceki_Yıl_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -1070,6 +1034,7 @@
                                   <Value>=Sum(Fields!Bütçe_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -1108,6 +1073,7 @@
                                   <Value>=Sum(Fields!Gerçekleşen_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -1196,6 +1162,7 @@
                                   <Value>=Sum(Fields!Önceki_Yıl_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Normal</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -1229,6 +1196,7 @@
                                   <Value>=Sum(Fields!Bütçe_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Normal</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -1262,6 +1230,7 @@
                                   <Value>=Sum(Fields!Gerçekleşen_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Normal</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -1295,6 +1264,7 @@
                                   <Value>=Sum(Fields!Önceki_Yıl_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -1328,6 +1298,7 @@
                                   <Value>=Sum(Fields!Bütçe_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -1361,6 +1332,7 @@
                                   <Value>=Sum(Fields!Gerçekleşen_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -1432,6 +1404,7 @@
                                   <Value />
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -1465,6 +1438,7 @@
                                   <Value />
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -1498,6 +1472,7 @@
                                   <Value />
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -1531,6 +1506,7 @@
                                   <Value />
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -1564,6 +1540,7 @@
                                   <Value />
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -1597,6 +1574,7 @@
                                   <Value />
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -1668,6 +1646,7 @@
                                   <Value>=Sum(IIf(Fields!Rapor_Kodu.Value = "10" Or Fields!Rapor_Kodu.Value = "11" Or Fields!Rapor_Kodu.Value = "12", Fields!Önceki_Yıl_Tutar.Value, CDec(0)))</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -1700,6 +1679,7 @@
                                   <Value>=Sum(IIf(Fields!Rapor_Kodu.Value = "10" Or Fields!Rapor_Kodu.Value = "11" Or Fields!Rapor_Kodu.Value = "12", Fields!Bütçe_Tutar.Value, CDec(0)))</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -1733,6 +1713,7 @@
                                   <Value>=Sum(IIf(Fields!Rapor_Kodu.Value = "10" Or Fields!Rapor_Kodu.Value = "11" Or Fields!Rapor_Kodu.Value = "12", Fields!Gerçekleşen_Tutar.Value, CDec(0)))</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -1766,6 +1747,7 @@
                                   <Value>=Sum(IIf(Fields!Rapor_Kodu.Value = "10" Or Fields!Rapor_Kodu.Value = "11" Or Fields!Rapor_Kodu.Value = "12", Fields!Önceki_Yıl_Tutar.Value, CDec(0)))</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -1798,6 +1780,7 @@
                                   <Value>=Sum(IIf(Fields!Rapor_Kodu.Value = "10" Or Fields!Rapor_Kodu.Value = "11" Or Fields!Rapor_Kodu.Value = "12", Fields!Bütçe_Tutar.Value, CDec(0)))</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -1831,6 +1814,7 @@
                                   <Value>=Sum(IIf(Fields!Rapor_Kodu.Value = "10" Or Fields!Rapor_Kodu.Value = "11" Or Fields!Rapor_Kodu.Value = "12", Fields!Gerçekleşen_Tutar.Value, CDec(0)))</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -1902,7 +1886,7 @@
                                   <Value>=Sum(IIf(Fields!Rapor_Kodu.Value = "10" Or Fields!Rapor_Kodu.Value = "12", Fields!Önceki_Yıl_Tutar.Value, CDec(0))) / Sum(IIf(Fields!Rapor_Kodu.Value = "10" Or Fields!Rapor_Kodu.Value = "11" Or Fields!Rapor_Kodu.Value = "12", Fields!Önceki_Yıl_Tutar.Value, CDec(0)))</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>0.00 %</Format>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -1936,7 +1920,7 @@
                                   <Value>=Sum(IIf(Fields!Rapor_Kodu.Value = "10" Or Fields!Rapor_Kodu.Value = "12", Fields!Bütçe_Tutar.Value, CDec(0))) / Sum(IIf(Fields!Rapor_Kodu.Value = "10" Or Fields!Rapor_Kodu.Value = "11" Or Fields!Rapor_Kodu.Value = "12", Fields!Bütçe_Tutar.Value, CDec(0)))</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>0.00 %</Format>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -1970,7 +1954,7 @@
                                   <Value>=Sum(IIf(Fields!Rapor_Kodu.Value = "10" Or Fields!Rapor_Kodu.Value = "12", Fields!Gerçekleşen_Tutar.Value, CDec(0))) / Sum(IIf(Fields!Rapor_Kodu.Value = "10" Or Fields!Rapor_Kodu.Value = "11" Or Fields!Rapor_Kodu.Value = "12", Fields!Gerçekleşen_Tutar.Value, CDec(0)))</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>0.00 %</Format>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -2004,7 +1988,7 @@
                                   <Value>=Sum(IIf(Fields!Rapor_Kodu.Value = "10" Or Fields!Rapor_Kodu.Value = "12", Fields!Önceki_Yıl_Tutar.Value, CDec(0))) / Sum(IIf(Fields!Rapor_Kodu.Value = "10" Or Fields!Rapor_Kodu.Value = "11" Or Fields!Rapor_Kodu.Value = "12", Fields!Önceki_Yıl_Tutar.Value, CDec(0)))</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>0.00 %</Format>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -2038,7 +2022,7 @@
                                   <Value>=Sum(IIf(Fields!Rapor_Kodu.Value = "10" Or Fields!Rapor_Kodu.Value = "12", Fields!Bütçe_Tutar.Value, CDec(0))) / Sum(IIf(Fields!Rapor_Kodu.Value = "10" Or Fields!Rapor_Kodu.Value = "11" Or Fields!Rapor_Kodu.Value = "12", Fields!Bütçe_Tutar.Value, CDec(0)))</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>0.00 %</Format>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -2072,7 +2056,7 @@
                                   <Value>=Sum(IIf(Fields!Rapor_Kodu.Value = "10" Or Fields!Rapor_Kodu.Value = "12", Fields!Gerçekleşen_Tutar.Value, CDec(0))) / Sum(IIf(Fields!Rapor_Kodu.Value = "10" Or Fields!Rapor_Kodu.Value = "11" Or Fields!Rapor_Kodu.Value = "12", Fields!Gerçekleşen_Tutar.Value, CDec(0)))</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>0.00 %</Format>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -2144,6 +2128,7 @@
                                   <Value>=Fields!Faaliyet_Gideri.Value</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -2177,6 +2162,7 @@
                                   <Value>=Fields!Faaliyet_Gideri.Value</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -2210,6 +2196,7 @@
                                   <Value>=Fields!Faaliyet_Gideri.Value</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -2622,6 +2609,7 @@
                                   <Value>=Sum(Fields!Önceki_Yıl_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -2659,6 +2647,7 @@
                                   <Value>=Sum(Fields!Bütçe_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -2697,6 +2686,7 @@
                                   <Value>=Sum(Fields!Gerçekleşen_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -2735,6 +2725,7 @@
                                   <Value>=Sum(Fields!Önceki_Yıl_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -2773,6 +2764,7 @@
                                   <Value>=Sum(Fields!Bütçe_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -2811,6 +2803,7 @@
                                   <Value>=Sum(Fields!Gerçekleşen_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -2899,6 +2892,7 @@
                                   <Value>=Sum(Fields!Önceki_Yıl_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Normal</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -2932,6 +2926,7 @@
                                   <Value>=Sum(Fields!Bütçe_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Normal</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -2965,6 +2960,7 @@
                                   <Value>=Sum(Fields!Gerçekleşen_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Normal</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -2998,6 +2994,7 @@
                                   <Value>=Sum(Fields!Önceki_Yıl_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -3031,6 +3028,7 @@
                                   <Value>=Sum(Fields!Bütçe_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -3064,6 +3062,7 @@
                                   <Value>=Sum(Fields!Gerçekleşen_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -3140,6 +3139,7 @@
                                   <Value>=Fields!Faaliyet_Gideri.Value+Sum(IIf(Fields!Rapor_Kodu.Value = "13" ,Fields!Önceki_Yıl_Tutar.Value, CDec(0)))</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -3173,6 +3173,7 @@
                                   <Value>=Fields!Faaliyet_Gideri.Value+Sum(IIf(Fields!Rapor_Kodu.Value = "13" ,Fields!Bütçe_Tutar.Value, CDec(0)))</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -3206,6 +3207,7 @@
                                   <Value>=Fields!Faaliyet_Gideri.Value+Sum(IIf(Fields!Rapor_Kodu.Value = "13" ,Fields!Gerçekleşen_Tutar.Value, CDec(0)))</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -3239,6 +3241,7 @@
                                   <Value />
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -3272,6 +3275,7 @@
                                   <Value />
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -3305,6 +3309,7 @@
                                   <Value />
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -3378,7 +3383,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=(Fields!Faaliyet_Gideri.Value+Sum(IIf(Fields!Rapor_Kodu.Value = "13" ,Fields!Önceki_Yıl_Tutar.Value, CDec(0))))/(Sum(IIf(Fields!Rapor_Kodu.Value = "10" Or Fields!Rapor_Kodu.Value = "12",Fields!Önceki_Yıl_Tutar.Value, CDec(0))))</Value>
+                                  <Value>=Sum(IIf(Fields!Rapor_Kodu.Value = "13", Fields!Önceki_Yıl_Tutar.Value, CDec(0))) / Sum(IIf(Fields!Rapor_Kodu.Value = "10" Or Fields!Rapor_Kodu.Value = "12", Fields!Önceki_Yıl_Tutar.Value, CDec(0)))</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>0.00 %</Format>
@@ -3412,7 +3417,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=(Fields!Faaliyet_Gideri.Value+Sum(IIf(Fields!Rapor_Kodu.Value = "13" ,Fields!Bütçe_Tutar.Value, CDec(0))))/(Sum(IIf(Fields!Rapor_Kodu.Value = "10" Or Fields!Rapor_Kodu.Value = "12", Fields!Bütçe_Tutar.Value, CDec(0))))</Value>
+                                  <Value>=Sum(IIf(Fields!Rapor_Kodu.Value = "13", Fields!Bütçe_Tutar.Value, CDec(0))) / Sum(IIf(Fields!Rapor_Kodu.Value = "10" Or Fields!Rapor_Kodu.Value = "12", Fields!Bütçe_Tutar.Value, CDec(0)))</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>0.00 %</Format>
@@ -3446,7 +3451,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=(Fields!Faaliyet_Gideri.Value+Sum(IIf(Fields!Rapor_Kodu.Value = "13" ,Fields!Gerçekleşen_Tutar.Value, CDec(0)))/(Sum(IIf(Fields!Rapor_Kodu.Value = "10" Or Fields!Rapor_Kodu.Value = "12",Fields!Gerçekleşen_Tutar.Value, CDec(0))))</Value>
+                                  <Value>=Sum(IIf(Fields!Rapor_Kodu.Value = "13" ,Fields!Gerçekleşen_Tutar.Value, CDec(0)))/(Sum(IIf(Fields!Rapor_Kodu.Value = "10" Or Fields!Rapor_Kodu.Value = "12",Fields!Gerçekleşen_Tutar.Value, CDec(0))))</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>0.00 %</Format>
@@ -3625,6 +3630,7 @@
                                   <Value>=Sum(Fields!Önceki_Yıl_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -3662,6 +3668,7 @@
                                   <Value>=Sum(Fields!Bütçe_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -3700,6 +3707,7 @@
                                   <Value>=Sum(Fields!Gerçekleşen_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -3738,6 +3746,7 @@
                                   <Value>=Sum(Fields!Önceki_Yıl_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -3776,6 +3785,7 @@
                                   <Value>=Sum(Fields!Bütçe_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -3814,6 +3824,7 @@
                                   <Value>=Sum(Fields!Gerçekleşen_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -3902,6 +3913,7 @@
                                   <Value>=Sum(Fields!Önceki_Yıl_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Normal</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -3935,6 +3947,7 @@
                                   <Value>=Sum(Fields!Bütçe_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Normal</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -3968,6 +3981,7 @@
                                   <Value>=Sum(Fields!Gerçekleşen_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Normal</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -4001,6 +4015,7 @@
                                   <Value>=Sum(Fields!Önceki_Yıl_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -4034,6 +4049,7 @@
                                   <Value>=Sum(Fields!Bütçe_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -4067,6 +4083,7 @@
                                   <Value>=Sum(Fields!Gerçekleşen_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -4387,6 +4404,7 @@
                                   <Value>=Sum(Fields!Önceki_Yıl_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -4424,6 +4442,7 @@
                                   <Value>=Sum(Fields!Bütçe_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -4462,6 +4481,7 @@
                                   <Value>=Sum(Fields!Gerçekleşen_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -4500,6 +4520,7 @@
                                   <Value>=Sum(Fields!Önceki_Yıl_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -4538,6 +4559,7 @@
                                   <Value>=Sum(Fields!Bütçe_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -4576,6 +4598,7 @@
                                   <Value>=Sum(Fields!Gerçekleşen_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -4664,6 +4687,7 @@
                                   <Value>=Sum(Fields!Önceki_Yıl_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Normal</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -4697,6 +4721,7 @@
                                   <Value>=Sum(Fields!Bütçe_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Normal</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -4730,6 +4755,7 @@
                                   <Value>=Sum(Fields!Gerçekleşen_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Normal</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -4763,6 +4789,7 @@
                                   <Value>=Sum(Fields!Önceki_Yıl_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -4796,6 +4823,7 @@
                                   <Value>=Sum(Fields!Bütçe_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -4829,6 +4857,7 @@
                                   <Value>=Sum(Fields!Gerçekleşen_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -5152,6 +5181,7 @@
                                   <Value>=Sum(Fields!Önceki_Yıl_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -5189,6 +5219,7 @@
                                   <Value>=Sum(Fields!Bütçe_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -5227,6 +5258,7 @@
                                   <Value>=Sum(Fields!Gerçekleşen_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -5265,6 +5297,7 @@
                                   <Value>=Sum(Fields!Önceki_Yıl_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -5303,6 +5336,7 @@
                                   <Value>=Sum(Fields!Bütçe_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -5341,6 +5375,7 @@
                                   <Value>=Sum(Fields!Gerçekleşen_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -5429,6 +5464,7 @@
                                   <Value>=Sum(Fields!Önceki_Yıl_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Normal</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -5462,6 +5498,7 @@
                                   <Value>=Sum(Fields!Bütçe_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Normal</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -5495,6 +5532,7 @@
                                   <Value>=Sum(Fields!Gerçekleşen_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Normal</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -5528,6 +5566,7 @@
                                   <Value>=Sum(Fields!Önceki_Yıl_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -5561,6 +5600,7 @@
                                   <Value>=Sum(Fields!Bütçe_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -5594,6 +5634,7 @@
                                   <Value>=Sum(Fields!Gerçekleşen_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -5670,6 +5711,7 @@
                                   <Value>=Sum(Fields!Önceki_Yıl_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -5707,6 +5749,7 @@
                                   <Value>=Sum(Fields!Bütçe_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -5745,6 +5788,7 @@
                                   <Value>=Sum(Fields!Gerçekleşen_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -5783,6 +5827,7 @@
                                   <Value>=Sum(Fields!Önceki_Yıl_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -5821,6 +5866,7 @@
                                   <Value>=Sum(Fields!Bütçe_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -5859,6 +5905,7 @@
                                   <Value>=Sum(Fields!Gerçekleşen_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -5947,6 +5994,7 @@
                                   <Value>=Sum(Fields!Önceki_Yıl_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Normal</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -5980,6 +6028,7 @@
                                   <Value>=Sum(Fields!Bütçe_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Normal</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -6013,6 +6062,7 @@
                                   <Value>=Sum(Fields!Gerçekleşen_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Normal</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -6046,6 +6096,7 @@
                                   <Value>=Sum(Fields!Önceki_Yıl_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -6079,6 +6130,7 @@
                                   <Value>=Sum(Fields!Bütçe_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -6112,6 +6164,7 @@
                                   <Value>=Sum(Fields!Gerçekleşen_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -6188,6 +6241,7 @@
                                   <Value>=Sum(Fields!Önceki_Yıl_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -6225,6 +6279,7 @@
                                   <Value>=Sum(Fields!Bütçe_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -6263,6 +6318,7 @@
                                   <Value>=Sum(Fields!Gerçekleşen_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -6301,6 +6357,7 @@
                                   <Value>=Sum(Fields!Önceki_Yıl_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -6339,6 +6396,7 @@
                                   <Value>=Sum(Fields!Bütçe_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -6377,6 +6435,7 @@
                                   <Value>=Sum(Fields!Gerçekleşen_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
@@ -6465,6 +6524,7 @@
                                   <Value>=Sum(Fields!Önceki_Yıl_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Normal</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -6498,6 +6558,7 @@
                                   <Value>=Sum(Fields!Bütçe_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Normal</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -6531,6 +6592,7 @@
                                   <Value>=Sum(Fields!Gerçekleşen_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Normal</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -6564,6 +6626,7 @@
                                   <Value>=Sum(Fields!Önceki_Yıl_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -6597,6 +6660,7 @@
                                   <Value>=Sum(Fields!Bütçe_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -6630,6 +6694,7 @@
                                   <Value>=Sum(Fields!Gerçekleşen_Tutar.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>n2</Format>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -7480,6 +7545,9 @@
                           </Textbox>
                         </CellContents>
                       </TablixHeader>
+                      <Visibility>
+                        <Hidden>true</Hidden>
+                      </Visibility>
                     </TablixMember>
                     <TablixMember>
                       <TablixHeader>
@@ -7524,6 +7592,9 @@
                           </Textbox>
                         </CellContents>
                       </TablixHeader>
+                      <Visibility>
+                        <Hidden>true</Hidden>
+                      </Visibility>
                     </TablixMember>
                     <TablixMember>
                       <TablixHeader>
@@ -7568,6 +7639,9 @@
                           </Textbox>
                         </CellContents>
                       </TablixHeader>
+                      <Visibility>
+                        <Hidden>true</Hidden>
+                      </Visibility>
                     </TablixMember>
                   </TablixMembers>
                 </TablixMember>
@@ -7948,12 +8022,6 @@
       </Page>
     </ReportSection>
   </ReportSections>
-  <ReportParametersLayout>
-    <GridLayoutDefinition>
-      <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
-    </GridLayoutDefinition>
-  </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
@@ -7991,4 +8059,62 @@ End Function
 </Code>
   <Language>=User!Language</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="GirisNo">
+          <DataField>GirisNo</DataField>
+        </Field>
+        <Field Name="Tarih">
+          <DataField>Tarih</DataField>
+        </Field>
+        <Field Name="Bütçe_Kodu">
+          <DataField>Bütçe_Kodu</DataField>
+        </Field>
+        <Field Name="Bütçe_Ad">
+          <DataField>Bütçe_Ad</DataField>
+        </Field>
+        <Field Name="Bütçe_Genel_Ad">
+          <DataField>Bütçe_Genel_Ad</DataField>
+        </Field>
+        <Field Name="Bütçe_Tutar">
+          <DataField>Bütçe_Tutar</DataField>
+        </Field>
+        <Field Name="Bütçe_TutarFormat">
+          <DataField>Bütçe_TutarFormat</DataField>
+        </Field>
+        <Field Name="Gerçekleşen_Tutar">
+          <DataField>Gerçekleşen_Tutar</DataField>
+        </Field>
+        <Field Name="Gerçekleşen_TutarFormat">
+          <DataField>Gerçekleşen_TutarFormat</DataField>
+        </Field>
+        <Field Name="Önceki_Yıl_Tutar">
+          <DataField>Önceki_Yıl_Tutar</DataField>
+        </Field>
+        <Field Name="Önceki_Yıl_TutarFormat">
+          <DataField>Önceki_Yıl_TutarFormat</DataField>
+        </Field>
+        <Field Name="Rapor_Adı">
+          <DataField>Rapor_Adı</DataField>
+        </Field>
+        <Field Name="Ay_Yıl">
+          <DataField>Ay_Yıl</DataField>
+        </Field>
+        <Field Name="Rapor_Kodu">
+          <DataField>Rapor_Kodu</DataField>
+        </Field>
+        <Field Name="Faaliyet_Gideri">
+          <DataField>Faaliyet_Gideri</DataField>
+        </Field>
+        <Field Name="Faaliyet_GideriFormat">
+          <DataField>Faaliyet_GideriFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

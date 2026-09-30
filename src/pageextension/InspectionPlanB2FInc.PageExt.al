@@ -24,10 +24,10 @@ pageextension 70814 "Inspection Plan-B2F_Inc" extends "Inspection Plan-B2F"
         if LUserSetup.Get(UserId) then
             case StatusType of
                 1:
-                    if LUserSetup."Inspection Approved_Inc" then
+                    if not LUserSetup."Inspection Approved_Inc" then
                         Error(Err01_Err);
                 2:
-                    if LUserSetup."Inspection Developing_Inc" then
+                    if not LUserSetup."Inspection Developing_Inc" then
                         Error(Err02_Err);
             end;
     end;

@@ -17,16 +17,8 @@ pageextension 70813 "Outgoing PTS Packages-B2F_Inc" extends "Outgoing PTS Packag
                     Clear(LReport);
                     LReport.Run();
                 end;
-
-
-
             }
-
-
-
-
-
-
         }
     }
+
 }

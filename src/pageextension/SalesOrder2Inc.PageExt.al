@@ -6,11 +6,22 @@ pageextension 70801 "Sales Order2_Inc" extends "Sales Order"
         {
             trigger OnAfterAction()
             var
-                LInciJobQueueEntryMang2Inc: Codeunit "Inci Job Queue Entry Mang2_Inc";
                 LWarehouseShipmentHeader: Record "Warehouse Shipment Header";
                 LWarehouseShipmentLine: Record "Warehouse Shipment Line";
                 LCompany: Record "Company";
+                LSalesLine: Record "Sales Line";
+                LInciJobQueueEntryMang2Inc: Codeunit "Inci Job Queue Entry Mang2_Inc";
+                LInciGen: codeunit InciGeneral_Inc;
             begin
+                LSalesLine.Init();
+                LSalesLine.SetRange("Document No.", Rec."No.");
+                LSalesLine.SetRange("Document Type", Rec."Document Type");
+                if LSalesLine.FindSet() then
+                    repeat
+                        Clear(LInciGen);
+                        LInciGen.CheckNegativeStock(LSalesLine);
+                    until LSalesLine.Next() = 0;
+
                 Clear(LCompany);
                 if LCompany.Get(CompanyName) then
                     if LCompany.Name = 'INC' then begin

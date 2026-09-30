@@ -293,6 +293,7 @@ codeunit 70800 "Inci Job Queue Entry Mang2_Inc"
         LWSL: Record "Warehouse Shipment Line";
         LWSH: Record "Warehouse Shipment Header";
         LCustomer: Record Customer;
+        TransferHeader: record "Transfer Header";
         LItemQuant: Decimal;
         LItemCount: Decimal;
     begin
@@ -305,10 +306,19 @@ codeunit 70800 "Inci Job Queue Entry Mang2_Inc"
                     Clear(LWSL);
                     LWSL.SetRange("No.", LWSH."No.");
                     if LWSL.FindFirst() then
-                        if LCustomer.Get(LWSL."Destination No.") then begin
-                            LWSH."Customer Name_Inc" := LCustomer.Name;
-                            LWSH."Customer Region Code_Inc" := LCustomer."Customer Region Code_Inc";
-
+                        case LWSL."Source Document" of
+                            LWSL."Source Document"::"Sales Order":
+                                if LCustomer.Get(LWSL."Destination No.") then begin
+                                    LWSH."Customer Name_Inc" := LCustomer.Name;
+                                    LWSH."Customer Region Code_Inc" := LCustomer."Customer Region Code_Inc";
+                                    LWSH."Field Update_Inc" := true;
+                                end;
+                            LWSL."Source Document"::"Outbound Transfer":
+                                if TransferHeader.Get(LWSL."Source No.") then begin
+                                    LWSH."Customer Name_Inc" := TransferHeader."Transfer-to Name";
+                                    LWSH."Customer Region Code_Inc" := TransferHeader."Trsf.-to Country/Region Code";
+                                    LWSH."Field Update_Inc" := true;
+                                end;
                         end;
                 end;
                 Clear(LItemQuant);
@@ -324,7 +334,6 @@ codeunit 70800 "Inci Job Queue Entry Mang2_Inc"
                 LWSH."Total Item Count_Inc" := LItemCount;
                 LWSH."Total Item Quantity_Inc" := LItemQuant;
                 LWSH.Note_Inc := CopyStr(GetNote(LWSH."No."), 1, MaxStrLen(LWSH.Note_Inc));
-                LWSH."Field Update_Inc" := true;
                 LWSH.Modify();
 
             until LWSH.Next() = 0;

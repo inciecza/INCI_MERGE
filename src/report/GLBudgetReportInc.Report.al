@@ -139,10 +139,11 @@ report 70819 "G/L Budget Report_Inc"
                     TempVLE."User ID" := LDimensionValue."Dimension Report Descr_Inc";
                     TempVLE."Item No." := LDimensionValue."Dimension Code"; //Bütçe Genel Adı
                     TempVLE."Cost per Unit" := 0; // Bütçe Tutar
-                    TempVLE."Cost per Unit (ACY)" := 0; // Gerçekleşen Tutar
-                    TempVLE."Purchase Amount (Actual)" := 0; // Önceki Yıl Tutar
+                    TempVLE."Cost per Unit (ACY)" := DimensionGLEntryInsert(LDimensionValue."Code", LDimensionValue."Acc.No.for Prep.Exp/Rev.-B2F", CalcDate('<+CM>', CurrMonth)); // Gerçekleşen Tutar
+                    TempVLE."Purchase Amount (Actual)" := GetLastBudgetEntry(LDimensionValue."Code", CurrMonth); // Önceki Yıl Tutar
                     TempVLE."Cost Amount (Expected)" := 647443.41;
                     TempVLE."Job No." := GetMonthYearText(CurrMonth);
+                    TempVLE."Job Task No." := LDimensionValue."Dimension Report Code_Inc";
                     TempVLE.Insert();
 
                     CurrMonth := CalcDate('<1M>', CurrMonth); // sonraki ayın 1'i
@@ -233,6 +234,35 @@ report 70819 "G/L Budget Report_Inc"
         end;
 
         exit('');
+    end;
+
+    local procedure DimensionGLEntryInsert(pDimensionValue: Code[20]; pAccountNo: Code[20]; pPostingDate: Date): Decimal
+    var
+        LGLEntry: Record "G/L Entry";
+    begin
+        if pAccountNo = '' then
+            LGLEntry.SetFilter("G/L Account No.", '7*' + pDimensionValue)
+        else
+            LGLEntry.SetRange("G/L Account No.", pAccountNo);
+        LGLEntry.SetFilter("Posting Date", '..%1', pPostingDate);
+        LGLEntry.CalcSums(Amount);
+        exit(LGLEntry.Amount);
+    end;
+
+    local procedure GetLastBudgetEntry(pBudgetDimensionCode: Code[20]; pBudgetDate: date): Decimal
+    var
+        LLastBudgetEntry: Record "Last Budget Buffer Data_Inc";
+        LDate: Date;
+    begin
+        LDate := CalcDate('<-1Y>', pBudgetDate);
+        LLastBudgetEntry.Init();
+        LLastBudgetEntry.SetRange("Dimension Code", pBudgetDimensionCode);
+        LLastBudgetEntry.Setfilter("Posting Date", '%1..%2', CalcDate('<-CM>', LDate), CalcDate('<-CM>', LDate));
+        if LLastBudgetEntry.FindSet() then begin
+            LLastBudgetEntry.CalcSums(Amount);
+            exit(LLastBudgetEntry.Amount);
+        end else
+            exit(0);
     end;
 
     var

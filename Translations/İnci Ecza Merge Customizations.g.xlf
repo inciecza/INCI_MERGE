@@ -103,6 +103,36 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Joker Cari Satislar Buffer_Inc - Field Yil - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 95425064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Budget Buffer Data</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Last Budget Buffer Data_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 95425064 - Field 636392376 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Last Budget Buffer Data_Inc - Field Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 95425064 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Last Budget Buffer Data_Inc - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 95425064 - Field 2623957639 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dimension Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Last Budget Buffer Data_Inc - Field Dimension Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 95425064 - Field 329134311 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry No</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Last Budget Buffer Data_Inc - Field Entry No - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 95425064 - Field 3710982960 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Last Budget Buffer Data_Inc - Field Posting Date - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 972512850 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Separate Invoice Creation</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -917,6 +947,11 @@
           <source>Create PTS Packages</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Outgoing PTS Packages-B2F_Inc - Action Create PTS Packages_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3308573330 - Action 142252280 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1883018247">
+          <source>Remove Selected</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTS Whse Rcpt Lines-B2F_Inc - Action RemoveSelected_Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 236938974 - Action 249095212 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2026081320">
           <source>Item Data Export Report</source>

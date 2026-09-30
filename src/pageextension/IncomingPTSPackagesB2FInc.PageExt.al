@@ -27,4 +27,9 @@ pageextension 70811 "Incoming PTS Packages-B2F_Inc" extends "Incoming PTS Packag
             end;
         }
     }
+    trigger OnOpenPage()
+    begin
+        Rec.SetCurrentKey("Entry No.");
+        Rec.Ascending(false);
+    end;
 }

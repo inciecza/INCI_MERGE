@@ -65,7 +65,7 @@ pageextension 70821 "Dimension Values_Inc" extends "Dimension Values"
                     if LDimensionValue.FindSet() then
                         repeat
                             LGLEntry.Init();
-                            LGLEntry.SetFilter("G/L Account No.", '7*%1', LDimensionValue."Acc.No.for Prep.Exp/Rev.-B2F");
+                            LGLEntry.SetFilter("G/L Account No.", '7*%1', LDimensionValue.Code);
                             LGLEntry.SetRange("Posting Date", LStartDate, LEndDate);
                             if LGLEntry.FindSet() then
                                 repeat
