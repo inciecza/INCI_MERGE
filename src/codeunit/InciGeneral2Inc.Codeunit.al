@@ -33,5 +33,50 @@ codeunit 70801 "InciGeneral2_Inc"
         EXIT(TRUE);
     end;
 
+    procedure CreateSerialNoTxt(pEntryNo: Integer; PItemLedgerEntryType: Enum "Item Ledger Entry Type")
+    var
+        LSerialNoMaster: Record "Serial No. Master-B2F";
+        LItem: Record Item;
+        TempBlob: Codeunit "Temp Blob";
+        OutStr: OutStream;
+        InStr: InStream;
+        LineTxt: Text;
+        ExpDateTxt: Text;
+        FileName: Text;
+        HasLines: Boolean;
+    begin
+        LSerialNoMaster.SetRange("Last ILE Entry No.", pEntryNo);
+        LSerialNoMaster.SetRange("Last Entry Type", PItemLedgerEntryType);
+
+        if LSerialNoMaster.FindSet() then begin
+            TempBlob.CreateOutStream(OutStr, TextEncoding::UTF8);
+            repeat
+                LItem.Get(LSerialNoMaster."Item No.");
+
+                // 31.01.2029 -> 290131 (YYMMDD)
+                if LSerialNoMaster."Expiration Date" <> 0D then
+                    ExpDateTxt := Format(LSerialNoMaster."Expiration Date", 0, '<Year,2><Month,2><Day,2>')
+                else
+                    ExpDateTxt := '';
+
+                // 01 + GTIN + 21 + Serial + ;17 + SKT + 10 + Lot
+                LineTxt :=
+                    '01' + LItem.GTIN +
+                    '21' + LSerialNoMaster."Serial No." +
+                    ';17' + ExpDateTxt +
+                    '10' + LSerialNoMaster."Lot No.";
+
+                OutStr.WriteText(LineTxt);
+                OutStr.WriteText(); // satır sonu (CRLF)
+                HasLines := true;
+            until LSerialNoMaster.Next() = 0;
+        end;
+
+        if HasLines then begin
+            TempBlob.CreateInStream(InStr, TextEncoding::UTF8);
+            FileName := StrSubstNo('SerialNo_%1.txt', pEntryNo);
+            DownloadFromStream(InStr, 'Seri No Txt', '', '', FileName);
+        end;
+    end;
 
 }

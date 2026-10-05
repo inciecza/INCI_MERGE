@@ -188,6 +188,61 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Inci Job Queue Entry Mang2_Inc - Method SendMiadReportData - NamedType LText_FileName_Lbl</note>
         </trans-unit>
+        <trans-unit id="Codeunit 3492788027 - NamedType 3509666998" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The file contains no serial number lines.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Serial Importer_Inc - NamedType EmptyFileMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3492788027 - NamedType 1486026171" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The file contains %1 serial number(s). Together with the %2 already entered this exceeds the expected quantity %3. Do you want to continue?</source>
+          <note from="Developer" annotates="general" priority="2">%1 = file count; %2 = entered count; %3 = expected qty</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Serial Importer_Inc - NamedType ExceedsExpectedQst</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3492788027 - NamedType 669274739" size-unit="char" translate="yes" xml:space="preserve">
+          <source>GS1 field %1 is incomplete</source>
+          <note from="Developer" annotates="general" priority="2">%1 = AI</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Serial Importer_Inc - NamedType FieldIncompleteErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3492788027 - NamedType 138710225" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Import GS1 Serial Numbers</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Serial Importer_Inc - NamedType ImportDialogLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3492788027 - NamedType 2983624497" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Text Files (*.txt)|*.txt|CSV Files (*.csv)|*.csv|All Files (*.*)|*.*</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Serial Importer_Inc - NamedType ImportFilterLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3492788027 - NamedType 3874001407" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 serial number(s) imported (%2 already present were skipped). Expected: %3.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = imported count; %2 = skipped count; %3 = expected qty</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Serial Importer_Inc - NamedType ImportResultMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3492788027 - NamedType 1432801292" size-unit="char" translate="yes" xml:space="preserve">
+          <source>invalid expiration date "%1"</source>
+          <note from="Developer" annotates="general" priority="2">%1 = date text</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Serial Importer_Inc - NamedType InvalidDateErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3492788027 - NamedType 1405722854" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line %1 could not be read: %2\\Line content: %3</source>
+          <note from="Developer" annotates="general" priority="2">%1 = line no.; %2 = reason; %3 = line text</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Serial Importer_Inc - NamedType InvalidLineErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3492788027 - NamedType 4169478939" size-unit="char" translate="yes" xml:space="preserve">
+          <source>no serial number (AI 21) found</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Serial Importer_Inc - NamedType MissingSerialErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3492788027 - NamedType 2733073735" size-unit="char" translate="yes" xml:space="preserve">
+          <source>unknown GS1 application identifier "%1"</source>
+          <note from="Developer" annotates="general" priority="2">%1 = AI</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Serial Importer_Inc - NamedType UnknownAIErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3492788027 - NamedType 2127484308" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 is longer than %2 characters</source>
+          <note from="Developer" annotates="general" priority="2">%1 = field caption; %2 = max length</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Serial Importer_Inc - NamedType ValueTooLongErr</note>
+        </trans-unit>
         <trans-unit id="Page 2011385462 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Bid Balance Pages</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -658,6 +713,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report G/L Budget Report_Inc - Control StartDate - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Report 1834505083 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Ledger Entry Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Item Ledger Entry Report_Inc - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 2274554480 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Miad Stock Report</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -918,6 +978,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Inspection Plan-B2F_Inc - NamedType Err02_Err</note>
         </trans-unit>
+        <trans-unit id="PageExtension 875860813 - Action 2171134367 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3595318222">
+          <source>Download QR Code List</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Item Ledger Entries2_Inc - Action QRCode_Inc - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 3221568069 - Control 3167235286 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2309148588">
           <source>Specifies the value of the Bid Final Total field.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -967,6 +1032,16 @@
           <source>Item Miad Location Page</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Quote Subform2_Inc - Action ItemMiad2_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2034988685 - Action 289639135 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1964728324">
+          <source>Import serial numbers from a GS1 text file (01&lt;GTIN&gt;21&lt;Serial No.&gt;;17&lt;YYMMDD&gt;10&lt;Lot No.&gt;). Serial No., expiration date and lot no. are read from each line.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Serial No. Entry-B2F_Inc - Action ImportGS1File_Inc - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2034988685 - Action 289639135 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1964728324">
+          <source>Import QR code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Serial No. Entry-B2F_Inc - Action ImportGS1File_Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 2973108816 - Action 2644261591 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2938519335">
           <source>Separate Shipments</source>
