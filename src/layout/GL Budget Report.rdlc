@@ -11,7 +11,7 @@
       <am:Name>MSRB</am:Name>
       <am:Version>15.1.30001.02</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2026-09-28T11:42:28.4059561Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2026-10-08T10:20:43.1443177Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -24,6 +24,67 @@
       <rd:DataSourceID>17fdeef1-bb56-4816-b96a-3ea3842680da</rd:DataSourceID>
     </DataSource>
   </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+      <Fields>
+        <Field Name="GirisNo">
+          <DataField>GirisNo</DataField>
+        </Field>
+        <Field Name="Tarih">
+          <DataField>Tarih</DataField>
+        </Field>
+        <Field Name="Bütçe_Kodu">
+          <DataField>Bütçe_Kodu</DataField>
+        </Field>
+        <Field Name="Bütçe_Ad">
+          <DataField>Bütçe_Ad</DataField>
+        </Field>
+        <Field Name="Bütçe_Genel_Ad">
+          <DataField>Bütçe_Genel_Ad</DataField>
+        </Field>
+        <Field Name="Bütçe_Tutar">
+          <DataField>Bütçe_Tutar</DataField>
+        </Field>
+        <Field Name="Bütçe_TutarFormat">
+          <DataField>Bütçe_TutarFormat</DataField>
+        </Field>
+        <Field Name="Gerçekleşen_Tutar">
+          <DataField>Gerçekleşen_Tutar</DataField>
+        </Field>
+        <Field Name="Gerçekleşen_TutarFormat">
+          <DataField>Gerçekleşen_TutarFormat</DataField>
+        </Field>
+        <Field Name="Önceki_Yıl_Tutar">
+          <DataField>Önceki_Yıl_Tutar</DataField>
+        </Field>
+        <Field Name="Önceki_Yıl_TutarFormat">
+          <DataField>Önceki_Yıl_TutarFormat</DataField>
+        </Field>
+        <Field Name="Rapor_Adı">
+          <DataField>Rapor_Adı</DataField>
+        </Field>
+        <Field Name="Ay_Yıl">
+          <DataField>Ay_Yıl</DataField>
+        </Field>
+        <Field Name="Rapor_Kodu">
+          <DataField>Rapor_Kodu</DataField>
+        </Field>
+        <Field Name="Faaliyet_Gideri">
+          <DataField>Faaliyet_Gideri</DataField>
+        </Field>
+        <Field Name="Faaliyet_GideriFormat">
+          <DataField>Faaliyet_GideriFormat</DataField>
+        </Field>
+        <Field Name="Detay_Açıklaması">
+          <DataField>Detay_Açıklaması</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -4885,6 +4946,254 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
+                        <Textbox Name="Textbox195">
+                          <rd:DefaultName>Textbox195</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value xml:space="preserve">           </Value>
+                                  <Style>
+                                    <FontWeight>Normal</FontWeight>
+                                    <Color>#333333</Color>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value>=Fields!Detay_Açıklaması.Value</Value>
+                                  <Style>
+                                    <FontWeight>Normal</FontWeight>
+                                    <Color>#333333</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <BottomBorder>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </BottomBorder>
+                            <BackgroundColor>LightSteelBlue</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox196">
+                          <rd:DefaultName>Textbox196</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontWeight>Normal</FontWeight>
+                                    <Color>#333333</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox197">
+                          <rd:DefaultName>Textbox197</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontWeight>Normal</FontWeight>
+                                    <Color>#333333</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Gerçekleşen_Tutar1">
+                          <rd:DefaultName>Gerçekleşen_Tutar1</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Gerçekleşen_Tutar.Value</Value>
+                                  <Style>
+                                    <FontWeight>Normal</FontWeight>
+                                    <Color>#333333</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <BackgroundColor>LightSteelBlue</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox199">
+                          <rd:DefaultName>Textbox199</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Color>#333333</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox200">
+                          <rd:DefaultName>Textbox200</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Color>#333333</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Gerçekleşen_Tutar3">
+                          <rd:DefaultName>Gerçekleşen_Tutar3</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!Gerçekleşen_Tutar.Value)</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Color>#333333</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
                         <Textbox Name="Textbox125">
                           <rd:DefaultName>Textbox104</rd:DefaultName>
                           <CanGrow>true</CanGrow>
@@ -7783,12 +8092,8 @@
                     </TablixMember>
                   </TablixMembers>
                 </TablixMember>
-                <TablixMember>
-                  <KeepWithGroup>Before</KeepWithGroup>
-                </TablixMember>
-                <TablixMember>
-                  <KeepWithGroup>Before</KeepWithGroup>
-                </TablixMember>
+                <TablixMember />
+                <TablixMember />
                 <TablixMember>
                   <Group Name="Rapor_Kodu1">
                     <GroupExpressions>
@@ -7865,6 +8170,25 @@
                               <Value>=Fields!Bütçe_Ad.Value</Value>
                             </SortExpression>
                           </SortExpressions>
+                          <TablixMembers>
+                            <TablixMember />
+                            <TablixMember>
+                              <TablixMembers>
+                                <TablixMember>
+                                  <Group Name="Detay_Açıklaması">
+                                    <GroupExpressions>
+                                      <GroupExpression>=Fields!Detay_Açıklaması.Value</GroupExpression>
+                                    </GroupExpressions>
+                                  </Group>
+                                  <SortExpressions>
+                                    <SortExpression>
+                                      <Value>=Fields!Detay_Açıklaması.Value</Value>
+                                    </SortExpression>
+                                  </SortExpressions>
+                                </TablixMember>
+                              </TablixMembers>
+                            </TablixMember>
+                          </TablixMembers>
                         </TablixMember>
                       </TablixMembers>
                     </TablixMember>
@@ -7998,7 +8322,7 @@
             <DataSetName>DataSet_Result</DataSetName>
             <Top>0in</Top>
             <Left>0in</Left>
-            <Height>7.5in</Height>
+            <Height>7.75in</Height>
             <Width>9.91667in</Width>
             <Style>
               <Border>
@@ -8007,7 +8331,7 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>7.5in</Height>
+        <Height>7.75in</Height>
         <Style />
       </Body>
       <Width>9.91667in</Width>
@@ -8022,6 +8346,12 @@
       </Page>
     </ReportSection>
   </ReportSections>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfRows>2</NumberOfRows>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
@@ -8059,62 +8389,4 @@ End Function
 </Code>
   <Language>=User!Language</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Fields>
-        <Field Name="GirisNo">
-          <DataField>GirisNo</DataField>
-        </Field>
-        <Field Name="Tarih">
-          <DataField>Tarih</DataField>
-        </Field>
-        <Field Name="Bütçe_Kodu">
-          <DataField>Bütçe_Kodu</DataField>
-        </Field>
-        <Field Name="Bütçe_Ad">
-          <DataField>Bütçe_Ad</DataField>
-        </Field>
-        <Field Name="Bütçe_Genel_Ad">
-          <DataField>Bütçe_Genel_Ad</DataField>
-        </Field>
-        <Field Name="Bütçe_Tutar">
-          <DataField>Bütçe_Tutar</DataField>
-        </Field>
-        <Field Name="Bütçe_TutarFormat">
-          <DataField>Bütçe_TutarFormat</DataField>
-        </Field>
-        <Field Name="Gerçekleşen_Tutar">
-          <DataField>Gerçekleşen_Tutar</DataField>
-        </Field>
-        <Field Name="Gerçekleşen_TutarFormat">
-          <DataField>Gerçekleşen_TutarFormat</DataField>
-        </Field>
-        <Field Name="Önceki_Yıl_Tutar">
-          <DataField>Önceki_Yıl_Tutar</DataField>
-        </Field>
-        <Field Name="Önceki_Yıl_TutarFormat">
-          <DataField>Önceki_Yıl_TutarFormat</DataField>
-        </Field>
-        <Field Name="Rapor_Adı">
-          <DataField>Rapor_Adı</DataField>
-        </Field>
-        <Field Name="Ay_Yıl">
-          <DataField>Ay_Yıl</DataField>
-        </Field>
-        <Field Name="Rapor_Kodu">
-          <DataField>Rapor_Kodu</DataField>
-        </Field>
-        <Field Name="Faaliyet_Gideri">
-          <DataField>Faaliyet_Gideri</DataField>
-        </Field>
-        <Field Name="Faaliyet_GideriFormat">
-          <DataField>Faaliyet_GideriFormat</DataField>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-    </DataSet>
-  </DataSets>
 </Report>
