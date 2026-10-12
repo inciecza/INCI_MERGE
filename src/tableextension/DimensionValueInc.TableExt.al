@@ -12,6 +12,12 @@ tableextension 70804 "Dimension Value_Inc" extends "Dimension Value"
             Caption = 'Dimension Report Code';
             DataClassification = ToBeClassified;
         }
+        field(70802; "Detail Description Type_Inc"; Option)
+        {
+            OptionMembers = "Description","Vehicle Code","Employee Code";
+            OptionCaption = 'Description,Vehicle Code,Employee Code';
+        }
+
 
     }
 }

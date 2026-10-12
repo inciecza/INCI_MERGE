@@ -13,6 +13,10 @@ pageextension 70821 "Dimension Values_Inc" extends "Dimension Values"
             {
                 ApplicationArea = All;
             }
+            field("Detail Description Type_Inc"; Rec."Detail Description Type_Inc")
+            {
+                ApplicationArea = All;
+            }
         }
     }
 

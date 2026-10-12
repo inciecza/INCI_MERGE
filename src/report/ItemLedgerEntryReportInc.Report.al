@@ -25,6 +25,7 @@ report 70820 "Item Ledger Entry Report_Inc"
             column(OpeningBalance; OpeningBalance) { }
             column(EntryTypeText; EntryTypeText) { }
             column(DocumentTypeText; DocumentTypeText) { }
+            column(Description; "Source Description-B2F") { }
 
             trigger OnPreDataItem()
             begin
