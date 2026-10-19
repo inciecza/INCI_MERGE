@@ -39,6 +39,10 @@ report 70815 "SKT Stock Report_Inc"
             {
             }
 
+            column(Birimi; "Source No.")
+            {
+            }
+
             trigger OnPreDataItem()
             begin
                 FillTempVLE();
@@ -166,6 +170,7 @@ report 70815 "SKT Stock Report_Inc"
                             TempVLE."Invoiced Quantity" := LItemLedgerEntry."Remaining Quantity";
                             TempVLE."User ID" := LItemLedgerEntry."Lot No."; // Lot No
                             TempVLE."Item Charge No." := CopyStr(GetManufacturerName(LItemLedgerEntry."Item No."), 1, 20);
+                            TempVLE."Source No." := LItemLedgerEntry."Unit of Measure Code";
                             if LotNo then
                                 TempVLE."Invoiced Quantity" := 1;
                             TempVLE.Insert();

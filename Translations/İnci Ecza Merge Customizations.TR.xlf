@@ -817,50 +817,31 @@
           <source>G/L Budget Report Detail</source>
           <target>Muhasebe Bütçe Raporu Detayı</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report G/L Budget Report Detail_Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 2439518439 - Control 3353585606 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Select the budget name to filter the report.</source>
           <target>Raporlamak için bütçe adını seçin.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report G/L Budget Report Detail_Inc - Control BudgetName - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Report 2439518439 - Control 3353585606 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Budget Name</source>
           <target>Bütçe Adı</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report G/L Budget Report Detail_Inc - Control BudgetName - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Report 2439518439 - Control 845401037 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Select the end date to filter the report.</source>
-          <target>Raporlamak için bitiş tarihini seçin.</target>
+        <trans-unit id="Report 2439518439 - Control 497847406 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the report date to filter the report.</source>
+          <target>Raporlamak için rapor tarihini seçin.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Report G/L Budget Report Detail_Inc - Control EndDate - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report G/L Budget Report Detail_Inc - Control ReportDate - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Report 2439518439 - Control 845401037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>End Date</source>
-          <target>Bitiş Tarihi</target>
+        <trans-unit id="Report 2439518439 - Control 497847406 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Report Date</source>
+          <target>Rapor Tarihi</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Report G/L Budget Report Detail_Inc - Control EndDate - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Report 2439518439 - Control 3605153064 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Select the start date to filter the report.</source>
-          <target>Raporlamak için başlangıç tarihini seçin.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Report G/L Budget Report Detail_Inc - Control StartDate - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Report 2439518439 - Control 3605153064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Start Date</source>
-          <target>Başlangıç Tarihi</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Report G/L Budget Report Detail_Inc - Control StartDate - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report G/L Budget Report Detail_Inc - Control ReportDate - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 197660520 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>G/L Budget Report</source>
@@ -1352,8 +1333,19 @@
           <source>Budget Code</source>
           <target>Bütçe Kodu</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension G/L Account_Inc - Field Budget Code_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1314341212 - Field 926841713 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2199490085">
+          <source>Stock Inventory Account Manager Approve</source>
+          <target>Stok Envanter Muhasebe Yöneticisi Onayı</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Invt. Document Header_Inc - Field Invt Ship Acc. Mang. App._Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1314341212 - Field 438995276 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2199490085">
+          <source>Stock Inventory Manager Approve</source>
+          <target>Stok Envanter Yöneticisi Onayı</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Invt. Document Header_Inc - Field Invt Ship Mang. App._Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 551539442 - Field 1655154494 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1487222247">
           <source>Direct Supply Bid</source>

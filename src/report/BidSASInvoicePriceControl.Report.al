@@ -130,7 +130,11 @@ report 70817 "Bid SAS Invoice Price Control"
                 if (LPurcInvHeader."Order/Document Type-B2F" = 'ST-DMO') or
                 (LPurcInvHeader."Order/Document Type-B2F" = 'ST-DMO KATALOG') or
                (LPurcInvHeader."Order/Document Type-B2F" = 'ST-DOĞRUDAN TEMİN') or
-                (LPurcInvHeader."Order/Document Type-B2F" = 'ST-ÖZEL HASTANE') then begin
+                (LPurcInvHeader."Order/Document Type-B2F" = 'ST-ÖZEL HASTANE') or
+                (LPurcInvHeader."Order/Document Type-B2F" = 'SA-AÇIK İHALE') or
+                (LPurcInvHeader."Order/Document Type-B2F" = 'SA-DMO') or
+                (LPurcInvHeader."Order/Document Type-B2F" = 'SA-DOĞRUDAN TEMİN') or
+                (LPurcInvHeader."Order/Document Type-B2F" = 'SA-ÖZEL HASTANE') then begin
 
 
                     LPurcInvLine.Init();

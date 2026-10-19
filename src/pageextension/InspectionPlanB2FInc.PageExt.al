@@ -6,6 +6,10 @@ pageextension 70814 "Inspection Plan-B2F_Inc" extends "Inspection Plan-B2F"
         {
             trigger OnAfterValidate()
             begin
+
+                if (Rec.Status = Rec.Status::Certified) then
+                    if not (xRec.Status = Rec.Status::"Under Development") then
+                        Error('İlk Önce Geliştiriliyor aşamasına almanız gerekiyor.');
                 case Rec.Status of
                     Rec.Status::"Under Development":
                         RoutingCheckStatus(1);

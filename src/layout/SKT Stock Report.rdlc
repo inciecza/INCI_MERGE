@@ -11,7 +11,7 @@
       <am:Name>MSRB</am:Name>
       <am:Version>15.1.30001.02</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2026-09-01T10:20:04.7249178Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2026-10-19T07:39:16.6987921Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -24,6 +24,52 @@
       <rd:DataSourceID>1499e069-9baa-4147-be6e-d5a8bb336ab3</rd:DataSourceID>
     </DataSource>
   </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+      <Fields>
+        <Field Name="GirisNo">
+          <DataField>GirisNo</DataField>
+        </Field>
+        <Field Name="Miad_Tarih">
+          <DataField>Miad_Tarih</DataField>
+        </Field>
+        <Field Name="MaddeNo">
+          <DataField>MaddeNo</DataField>
+        </Field>
+        <Field Name="MaddeAd">
+          <DataField>MaddeAd</DataField>
+        </Field>
+        <Field Name="Barkod">
+          <DataField>Barkod</DataField>
+        </Field>
+        <Field Name="Miktar">
+          <DataField>Miktar</DataField>
+        </Field>
+        <Field Name="MiktarFormat">
+          <DataField>MiktarFormat</DataField>
+        </Field>
+        <Field Name="Uretici">
+          <DataField>Uretici</DataField>
+        </Field>
+        <Field Name="Lot_No">
+          <DataField>Lot_No</DataField>
+        </Field>
+        <Field Name="LotKullan">
+          <DataField>LotKullan</DataField>
+        </Field>
+        <Field Name="LotKullanFormat">
+          <DataField>LotKullanFormat</DataField>
+        </Field>
+        <Field Name="Birimi">
+          <DataField>Birimi</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -44,13 +90,16 @@
                   <Width>0.90625in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.72916in</Width>
+                  <Width>1.57291in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.4675in</Width>
+                  <Width>1.2175in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>0.72917in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.6875in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -309,6 +358,42 @@
                         </Textbox>
                       </CellContents>
                     </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox6">
+                          <rd:DefaultName>Textbox6</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Birimi</Value>
+                                  <Style>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>Gray</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
@@ -326,6 +411,7 @@
                                 <TextRun>
                                   <Value>=Fields!Miad_Tarih.Value</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <Format>d</Format>
                                   </Style>
                                 </TextRun>
@@ -361,7 +447,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!MaddeNo.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -395,7 +483,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Uretici.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -429,7 +519,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Lot_No.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -463,7 +555,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!MaddeAd.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -497,7 +591,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Barkod.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -532,7 +628,44 @@
                                 <TextRun>
                                   <Value>=Fields!Miktar.Value</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <Format>n0</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>Khaki</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Birimi">
+                          <rd:DefaultName>Birimi</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Birimi.Value</Value>
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -569,6 +702,7 @@
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -593,7 +727,7 @@
             <Top>0in</Top>
             <Left>0in</Left>
             <Height>0.5in</Height>
-            <Width>8.18625in</Width>
+            <Width>8.19666in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -604,12 +738,18 @@
         <Height>0.51042in</Height>
         <Style />
       </Body>
-      <Width>8.18625in</Width>
+      <Width>8.19666in</Width>
       <Page>
         <Style />
       </Page>
     </ReportSection>
   </ReportSections>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfRows>2</NumberOfRows>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
@@ -647,47 +787,4 @@ End Function
 </Code>
   <Language>=User!Language</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Fields>
-        <Field Name="GirisNo">
-          <DataField>GirisNo</DataField>
-        </Field>
-        <Field Name="Miad_Tarih">
-          <DataField>Miad_Tarih</DataField>
-        </Field>
-        <Field Name="MaddeNo">
-          <DataField>MaddeNo</DataField>
-        </Field>
-        <Field Name="MaddeAd">
-          <DataField>MaddeAd</DataField>
-        </Field>
-        <Field Name="Barkod">
-          <DataField>Barkod</DataField>
-        </Field>
-        <Field Name="Miktar">
-          <DataField>Miktar</DataField>
-        </Field>
-        <Field Name="MiktarFormat">
-          <DataField>MiktarFormat</DataField>
-        </Field>
-        <Field Name="Uretici">
-          <DataField>Uretici</DataField>
-        </Field>
-        <Field Name="Lot_No">
-          <DataField>Lot_No</DataField>
-        </Field>
-        <Field Name="LotKullan">
-          <DataField>LotKullan</DataField>
-        </Field>
-        <Field Name="LotKullanFormat">
-          <DataField>LotKullanFormat</DataField>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-    </DataSet>
-  </DataSets>
 </Report>

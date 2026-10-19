@@ -152,11 +152,10 @@ report 70816 "Bid Sales Report_Inc"
         if EndDate = 0D then
             error('End Date cannot be empty. Please select a valid end date.');
 
-        if "Order/Document Type" = '' then
-            error('Order/Document Type cannot be empty. Please select a valid order/document type.');
+        if "Order/Document Type" <> '' then
+            LSalesInvoiceHeader.SetRange("Order/Document Type-B2F", "Order/Document Type");
 
         LSalesInvoiceHeader.SetRange("Posting Date", StartDate, EndDate);
-        LSalesInvoiceHeader.SetRange("Order/Document Type-B2F", "Order/Document Type");
         if LSalesInvoiceHeader.FindSet() then
             repeat
                 LSalesInvoiceLine.SetRange("Document No.", LSalesInvoiceHeader."No.");
@@ -199,7 +198,6 @@ report 70816 "Bid Sales Report_Inc"
                         LSalesPerson.Init();
                         if LSalesPerson.Get(LSalesInvoiceHeader."Salesperson Code") then
                             TempVLE."Job No." := CopyStr(LSalesPerson."Name", 1, 20);
-
 
 
                         TempVLE.Insert();
