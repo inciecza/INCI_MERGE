@@ -24,52 +24,6 @@
       <rd:DataSourceID>1499e069-9baa-4147-be6e-d5a8bb336ab3</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="GirisNo">
-          <DataField>GirisNo</DataField>
-        </Field>
-        <Field Name="Miad_Tarih">
-          <DataField>Miad_Tarih</DataField>
-        </Field>
-        <Field Name="MaddeNo">
-          <DataField>MaddeNo</DataField>
-        </Field>
-        <Field Name="MaddeAd">
-          <DataField>MaddeAd</DataField>
-        </Field>
-        <Field Name="Barkod">
-          <DataField>Barkod</DataField>
-        </Field>
-        <Field Name="Miktar">
-          <DataField>Miktar</DataField>
-        </Field>
-        <Field Name="MiktarFormat">
-          <DataField>MiktarFormat</DataField>
-        </Field>
-        <Field Name="Uretici">
-          <DataField>Uretici</DataField>
-        </Field>
-        <Field Name="Lot_No">
-          <DataField>Lot_No</DataField>
-        </Field>
-        <Field Name="LotKullan">
-          <DataField>LotKullan</DataField>
-        </Field>
-        <Field Name="LotKullanFormat">
-          <DataField>LotKullanFormat</DataField>
-        </Field>
-        <Field Name="Birimi">
-          <DataField>Birimi</DataField>
-        </Field>
-      </Fields>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -744,12 +698,6 @@
       </Page>
     </ReportSection>
   </ReportSections>
-  <ReportParametersLayout>
-    <GridLayoutDefinition>
-      <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
-    </GridLayoutDefinition>
-  </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
@@ -787,4 +735,50 @@ End Function
 </Code>
   <Language>=User!Language</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="GirisNo">
+          <DataField>GirisNo</DataField>
+        </Field>
+        <Field Name="Miad_Tarih">
+          <DataField>Miad_Tarih</DataField>
+        </Field>
+        <Field Name="MaddeNo">
+          <DataField>MaddeNo</DataField>
+        </Field>
+        <Field Name="MaddeAd">
+          <DataField>MaddeAd</DataField>
+        </Field>
+        <Field Name="Barkod">
+          <DataField>Barkod</DataField>
+        </Field>
+        <Field Name="Miktar">
+          <DataField>Miktar</DataField>
+        </Field>
+        <Field Name="MiktarFormat">
+          <DataField>MiktarFormat</DataField>
+        </Field>
+        <Field Name="Uretici">
+          <DataField>Uretici</DataField>
+        </Field>
+        <Field Name="Lot_No">
+          <DataField>Lot_No</DataField>
+        </Field>
+        <Field Name="LotKullan">
+          <DataField>LotKullan</DataField>
+        </Field>
+        <Field Name="LotKullanFormat">
+          <DataField>LotKullanFormat</DataField>
+        </Field>
+        <Field Name="Birimi">
+          <DataField>Birimi</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

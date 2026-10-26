@@ -48,6 +48,11 @@ report 70819 "G/L Budget Report_Inc"
             {
             }
 
+            column(Tahakkuk_Alacak; "Cost Amount (Non-Invtbl.)")
+            {
+            }
+
+
             trigger OnPreDataItem()
             begin
                 FillTempVLE();
@@ -82,6 +87,18 @@ report 70819 "G/L Budget Report_Inc"
                         ApplicationArea = All;
                         Caption = 'End Date';
                         ToolTip = 'Select the end date to filter the report.';
+                    }
+                    field(GenelMerkezAktarılan; GenelMerkezAktarılan)
+                    {
+                        ApplicationArea = All;
+                        Caption = 'Genel Merkez Aktarılan', locked = true;
+                        ToolTip = 'Select the Genel Merkez Aktarılan to filter the report.', locked = true;
+                    }
+                    field(TahakkukAlacak; TahakkukAlacak)
+                    {
+                        ApplicationArea = All;
+                        Caption = 'Tahakkuk Alacak', locked = true;
+                        ToolTip = 'Select the Tahakkuk Alacak to filter the report.';
                     }
 
 
@@ -141,11 +158,11 @@ report 70819 "G/L Budget Report_Inc"
                     TempVLE."Cost per Unit" := 0; // Bütçe Tutar
                     TempVLE."Cost per Unit (ACY)" := DimensionGLEntryInsert(LDimensionValue."Code", LDimensionValue."Acc.No.for Prep.Exp/Rev.-B2F", CalcDate('<+CM>', CurrMonth)); // Gerçekleşen Tutar
                     TempVLE."Purchase Amount (Actual)" := GetLastBudgetEntry(LDimensionValue."Code", CurrMonth); // Önceki Yıl Tutar
-                    TempVLE."Cost Amount (Expected)" := 647443.41;
+                    TempVLE."Cost Amount (Expected)" := GenelMerkezAktarılan;
+                    TempVLE."Cost Amount (Non-Invtbl.)" := TahakkukAlacak;
                     TempVLE."Job No." := GetMonthYearText(CurrMonth);
                     TempVLE."Job Task No." := LDimensionValue."Dimension Report Code_Inc";
                     TempVLE.Insert();
-
                     CurrMonth := CalcDate('<1M>', CurrMonth); // sonraki ayın 1'i
                 end;
             until LDimensionValue.Next() = 0;
@@ -270,5 +287,7 @@ report 70819 "G/L Budget Report_Inc"
         StartDate: Date;
         EndDate: Date;
         BudgetName: code[10];
+        GenelMerkezAktarılan: Decimal;
+        TahakkukAlacak: Decimal;
 
 }

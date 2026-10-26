@@ -50,6 +50,15 @@ report 70821 "G/L Budget Report Detail_Inc"
             column(Detay_Açıklaması; "ITS Deacvt. Reason Desc.-B2F")
             {
             }
+            column(Tahakkuk_Alacak; "Cost Amount (Non-Invtbl.)")
+            {
+            }
+            column(Detay_Açıklaması2; Description)
+            {
+            }
+            column(Detay_Açıklaması3; "Source Description-B2F")
+            {
+            }
 
             trigger OnPreDataItem()
             begin
@@ -79,6 +88,18 @@ report 70821 "G/L Budget Report Detail_Inc"
                         ApplicationArea = All;
                         Caption = 'Report Date';
                         ToolTip = 'Select the report date to filter the report.';
+                    }
+                    field(GenelMerkezAktarılan; GenelMerkezAktarılan)
+                    {
+                        ApplicationArea = All;
+                        Caption = 'Genel Merkez Aktarılan', locked = true;
+                        ToolTip = 'Select the Genel Merkez Aktarılan to filter the report.', locked = true;
+                    }
+                    field(TahakkukAlacak; TahakkukAlacak)
+                    {
+                        ApplicationArea = All;
+                        Caption = 'Tahakkuk Alacak', locked = true;
+                        ToolTip = 'Select the Tahakkuk Alacak to filter the report.';
                     }
 
 
@@ -114,6 +135,9 @@ report 70821 "G/L Budget Report Detail_Inc"
         CurrMonth: Date;
         LastMonth: Date;
         LDescription: Text;
+        LInvoiceFirstDescription: Text;
+        LInvoiceLastDescription: Text;
+
     begin
         TempVLE.Reset();
         TempVLE.DeleteAll();
@@ -144,18 +168,23 @@ report 70821 "G/L Budget Report Detail_Inc"
                         LGLEntry.SetCurrentKey("G/L Account No.", "Posting Date");
                         LGLEntry.SetRange("G/L Account No.", LAccount."No.");
                         LGLEntry.SetRange("Posting Date", CalcDate('<-CM>', StartDate), CalcDate('<CM>', EndDate));
-
                         if LGLEntry.FindSet() then
                             repeat
                                 CurrMonth := CalcDate('<-CM>', LGLEntry."Posting Date");
                                 if not MonthHasRow.ContainsKey(CurrMonth) then
                                     MonthHasRow.Add(CurrMonth, true);
-
                                 GetMonthYearText(CurrMonth);
                                 LGLEntry.CalcFields("Shortcut Dimension 3 Code", "Shortcut Dimension 5 Code");
+
+                                Clear(LInvoiceFirstDescription);
+                                Clear(LInvoiceLastDescription);
                                 case LDimensionValue."Detail Description Type_Inc" of
                                     LDimensionValue."Detail Description Type_Inc"::Description:
-                                        LDescription := LGLEntry.Description;
+                                        begin
+                                            LDescription := LGLEntry.Description;
+                                            if LGLEntry."Document Type" = LGLEntry."Document Type"::Invoice then
+                                                GetPurchInvoiceDescriptions(LGLEntry."Document No.", LGLEntry."External Document No.", LInvoiceFirstDescription, LInvoiceLastDescription);
+                                        end;
                                     LDimensionValue."Detail Description Type_Inc"::"Employee Code":
                                         LDescription := GetDimension(LGLEntry."Shortcut Dimension 5 Code", 1);
                                     LDimensionValue."Detail Description Type_Inc"::"Vehicle Code":
@@ -163,7 +192,7 @@ report 70821 "G/L Budget Report Detail_Inc"
                                 end;
                                 if LDescription = '' then
                                     LDescription := LGLEntry.Description;
-                                InsertActualRow(LDimensionValue, CurrMonth, LGLEntry.Amount, LDescription);
+                                InsertActualRow(LDimensionValue, CurrMonth, LGLEntry.Amount, LDescription, LInvoiceFirstDescription, LInvoiceLastDescription);
                             until LGLEntry.Next() = 0;
 
                         // Hareketi olmayan aylar için boş satır
@@ -171,7 +200,7 @@ report 70821 "G/L Budget Report Detail_Inc"
                         while CurrMonth <= LastMonth do begin
                             if not MonthHasRow.ContainsKey(CurrMonth) then begin
                                 GetMonthYearText(CurrMonth);
-                                InsertActualRow(LDimensionValue, CurrMonth, 0, '');
+                                InsertActualRow(LDimensionValue, CurrMonth, 0, '', '', '');
                             end;
                             CurrMonth := CalcDate('<+1M>', CurrMonth);
                         end;
@@ -221,24 +250,32 @@ report 70821 "G/L Budget Report Detail_Inc"
             rtnvalue := LDimensionValue.Name;
     end;
 
-    local procedure InsertActualRow(var pDimensionValue: Record "Dimension Value"; pMonth: Date; pAmount: Decimal; pDescription: Text)
+    local procedure InsertActualRow(var pDimensionValue: Record "Dimension Value"; pMonth: Date; pAmount: Decimal; pDescription: Text; pInvoiceFirstDescription: Text; pInvoiceLastDescription: Text)
     begin
         TempVLE.Init();
         i += 1;
         TempVLE."Entry No." := i;
         TempVLE."Posting Date" := pMonth;
         TempVLE."Document No." := pDimensionValue."Code"; // Bütçe Kodu
-        TempVLE.Description := CopyStr(
-            TempVLE."Document No." + '.' + pDimensionValue.Name, 1, MaxStrLen(TempVLE.Description));
+        TempVLE."External Document No." := CopyStr(
+            TempVLE."Document No." + '.' + pDimensionValue.Name, 1, MaxStrLen(TempVLE."External Document No."));
         TempVLE."User ID" := pDimensionValue."Dimension Report Descr_Inc";
         TempVLE."Item No." := pDimensionValue."Dimension Code"; // Bütçe Genel Adı
         TempVLE."Cost per Unit" := 0; // Bütçe Tutar
         TempVLE."Cost per Unit (ACY)" := pAmount; // Gerçekleşen Tutar
         TempVLE."Purchase Amount (Actual)" := 0; // Önceki Yıl Tutar
-        TempVLE."Cost Amount (Expected)" := 647443.41;
+        TempVLE."Cost Amount (Expected)" := GenelMerkezAktarılan;
+        TempVLE."Cost Amount (Non-Invtbl.)" := tahakkukAlacak;
         TempVLE."Job No." := MonthYearText;
         TempVLE."Job Task No." := pDimensionValue."Dimension Report Code_Inc";
-        TempVLE."ITS Deacvt. Reason Desc.-B2F" := pDescription;
+        if pInvoiceFirstDescription = '' then begin
+            TempVLE."ITS Deacvt. Reason Desc.-B2F" := pDescription;
+            TempVLE.Description := pInvoiceFirstDescription;
+        end else begin
+            TempVLE."ITS Deacvt. Reason Desc.-B2F" := pInvoiceFirstDescription;
+            TempVLE.Description := pDescription;
+        end;
+        TempVLE."Source Description-B2F" := pInvoiceLastDescription;
         TempVLE.Insert();
     end;
 
@@ -357,6 +394,19 @@ report 70821 "G/L Budget Report Detail_Inc"
             exit(0);
     end;
 
+    local procedure GetPurchInvoiceDescriptions(pDocumentNo: Code[20]; pExternalDocumentNo: Code[20]; var pInvoiceFirstDescription: Text[100]; var pInvoiceLastDescription: Text[100])
+    var
+        LPurchInvoice: Record "Purch. Inv. Header";
+    begin
+        if LPurchInvoice.Get(pDocumentNo) then begin
+            pInvoiceFirstDescription := LPurchInvoice."Description (VAT List)-B2F";
+            pInvoiceLastDescription := LPurchInvoice."Document Description-B2F";
+        end else begin
+            pInvoiceFirstDescription := '';
+            pInvoiceLastDescription := '';
+        end;
+    end;
+
     var
         TempDimensionCache: Record "Dimension Value" temporary;
         i: Integer;
@@ -365,5 +415,8 @@ report 70821 "G/L Budget Report Detail_Inc"
         ReportDate: Date;
         BudgetName: code[10];
         MonthYearText: Text[20];
+        GenelMerkezAktarılan: Decimal;
+        TahakkukAlacak: Decimal;
+
 
 }
