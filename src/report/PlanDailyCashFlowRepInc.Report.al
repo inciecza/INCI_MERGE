@@ -10,6 +10,57 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
         dataitem(TempVLE; "Value Entry")
         {
             UseTemporary = true;
+
+            column(Type; "Document No.") { }                                        // Tür (1 = Vadesi geçmiş, 2 = Rapor tarihi ve sonrası)
+            column(PostingDate; "Posting Date") { }                                 // Tarih
+            column(Week; "Location Code") { }                                       // Hafta
+            column(Month; "Order No.") { }                                          // Ay
+
+            column(AcikHesapCariOdeme; "Cost Amount (Actual)") { }                  // Açık Hesap Cari ödeme
+            column(GrupIciOdeme; "Cost Amount (Actual) (ACY)") { }                  // Grup İçi
+            column(VadesiGelecekDBS; "Cost Amount (Expected)") { }                  // Vadesi Gelecek DBS Bakiyesi
+            column(FirmaCekleri; "Cost Amount (Expected) (ACY)") { }                // Firma Çekleri
+            column(MusteriCekleri; "Cost Amount (Non-Invtbl.)") { }                 // Müşteri Çekleri
+            column(SiparisOdemeleri; "Cost Amount (Non-Invtbl.)(ACY)") { }          // Sipariş Ödemeleri
+            column(VergiSGKOdemeleri; "Sales Amount (Actual)") { }                  // Vergi + SGK Ödemeleri
+            column(MaasKiraOdemeleri; "Sales Amount (Expected)") { }                // Maaş + Kira Ödemeleri
+            column(DMOAcikHesap; "Valued Quantity") { }                             // DMO Açık Hesap
+            column(Ihale; "Item Ledger Entry Quantity") { }                         // İhale
+            column(EczaDepolari; "Invoiced Quantity") { }                           // Ecza Depoları
+            column(Eczaci; "Cost per Unit") { }                                     // Eczacı
+            column(Ihracat; "Discount Amount") { }                                  // İhracat
+            column(GrupIciTahsilat; "Cost Posted to G/L") { }                       // Grup İçi (müşteri)
+            column(OzelHastaneKisaVade; "Cost Posted to G/L (ACY)") { }             // Özel Hastane KISA VADE
+            column(OzelHastaneUzunVade; "Cost per Unit (ACY)") { }                  // Özel Hastane UZUN VADE
+            column(OzelHastaneKeytruda; "Purchase Amount (Actual)") { }             // Özel Hastane KEYTRUDA
+            column(ManuelGelirKamu; "Purchase Amount (Expected)") { }               // Kamu
+            column(ManuelGelirOzel; "Expected Cost Posted to G/L") { }              // Özel
+            column(ManuelGelirDiger; "Exp. Cost Posted to G/L (ACY)") { }           // Çek, DMO, Diğer
+
+            // Kurlar (rapor tarihi - 1)
+            column(EURRate; EURRate) { }
+            column(USDRate; USDRate) { }
+            column(GBPRate; GBPRate) { }
+            column(GRAMRate; GRAMRate) { }
+            column(ONSRate; ONSRate) { }
+
+            // Banka başlangıç bakiyeleri (döviz cinsinden)
+            column(BankBalTL; BankBalTL) { }
+            column(BankBalEUR; BankBalEUR) { }
+            column(BankBalUSD; BankBalUSD) { }
+            column(BankBalGBP; BankBalGBP) { }
+            column(BankBalGRAM; BankBalGRAM) { }
+            column(BankBalONS; BankBalONS) { }
+
+            // Banka başlangıç bakiyeleri (TL karşılığı)
+            column(BankBalEURLCY; BankBalEURLCY) { }
+            column(BankBalUSDLCY; BankBalUSDLCY) { }
+            column(BankBalGBPLCY; BankBalGBPLCY) { }
+            column(BankBalGRAMLCY; BankBalGRAMLCY) { }
+            column(BankBalONSLCY; BankBalONSLCY) { }
+            column(BankBalOtherLCY; BankBalOtherLCY) { }
+            column(BankBalTotalLCY; BankBalTotalLCY) { }
+
             trigger OnPreDataItem()
             begin
                 FillTempVLE();
@@ -59,23 +110,33 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
         if ReportDate = 0D then
             error('Report Date cannot be empty. Please select a valid report date.');
 
+        // Rapor tarihinden önceki günün kurları
         EURRate := GetExchangeRate('EUR', ReportDate - 1);
         USDRate := GetExchangeRate('USD', ReportDate - 1);
+        GBPRate := GetExchangeRate('GBP', ReportDate - 1);
+        GRAMRate := GetExchangeRate('GRAM', ReportDate - 1);
+        ONSRate := GetExchangeRate('ONS', ReportDate - 1);
+
+        CalcBankOpeningBalances();
 
         TempVLE.Reset();
         TempVLE.DeleteAll();
         i := 0;
 
-
+        StartDate := ReportDate - 1;
         EndDate := CalcDate('<+5M>', ReportDate) - 1;
 
-        for CurrDate := ReportDate to EndDate do begin
+        for CurrDate := StartDate to EndDate do begin
             TempVLE.Init();
             i += 1;
             TempVLE."Entry No." := i;
-            TempVLE."Posting Date" := CurrDate;
-            TempVLE."Location Code" := Format(Date2DWY(CurrDate, 2)) + '.Hafta';
-            TempVLE."Order No." := GetMonthYearText(CurrDate);
+            TempVLE."Posting Date" := CurrDate; // Tarih
+            if CurrDate < ReportDate then
+                TempVLE."Document No." := '1' // Rapor tarihinden önceki (vadesi geçmiş) satır
+            else
+                TempVLE."Document No." := '2'; // Rapor tarihi ve sonrası
+            TempVLE."Location Code" := Format(Date2DWY(CurrDate, 2)) + '.Hafta';//Hafta
+            TempVLE."Order No." := GetMonthYearText(CurrDate);//Ay
             TempVLE."Cost Amount (Actual)" := 0; // Açık Hesap Cari ödeme
             TempVLE."Cost Amount (Actual) (ACY)" := 0; // GRUP İÇİ
             TempVLE."Cost Amount (Expected)" := 0; //  Vadesi Gelecek DBS Bakiyesi
@@ -93,9 +154,9 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
             TempVLE."Cost Posted to G/L (ACY)" := 0; //Özel Hastane KISA VADE
             TempVLE."Cost per Unit (ACY)" := 0; // Özel Hastane UZUN VADE
             TempVLE."Purchase Amount (Actual)" := 0; // Özel Hastane KEYTRUDA
-            TempVLE."Purchase Amount (Expected)" := 0;
-            TempVLE."Expected Cost Posted to G/L" := 0;
-            TempVLE."Exp. Cost Posted to G/L (ACY)" := 0;
+            TempVLE."Purchase Amount (Expected)" := 0;//Kamu
+            TempVLE."Expected Cost Posted to G/L" := 0;//Özel
+            TempVLE."Exp. Cost Posted to G/L (ACY)" := 0; //Çek, DMO,Diğer
 
             TempVLE.Insert();
         end;
@@ -131,22 +192,93 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
 
         AddReleasedPurchOrdersToTempVLE();
         AddManualExpensesToTempVLE();
+        AddManualRevenuesToTempVLE();
 
+    end;
+
+    // Banka hesaplarındaki (102 ile başlayan) açık kayıtların döviz cinsine göre başlangıç bakiyeleri
+    local procedure CalcBankOpeningBalances()
+    var
+        BankAccLedgEntry: Record "Bank Account Ledger Entry";
+    begin
+        BankBalTL := 0;
+        BankBalEUR := 0;
+        BankBalUSD := 0;
+        BankBalGBP := 0;
+        BankBalGRAM := 0;
+        BankBalONS := 0;
+        BankBalOtherLCY := 0;
+
+        BankAccLedgEntry.SetFilter("Bank Account No.", '102*');
+        BankAccLedgEntry.SetRange(Open, true);
+        if BankAccLedgEntry.FindSet() then
+            repeat
+                case BankAccLedgEntry."Currency Code" of
+                    '':
+                        BankBalTL += BankAccLedgEntry.Amount;
+                    'EUR':
+                        BankBalEUR += BankAccLedgEntry.Amount;
+                    'USD':
+                        BankBalUSD += BankAccLedgEntry.Amount;
+                    'GBP':
+                        BankBalGBP += BankAccLedgEntry.Amount;
+                    'GRAM':
+                        BankBalGRAM += BankAccLedgEntry.Amount;
+                    'ONS':
+                        BankBalONS += BankAccLedgEntry.Amount;
+                    else
+                        BankBalOtherLCY += BankAccLedgEntry."Amount (LCY)";
+                end;
+            until BankAccLedgEntry.Next() = 0;
+
+        // TL karşılıkları
+        BankBalEURLCY := BankBalEUR * EURRate;
+        BankBalUSDLCY := BankBalUSD * USDRate;
+        BankBalGBPLCY := BankBalGBP * GBPRate;
+        BankBalGRAMLCY := BankBalGRAM * GRAMRate;
+        BankBalONSLCY := BankBalONS * ONSRate;
+
+        BankBalTotalLCY := BankBalTL + BankBalEURLCY + BankBalUSDLCY + BankBalGBPLCY +
+                           BankBalGRAMLCY + BankBalONSLCY + BankBalOtherLCY;
+    end;
+
+    // Döviz kodunu kura çevirir, boşsa TL (1)
+    local procedure GetRate(pCurrencyCode: Code[10]): Decimal
+    begin
+        case pCurrencyCode of
+            '':
+                exit(1);
+            'EUR':
+                exit(EURRate);
+            'USD':
+                exit(USDRate);
+            'GBP':
+                exit(GBPRate);
+            'GRAM':
+                exit(GRAMRate);
+            'ONS':
+                exit(ONSRate);
+        end;
+
+        exit(0);
+    end;
+
+    // Boş döviz = TL, bilinen 5 kur için tutar x kur, diğerleri için pFallbackLCY (kaydın kendi LCY tutarı)
+    local procedure ConvertToLCY(pCurrencyCode: Code[10]; pAmount: Decimal; pFallbackLCY: Decimal): Decimal
+    begin
+        if pCurrencyCode = '' then
+            exit(pAmount);
+
+        if pCurrencyCode in ['EUR', 'USD', 'GBP', 'GRAM', 'ONS'] then
+            exit(pAmount * GetRate(pCurrencyCode));
+
+        exit(pFallbackLCY);
     end;
 
     local procedure GetAmountLCY(var pVLE: Record "Vendor Ledger Entry"): Decimal
     begin
         pVLE.CalcFields("Remaining Amount", "Remaining Amt. (LCY)");
-        case pVLE."Currency Code" of
-            '':
-                exit(-pVLE."Remaining Amount");
-            'USD':
-                exit(-pVLE."Remaining Amount" * USDRate);
-            'EUR':
-                exit(-pVLE."Remaining Amount" * EURRate);
-            else
-                exit(-pVLE."Remaining Amt. (LCY)");
-        end;
+        exit(ConvertToLCY(pVLE."Currency Code", -pVLE."Remaining Amount", -pVLE."Remaining Amt. (LCY)"));
     end;
 
     local procedure AddCustLedgerToTempVLE(var pCLE: Record "Cust. Ledger Entry")
@@ -159,16 +291,7 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
             exit;
 
         pCLE.CalcFields("Remaining Amount", "Remaining Amt. (LCY)");
-        case pCLE."Currency Code" of
-            '':
-                AmountLCY := pCLE."Remaining Amount";
-            'USD':
-                AmountLCY := pCLE."Remaining Amount" * USDRate;
-            'EUR':
-                AmountLCY := pCLE."Remaining Amount" * EURRate;
-            else
-                AmountLCY := pCLE."Remaining Amt. (LCY)";
-        end;
+        AmountLCY := ConvertToLCY(pCLE."Currency Code", pCLE."Remaining Amount", pCLE."Remaining Amt. (LCY)");
 
         case Customer."Customer Group_Inc" of
             Customer."Customer Group_Inc"::DMO:
@@ -204,22 +327,9 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
         AmountLCY: Decimal;
         EntryNo: Integer;
     begin
-        case pCheque."Currency Code" of
-            '':
-                AmountLCY := pCheque.Amount;
-            'USD':
-                AmountLCY := pCheque.Amount * USDRate;
-            'EUR':
-                AmountLCY := pCheque.Amount * EURRate;
-            else
-                AmountLCY := pCheque.Amount;
-        end;
+        AmountLCY := ConvertToLCY(pCheque."Currency Code", pCheque.Amount, pCheque.Amount);
 
-        if pCheque."Due Date" < ReportDate then
-            EntryNo := 1 // rapor tarihindeki satır
-        else
-            EntryNo := pCheque."Due Date" - ReportDate + 1;
-
+        EntryNo := GetEntryNo(pCheque."Due Date");
         if (EntryNo < 1) or (EntryNo > i) then
             exit; // 5 aylık aralığın dışında
 
@@ -233,21 +343,25 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
         TempVLE.Modify();
     end;
 
+    // Vadesi rapor tarihinden küçük olanlar ilk satıra (Rapor tarihi - 1), diğerleri kendi gününe yazılır
+    local procedure GetEntryNo(pDueDate: Date): Integer
+    begin
+        if pDueDate < ReportDate then
+            exit(1);
+
+        exit(pDueDate - StartDate + 1);
+    end;
+
     // pGroup: 1 = Grupiçi (Actual ACY), 2 = DBS (Expected), 3 = DBS Dışı (Actual),
     // 4 = Sipariş, 5 = Vergi+SGK, 6 = Maaş+Kira,
     // 7 = DMO, 8 = İhale, 9 = Ecza Deposu, 10 = Eczane+İhracat, 11 = Grup İçi (müşteri),
     // 12 = Özel Hastane Kısa Vade, 13 = Özel Hastane Uzun Vade, 14 = Özel Hastane Keytruda
+    // 15 = Manuel Gelir Kamu, 16 = Manuel Gelir Özel, 17 = Manuel Gelir Diğer
     local procedure AddToTempVLE(pDueDate: Date; pGroup: Integer; pAmount: Decimal)
     var
-        TargetDate: Date;
         EntryNo: Integer;
     begin
-        if pDueDate > ReportDate then
-            TargetDate := pDueDate
-        else
-            TargetDate := ReportDate; // Rapor tarihi ve öncesi, rapor tarihinde toplanır
-
-        EntryNo := TargetDate - ReportDate + 1;
+        EntryNo := GetEntryNo(pDueDate);
         if (EntryNo < 1) or (EntryNo > i) then
             exit; // 5 aylık aralığın dışında
 
@@ -283,6 +397,12 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
                 TempVLE."Cost per Unit (ACY)" += pAmount;
             14:
                 TempVLE."Purchase Amount (Actual)" += pAmount;
+            15:
+                TempVLE."Purchase Amount (Expected)" += pAmount;
+            16:
+                TempVLE."Expected Cost Posted to G/L" += pAmount;
+            17:
+                TempVLE."Exp. Cost Posted to G/L (ACY)" += pAmount;
         end;
         TempVLE.Modify();
     end;
@@ -293,8 +413,12 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
     begin
         CurrExchRate.SetRange("Currency Code", pCurrencyCode);
         CurrExchRate.SetFilter("Starting Date", '..%1', pDate);
-        if CurrExchRate.FindLast() then
+        if CurrExchRate.FindLast() then begin
+            // Kur birimi 1 değilse (örn. 100 birim) birim başına kura çevirir
+            if CurrExchRate."Exchange Rate Amount" <> 0 then
+                exit(CurrExchRate."Relational Exch. Rate Amount" / CurrExchRate."Exchange Rate Amount");
             exit(CurrExchRate."Relational Exch. Rate Amount");
+        end;
 
         exit(0);
     end;
@@ -304,6 +428,7 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
         PurchHeader: Record "Purchase Header";
         PurchLine: Record "Purchase Line";
         OutstandingAmt: Decimal;
+        OutstandingAmtLCY: Decimal;
         AmountLCY: Decimal;
     begin
         PurchHeader.SetRange("Document Type", PurchHeader."Document Type"::Order);
@@ -311,7 +436,7 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
         if PurchHeader.FindSet() then
             repeat
                 OutstandingAmt := 0;
-                AmountLCY := 0;
+                OutstandingAmtLCY := 0;
 
                 PurchLine.Reset();
                 PurchLine.SetRange("Document Type", PurchHeader."Document Type");
@@ -319,22 +444,13 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
                 if PurchLine.FindSet() then
                     repeat
                         OutstandingAmt += PurchLine."Outstanding Amount";
-                        // Diğer dövizler için kur tanımı yok, satırın LCY tutarı kullanılır
-                        if not (PurchHeader."Currency Code" in ['', 'USD', 'EUR']) then
-                            AmountLCY += PurchLine."Outstanding Amount (LCY)";
+                        OutstandingAmtLCY += PurchLine."Outstanding Amount (LCY)";
                     until PurchLine.Next() = 0;
 
-                case PurchHeader."Currency Code" of
-                    '':
-                        AmountLCY := OutstandingAmt;
-                    'USD':
-                        AmountLCY := OutstandingAmt * USDRate;
-                    'EUR':
-                        AmountLCY := OutstandingAmt * EURRate;
-                end;
+                AmountLCY := ConvertToLCY(PurchHeader."Currency Code", OutstandingAmt, OutstandingAmtLCY);
 
                 if AmountLCY <> 0 then
-                    // Rapor tarihi ve öncesi rapor tarihinde toplanır, sonrası kendi gününe yazılır (AddToTempVLE bunu zaten yapıyor)
+                    // Rapor tarihinden küçükler Rapor tarihi - 1 satırına, diğerleri kendi gününe yazılır (GetEntryNo)
                     AddToTempVLE(PurchHeader."Due Date", 4, AmountLCY);
             until PurchHeader.Next() = 0;
     end;
@@ -397,11 +513,49 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
             until ManualExpense.Next() = 0;
     end;
 
+    local procedure AddManualRevenuesToTempVLE()
+    var
+        ManualRevenue: Record "Cash Flow Manual Revenue";
+    begin
+        ManualRevenue.SetFilter("Ending Date", '>%1', ReportDate);
+        if ManualRevenue.FindSet() then
+            repeat
+                case ManualRevenue."Revenue Type_Inc" of
+                    ManualRevenue."Revenue Type_Inc"::Public:
+                        AddToTempVLE(ManualRevenue."Ending Date", 15, ManualRevenue.Amount);
+                    ManualRevenue."Revenue Type_Inc"::Private:
+                        AddToTempVLE(ManualRevenue."Ending Date", 16, ManualRevenue.Amount);
+                    else
+                        AddToTempVLE(ManualRevenue."Ending Date", 17, ManualRevenue.Amount);
+                end;
+            until ManualRevenue.Next() = 0;
+    end;
 
     var
         i: Integer;
         ReportDate: Date;
+        YesterdayDate: Date;
+        StartDate: Date;
+        // Kurlar (rapor tarihi - 1)
         EURRate: Decimal;
         USDRate: Decimal;
+        GBPRate: Decimal;
+        GRAMRate: Decimal;
+        ONSRate: Decimal;
+        // Banka başlangıç bakiyeleri (döviz cinsinden)
+        BankBalTL: Decimal;
+        BankBalEUR: Decimal;
+        BankBalUSD: Decimal;
+        BankBalGBP: Decimal;
+        BankBalGRAM: Decimal;
+        BankBalONS: Decimal;
+        // Banka başlangıç bakiyeleri (TL karşılığı)
+        BankBalEURLCY: Decimal;
+        BankBalUSDLCY: Decimal;
+        BankBalGBPLCY: Decimal;
+        BankBalGRAMLCY: Decimal;
+        BankBalONSLCY: Decimal;
+        BankBalOtherLCY: Decimal;
+        BankBalTotalLCY: Decimal;
 
 }
