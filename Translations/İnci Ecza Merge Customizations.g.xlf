@@ -748,6 +748,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report G/L Budget Report_Inc - Control TahakkukAlacak - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Report 2025629336 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Inc Warehouse Label</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Inc Warehouse Label_Inc - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 1834505083 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Item Ledger Entry Report</source>
           <note from="Developer" annotates="general" priority="2"></note>

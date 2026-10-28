@@ -44,7 +44,7 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
             column(GRAMRate; GRAMRate) { }
             column(ONSRate; ONSRate) { }
 
-            // Banka başlangıç bakiyeleri (döviz cinsinden)
+            // Banka bakiyeleri (döviz cinsinden)
             column(BankBalTL; BankBalTL) { }
             column(BankBalEUR; BankBalEUR) { }
             column(BankBalUSD; BankBalUSD) { }
@@ -52,7 +52,7 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
             column(BankBalGRAM; BankBalGRAM) { }
             column(BankBalONS; BankBalONS) { }
 
-            // Banka başlangıç bakiyeleri (TL karşılığı)
+            // Banka bakiyeleri (TL karşılığı)
             column(BankBalEURLCY; BankBalEURLCY) { }
             column(BankBalUSDLCY; BankBalUSDLCY) { }
             column(BankBalGBPLCY; BankBalGBPLCY) { }
@@ -111,19 +111,21 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
             error('Report Date cannot be empty. Please select a valid report date.');
 
         // Rapor tarihinden önceki günün kurları
-        EURRate := GetExchangeRate('EUR', ReportDate - 1);
-        USDRate := GetExchangeRate('USD', ReportDate - 1);
-        GBPRate := GetExchangeRate('GBP', ReportDate - 1);
-        GRAMRate := GetExchangeRate('GRAM', ReportDate - 1);
-        ONSRate := GetExchangeRate('ONS', ReportDate - 1);
+        YesterdayDate := ReportDate - 1;
+        EURRate := GetExchangeRate('EUR', YesterdayDate);
+        USDRate := GetExchangeRate('USD', YesterdayDate);
+        GBPRate := GetExchangeRate('GBP', YesterdayDate);
+        GRAMRate := GetExchangeRate('GRAM', YesterdayDate);
+        ONSRate := GetExchangeRate('ONS', YesterdayDate);
 
+        // Kurlar hazir olmadan banka TL karsiliklari hesaplanamaz
         CalcBankOpeningBalances();
 
         TempVLE.Reset();
         TempVLE.DeleteAll();
         i := 0;
 
-        StartDate := ReportDate - 1;
+        StartDate := YesterdayDate;
         EndDate := CalcDate('<+5M>', ReportDate) - 1;
 
         for CurrDate := StartDate to EndDate do begin
@@ -182,9 +184,10 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
                 AddChequeToTempVLE(Cheque);
             until Cheque.Next() = 0;
 
+        // Müşteri vade filtresi rapor tarihi üzerinden (rapor tarihi dahil)
         CustLedgEntry.SetRange("Document Type", CustLedgEntry."Document Type"::Invoice);
         CustLedgEntry.SetRange(Open, true);
-        CustLedgEntry.SetFilter("Due Date", '>%1', Today);
+        CustLedgEntry.SetFilter("Due Date", '>=%1', ReportDate);
         if CustLedgEntry.FindSet() then
             repeat
                 AddCustLedgerToTempVLE(CustLedgEntry);
@@ -196,7 +199,8 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
 
     end;
 
-    // Banka hesaplarındaki (102 ile başlayan) açık kayıtların döviz cinsine göre başlangıç bakiyeleri
+    // Banka hesaplarındaki (102 ile başlayan) kayıtların rapor tarihinden bir gün önceki (YesterdayDate)
+    // bakiyesi: döviz cinsine göre bakiye ve kurla TL karşılığı. Kurlar bu procedure'dan ÖNCE hesaplanmış olmalı.
     local procedure CalcBankOpeningBalances()
     var
         BankAccLedgEntry: Record "Bank Account Ledger Entry";
@@ -209,8 +213,9 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
         BankBalONS := 0;
         BankBalOtherLCY := 0;
 
+        // Bakiye = tarihe kadar olan tüm kayıtlar ("Open" mutabakatla kapanan kayıtları dışarıda bırakırdı)
         BankAccLedgEntry.SetFilter("Bank Account No.", '102*');
-        BankAccLedgEntry.SetRange(Open, true);
+        BankAccLedgEntry.SetFilter("Posting Date", '..%1', YesterdayDate);
         if BankAccLedgEntry.FindSet() then
             repeat
                 case BankAccLedgEntry."Currency Code" of
@@ -231,18 +236,19 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
                 end;
             until BankAccLedgEntry.Next() = 0;
 
-        // TL karşılıkları
-        BankBalEURLCY := BankBalEUR * EURRate;
-        BankBalUSDLCY := BankBalUSD * USDRate;
-        BankBalGBPLCY := BankBalGBP * GBPRate;
-        BankBalGRAMLCY := BankBalGRAM * GRAMRate;
-        BankBalONSLCY := BankBalONS * ONSRate;
+        // TL karşılıkları (GetRate: EUR/USD/GBP/GRAM kuru, ONS için ONS(USD) x USD kuru)
+        BankBalEURLCY := BankBalEUR * GetRate('EUR');
+        BankBalUSDLCY := BankBalUSD * GetRate('USD');
+        BankBalGBPLCY := BankBalGBP * GetRate('GBP');
+        BankBalGRAMLCY := BankBalGRAM * GetRate('GRAM');
+        BankBalONSLCY := BankBalONS * GetRate('ONS');
 
         BankBalTotalLCY := BankBalTL + BankBalEURLCY + BankBalUSDLCY + BankBalGBPLCY +
                            BankBalGRAMLCY + BankBalONSLCY + BankBalOtherLCY;
     end;
 
-    // Döviz kodunu kura çevirir, boşsa TL (1)
+    // Döviz kodunu TL kuruna çevirir, boşsa TL (1).
+    // ONS (ons altın) USD cinsinden fiyatlandığı için TL kuru = ONS fiyatı x USD kuru (Excel: Y5 = ONS x USD)
     local procedure GetRate(pCurrencyCode: Code[10]): Decimal
     begin
         case pCurrencyCode of
@@ -257,7 +263,7 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
             'GRAM':
                 exit(GRAMRate);
             'ONS':
-                exit(ONSRate);
+                exit(ONSRate * USDRate);
         end;
 
         exit(0);
@@ -301,9 +307,10 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
                 AddToTempVLE(pCLE."Due Date", 8, AmountLCY);
             Customer."Customer Group_Inc"::"Pharmaceutical Distributor":
                 AddToTempVLE(pCLE."Due Date", 9, AmountLCY);
-            Customer."Customer Group_Inc"::Pharmacy,
+            Customer."Customer Group_Inc"::Pharmacy:
+                AddToTempVLE(pCLE."Due Date", 18, AmountLCY); // Eczacı
             Customer."Customer Group_Inc"::Export:
-                AddToTempVLE(pCLE."Due Date", 10, AmountLCY);
+                AddToTempVLE(pCLE."Due Date", 10, AmountLCY); // İhracat
             Customer."Customer Group_Inc"::"Group Company":
                 AddToTempVLE(pCLE."Due Date", 11, AmountLCY);
             Customer."Customer Group_Inc"::"Private Hospital":
@@ -354,9 +361,9 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
 
     // pGroup: 1 = Grupiçi (Actual ACY), 2 = DBS (Expected), 3 = DBS Dışı (Actual),
     // 4 = Sipariş, 5 = Vergi+SGK, 6 = Maaş+Kira,
-    // 7 = DMO, 8 = İhale, 9 = Ecza Deposu, 10 = Eczane+İhracat, 11 = Grup İçi (müşteri),
+    // 7 = DMO, 8 = İhale, 9 = Ecza Deposu, 10 = İhracat, 11 = Grup İçi (müşteri),
     // 12 = Özel Hastane Kısa Vade, 13 = Özel Hastane Uzun Vade, 14 = Özel Hastane Keytruda
-    // 15 = Manuel Gelir Kamu, 16 = Manuel Gelir Özel, 17 = Manuel Gelir Diğer
+    // 15 = Manuel Gelir Kamu, 16 = Manuel Gelir Özel, 17 = Manuel Gelir Diğer, 18 = Eczacı
     local procedure AddToTempVLE(pDueDate: Date; pGroup: Integer; pAmount: Decimal)
     var
         EntryNo: Integer;
@@ -403,6 +410,8 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
                 TempVLE."Expected Cost Posted to G/L" += pAmount;
             17:
                 TempVLE."Exp. Cost Posted to G/L (ACY)" += pAmount;
+            18:
+                TempVLE."Cost per Unit" += pAmount;
         end;
         TempVLE.Modify();
     end;
@@ -498,7 +507,7 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
     var
         ManualExpense: Record "Cash Flow Manual Expense";
     begin
-        ManualExpense.SetFilter("Ending Date", '>%1', ReportDate);
+        ManualExpense.SetFilter("Ending Date", '>=%1', ReportDate);
         ManualExpense.SetFilter("Expense Type_Inc", '<>%1', ManualExpense."Expense Type_Inc"::" ");
         if ManualExpense.FindSet() then
             repeat
@@ -517,7 +526,7 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
     var
         ManualRevenue: Record "Cash Flow Manual Revenue";
     begin
-        ManualRevenue.SetFilter("Ending Date", '>%1', ReportDate);
+        ManualRevenue.SetFilter("Ending Date", '>=%1', ReportDate);
         if ManualRevenue.FindSet() then
             repeat
                 case ManualRevenue."Revenue Type_Inc" of
@@ -542,14 +551,14 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
         GBPRate: Decimal;
         GRAMRate: Decimal;
         ONSRate: Decimal;
-        // Banka başlangıç bakiyeleri (döviz cinsinden)
+        // Banka bakiyeleri (döviz cinsinden)
         BankBalTL: Decimal;
         BankBalEUR: Decimal;
         BankBalUSD: Decimal;
         BankBalGBP: Decimal;
         BankBalGRAM: Decimal;
         BankBalONS: Decimal;
-        // Banka başlangıç bakiyeleri (TL karşılığı)
+        // Banka bakiyeleri (TL karşılığı)
         BankBalEURLCY: Decimal;
         BankBalUSDLCY: Decimal;
         BankBalGBPLCY: Decimal;
