@@ -847,7 +847,6 @@
           <source>Select the Tahakkuk Alacak to filter the report.</source>
           <target>Tahakkuk Alacak için raporu filtrelemek üzere seçin.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report G/L Budget Report Detail_Inc - Control TahakkukAlacak - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Report 197660520 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -896,14 +895,12 @@
           <source>Select the Tahakkuk Alacak to filter the report.</source>
           <target>Tahakkuk Alacak için raporu filtrelemek üzere seçin.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report G/L Budget Report_Inc - Control TahakkukAlacak - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Report 2025629336 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Inc Warehouse Label</source>
           <target>Inc Depo Etiketi</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Inc Warehouse Label_Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 1834505083 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -1016,24 +1013,28 @@
         </trans-unit>
         <trans-unit id="Report 333145991 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Planned Daily Cash Flow Report</source>
-          <target>Planlanmış Nakit Akışı Raporu</target>
+          <target>Planlanmış Günlük Haftalık Nakit Akışı Raporu</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Plan. Daily CashFlow Rep._Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 333145991 - Control 497847406 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Select the report date to filter the report.</source>
           <target>Raporlamak için rapor tarihini seçin.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Plan. Daily CashFlow Rep._Inc - Control ReportDate - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Report 333145991 - Control 497847406 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Report Date</source>
           <target>Rapor Tarihi</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Plan. Daily CashFlow Rep._Inc - Control ReportDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 333145991 - Control 3115007730 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Report Type</source>
+          <target>Rapor Tipi</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Plan. Daily CashFlow Rep._Inc - Control ReportType - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 3007758371 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Qr Code List Report</source>

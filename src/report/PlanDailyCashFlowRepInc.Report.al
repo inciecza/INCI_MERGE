@@ -15,6 +15,10 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
             column(PostingDate; "Posting Date") { }                                 // Tarih
             column(Week; "Location Code") { }                                       // Hafta
             column(Month; "Order No.") { }                                          // Ay
+            column(DayNo; "Document Line No.") { }                                  // Haftanın günü (1 = Pazartesi ... 7 = Pazar)
+            column(WeeklyDevir; "Sales Amount (Actual)") { }                        // Haftalık: günün DEVİR tutarı (sadece haftalık modda dolu)
+            column(WeeklyToplam; "Sales Amount (Expected)") { }                     // Haftalık: günün TOPLAM tutarı (sadece haftalık modda dolu)
+            column(ReportMode; ReportModeNo) { }                                    // 0 = Günlük, 1 = Haftalık
 
             column(AcikHesapCariOdeme; "Cost Amount (Actual)") { }                  // Açık Hesap Cari ödeme
             column(GrupIciOdeme; "Cost Amount (Actual) (ACY)") { }                  // Grup İçi
@@ -76,7 +80,13 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
             {
                 group(GroupName)
                 {
-
+                    field(ReportType; ReportType)
+                    {
+                        ApplicationArea = All;
+                        Caption = 'Report Type';
+                        OptionCaption = 'Günlük,Haftalık', Locked = true;
+                        ToolTip = 'Select Daily or Weekly report type.', Locked = true;
+                    }
                     field(ReportDate; ReportDate)
                     {
                         ApplicationArea = All;
@@ -128,6 +138,11 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
         StartDate := YesterdayDate;
         EndDate := CalcDate('<+5M>', ReportDate) - 1;
 
+        if ReportType = ReportType::Weekly then
+            ReportModeNo := 1
+        else
+            ReportModeNo := 0;
+
         for CurrDate := StartDate to EndDate do begin
             TempVLE.Init();
             i += 1;
@@ -139,6 +154,7 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
                 TempVLE."Document No." := '2'; // Rapor tarihi ve sonrası
             TempVLE."Location Code" := Format(Date2DWY(CurrDate, 2)) + '.Hafta';//Hafta
             TempVLE."Order No." := GetMonthYearText(CurrDate);//Ay
+            TempVLE."Document Line No." := Date2DWY(CurrDate, 1); // Haftanın günü (1 = Pazartesi)
             TempVLE."Cost Amount (Actual)" := 0; // Açık Hesap Cari ödeme
             TempVLE."Cost Amount (Actual) (ACY)" := 0; // GRUP İÇİ
             TempVLE."Cost Amount (Expected)" := 0; //  Vadesi Gelecek DBS Bakiyesi
@@ -193,10 +209,72 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
                 AddCustLedgerToTempVLE(CustLedgEntry);
             until CustLedgEntry.Next() = 0;
 
-        AddReleasedPurchOrdersToTempVLE();
-        AddManualExpensesToTempVLE();
-        AddManualRevenuesToTempVLE();
+        if ReportType = ReportType::Weekly then begin
+            // Haftalık: 108 ile başlayan banka kayıtları (MÜŞ POS/TİCA) + günlük DEVİR/TOPLAM hesabı
+            AddWeeklyBankEntriesToTempVLE();
+            CalcWeeklyBalances();
+        end else begin
+            AddReleasedPurchOrdersToTempVLE();
+            AddManualExpensesToTempVLE();
+            AddManualRevenuesToTempVLE();
+        end;
 
+    end;
+
+    // Haftalık modda sadece haftalık rapordaki satırları besleyen gruplar işlenir:
+    // 2 = DBS, 3 = Açık Hesap Borç, 7/8/9/18 = Açık Alacaklar (DMO, İhale, Ecza Deposu, Eczacı),
+    // 10 = İhracat, 12/13/14 = Açık Alacaklar (Özel Hastane), 19 = Müş POS/Tica (banka 108)
+    local procedure IsWeeklyGroup(pGroup: Integer): Boolean
+    begin
+        exit(pGroup in [2, 3, 7, 8, 9, 10, 12, 13, 14, 18, 19]);
+    end;
+
+    // Haftalık MÜŞ POS/TİCA: Bank Account Ledger Entry, Bank Account No. 108 ile başlayan, Open = Yes.
+    // Vade tarihi "Closed at Date" alanından alınır, tutar "Amount" (TL'ye çevrilerek) Cost Posted to G/L alanına yazılır.
+    local procedure AddWeeklyBankEntriesToTempVLE()
+    var
+        BankAccLedgEntry: Record "Bank Account Ledger Entry";
+        AmountLCY: Decimal;
+    begin
+        BankAccLedgEntry.SetFilter("Bank Account No.", '108*');
+        BankAccLedgEntry.SetRange(Open, true);
+        if BankAccLedgEntry.FindSet() then
+            repeat
+                AmountLCY := ConvertToLCY(BankAccLedgEntry."Currency Code", BankAccLedgEntry.Amount, BankAccLedgEntry."Amount (LCY)");
+                AddToTempVLE(BankAccLedgEntry."Closed at Date", 19, AmountLCY);
+            until BankAccLedgEntry.Next() = 0;
+    end;
+
+    // Haftalık DEVİR / TOPLAM:
+    // Satır neti = Müş Çek + İhracat - Borç Çekleri + Müş POS/Tica + Açık Alacaklar - DBS - Açık Hesap Borç
+    // İlk satır (rapor tarihi - 1) kendi toplamını devir olarak bırakır, sonraki her gün önceki günün TOPLAM'ını devralır.
+    // DEVİR "Sales Amount (Actual)", TOPLAM "Sales Amount (Expected)" alanlarına yazılır (haftalık modda başka amaçla kullanılmaz).
+    local procedure CalcWeeklyBalances()
+    var
+        PrevTotal: Decimal;
+        DayNet: Decimal;
+    begin
+        PrevTotal := 0;
+        TempVLE.Reset();
+        if TempVLE.FindSet() then
+            repeat
+                DayNet :=
+                    TempVLE."Cost Amount (Non-Invtbl.)" +                                  // Müş Çek/Senet
+                    TempVLE."Discount Amount" -                                            // İhracat Tahsilatları
+                    TempVLE."Cost Amount (Expected) (ACY)" +                               // Borç Çekleri (çıkar)
+                    TempVLE."Cost Posted to G/L" +                                         // Müş POS/Tica
+                    TempVLE."Valued Quantity" + TempVLE."Item Ledger Entry Quantity" +     // Açık Alacaklar
+                    TempVLE."Invoiced Quantity" + TempVLE."Cost per Unit" +
+                    TempVLE."Cost Posted to G/L (ACY)" + TempVLE."Cost per Unit (ACY)" +
+                    TempVLE."Purchase Amount (Actual)" -
+                    TempVLE."Cost Amount (Expected)" -                                     // DBS (çıkar)
+                    TempVLE."Cost Amount (Actual)";                                        // Açık Hesap Borç (çıkar)
+
+                TempVLE."Sales Amount (Actual)" := PrevTotal;               // DEVİR
+                TempVLE."Sales Amount (Expected)" := PrevTotal + DayNet;    // TOPLAM
+                PrevTotal := PrevTotal + DayNet;
+                TempVLE.Modify();
+            until TempVLE.Next() = 0;
     end;
 
     // Banka hesaplarındaki (102 ile başlayan) kayıtların rapor tarihinden bir gün önceki (YesterdayDate)
@@ -368,6 +446,9 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
     var
         EntryNo: Integer;
     begin
+        if (ReportType = ReportType::Weekly) and not IsWeeklyGroup(pGroup) then
+            exit; // Haftalık raporda olmayan satırlar (Grup içi, Sipariş, Vergi/SGK, Maaş/Kira, Manuel gelir) işlenmez
+
         EntryNo := GetEntryNo(pDueDate);
         if (EntryNo < 1) or (EntryNo > i) then
             exit; // 5 aylık aralığın dışında
@@ -412,6 +493,8 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
                 TempVLE."Exp. Cost Posted to G/L (ACY)" += pAmount;
             18:
                 TempVLE."Cost per Unit" += pAmount;
+            19:
+                TempVLE."Cost Posted to G/L" += pAmount; // Haftalık: Müş POS/Tica (banka 108)
         end;
         TempVLE.Modify();
     end;
@@ -543,6 +626,8 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
     var
         i: Integer;
         ReportDate: Date;
+        ReportType: Option Daily,Weekly;
+        ReportModeNo: Integer;
         YesterdayDate: Date;
         StartDate: Date;
         // Kurlar (rapor tarihi - 1)

@@ -858,6 +858,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Plan. Daily CashFlow Rep._Inc - Control ReportDate - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Report 333145991 - Control 3115007730 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Report Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Plan. Daily CashFlow Rep._Inc - Control ReportType - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 3007758371 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Qr Code List Report</source>
           <note from="Developer" annotates="general" priority="2"></note>
