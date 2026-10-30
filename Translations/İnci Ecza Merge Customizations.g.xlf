@@ -748,6 +748,111 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report G/L Budget Report_Inc - Control TahakkukAlacak - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Report 4153454431 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Inc Item Identification Label</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Inc Item Identification Label - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4153454431 - NamedType 1282466701" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ambalaj Adedi must be at least 1.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Inc Item Identification Label - NamedType BoxCountErr</note>
+        </trans-unit>
+        <trans-unit id="Report 4153454431 - NamedType 338823279" size-unit="char" translate="yes" xml:space="preserve">
+          <source>İlk ve son koli miktarı toplamı (%1) madde hareketi miktarını (%2) aşıyor.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = first + last box quantity, %2 = entry quantity</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Inc Item Identification Label - NamedType QtyMismatchErr</note>
+        </trans-unit>
+        <trans-unit id="Report 4153454431 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Inc Item Identification Label - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4153454431 - Control 2558086488 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how many labels are printed.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Inc Item Identification Label - Control BoxCountField - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 4153454431 - Control 2558086488 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ambalaj Adedi</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Inc Item Identification Label - Control BoxCountField - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4153454431 - Control 4217634558 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the entry date printed on the label.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Inc Item Identification Label - Control EntryDateField - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 4153454431 - Control 4217634558 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Giriş Tarihi</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Inc Item Identification Label - Control EntryDateField - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4153454431 - Control 3059331975 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the expiration date printed on the label.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Inc Item Identification Label - Control ExpirationDateField - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 4153454431 - Control 3059331975 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Son Kullanma Tarihi</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Inc Item Identification Label - Control ExpirationDateField - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4153454431 - Control 2404261147 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the quantity on the first label.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Inc Item Identification Label - Control FirstBoxQtyField - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 4153454431 - Control 2404261147 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>İlk Koli Miktar</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Inc Item Identification Label - Control FirstBoxQtyField - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4153454431 - Control 3173417499 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the quantity on the last label. The boxes in between share the remainder equally.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Inc Item Identification Label - Control LastBoxQtyField - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 4153454431 - Control 3173417499 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Son Koli Miktar</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Inc Item Identification Label - Control LastBoxQtyField - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4153454431 - Control 2679860462 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the manufacturer name printed on the label.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Inc Item Identification Label - Control ManufacturerNameField - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 4153454431 - Control 2679860462 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Üretici Adı</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Inc Item Identification Label - Control ManufacturerNameField - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3594794442 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Inc Packaging Label</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Inc Packaging Label_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3594794442 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Inc Packaging Label_Inc - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3594794442 - Control 2558086488 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how many box labels are printed.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Inc Packaging Label_Inc - Control BoxCountField - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 3594794442 - Control 2228429436 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the quantity inside each box.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Inc Packaging Label_Inc - Control InnerQtyField - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 3594794442 - Control 2826615255 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the production date printed on the label.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Inc Packaging Label_Inc - Control ProductionDateField - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Report 2025629336 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Inc Warehouse Label</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1037,6 +1142,16 @@
           <source>You are not allowed to change the status to Approved.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Inspection Plan-B2F_Inc - NamedType Err02_Err</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 875860813 - Action 2206574990 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3595318222">
+          <source>Print Item Identification Label</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Item Ledger Entries2_Inc - Action ItemIdentificationLabel_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 875860813 - Action 3162499326 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3595318222">
+          <source>Print Packaging Label</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Item Ledger Entries2_Inc - Action PackagingLabel_Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 875860813 - Action 2171134367 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3595318222">
           <source>Download QR Code List</source>
