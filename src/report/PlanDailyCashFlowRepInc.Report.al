@@ -19,6 +19,7 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
             column(WeeklyDevir; "Sales Amount (Actual)") { }                        // Haftalık: günün DEVİR tutarı (sadece haftalık modda dolu)
             column(WeeklyToplam; "Sales Amount (Expected)") { }                     // Haftalık: günün TOPLAM tutarı (sadece haftalık modda dolu)
             column(ReportMode; ReportModeNo) { }                                    // 0 = Günlük, 1 = Haftalık
+            column(IsINC; IsINCCompany) { }                                         // 1 = Şirket INC (bazı kolonlar RDLC'de gizlenir)
 
             column(AcikHesapCariOdeme; "Cost Amount (Actual)") { }                  // Açık Hesap Cari ödeme
             column(GrupIciOdeme; "Cost Amount (Actual) (ACY)") { }                  // Grup İçi
@@ -115,6 +116,7 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
         VendLedgEntry: Record "Vendor Ledger Entry";
         CustLedgEntry: Record "Cust. Ledger Entry";
         Cheque: Record "Cheque-B2F";
+        LCompany: Record Company;
         AmountLCY: Decimal;
     begin
         if ReportDate = 0D then
@@ -142,6 +144,12 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
             ReportModeNo := 1
         else
             ReportModeNo := 0;
+
+        // Şirket ayrımı: INC şirketinde Özel Hastane (3 kolon), Eczacı, Kamu ve Özel manuel gelir kolonları RDLC'de görünmez
+        IsINCCompany := 0;
+        if LCompany.Get(CompanyName) then
+            if LCompany.Name = 'INC' then
+                IsINCCompany := 1;
 
         for CurrDate := StartDate to EndDate do begin
             TempVLE.Init();
@@ -628,6 +636,7 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
         ReportDate: Date;
         ReportType: Option Daily,Weekly;
         ReportModeNo: Integer;
+        IsINCCompany: Integer;
         YesterdayDate: Date;
         StartDate: Date;
         // Kurlar (rapor tarihi - 1)
@@ -651,5 +660,6 @@ report 70822 "Plan. Daily CashFlow Rep._Inc"
         BankBalONSLCY: Decimal;
         BankBalOtherLCY: Decimal;
         BankBalTotalLCY: Decimal;
+
 
 }

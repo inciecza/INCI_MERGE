@@ -66,32 +66,32 @@ report 70825 "Inc Item Identification Label"
                     field(ManufacturerNameField; ManufacturerName)
                     {
                         ApplicationArea = All;
-                        Caption = 'Üretici Adı';
-                        ToolTip = 'Specifies the manufacturer name printed on the label.';
+                        Caption = 'Üretici Adı', locked = true;
+                        ToolTip = 'Specifies the manufacturer name printed on the label.', locked = true;
                     }
                     field(EntryDateField; EntryDate)
                     {
                         ApplicationArea = All;
-                        Caption = 'Giriş Tarihi';
+                        Caption = 'Giriş Tarihi', locked = true;
                         ToolTip = 'Specifies the entry date printed on the label.';
                     }
                     field(ExpirationDateField; ExpirationDate)
                     {
                         ApplicationArea = All;
-                        Caption = 'Son Kullanma Tarihi';
+                        Caption = 'Son Kullanma Tarihi', locked = true;
                         ToolTip = 'Specifies the expiration date printed on the label.';
                     }
                     field(BoxCountField; BoxCount)
                     {
                         ApplicationArea = All;
-                        Caption = 'Ambalaj Adedi';
+                        Caption = 'Ambalaj Adedi', locked = true;
                         MinValue = 1;
                         ToolTip = 'Specifies how many labels are printed.';
                     }
                     field(FirstBoxQtyField; FirstBoxQty)
                     {
                         ApplicationArea = All;
-                        Caption = 'İlk Koli Miktar';
+                        Caption = 'İlk Koli Miktar', locked = true;
                         MinValue = 0;
                         DecimalPlaces = 0 : 5;
                         ToolTip = 'Specifies the quantity on the first label.';
@@ -99,7 +99,7 @@ report 70825 "Inc Item Identification Label"
                     field(LastBoxQtyField; LastBoxQty)
                     {
                         ApplicationArea = All;
-                        Caption = 'Son Koli Miktar';
+                        Caption = 'Son Koli Miktar', locked = true;
                         MinValue = 0;
                         DecimalPlaces = 0 : 5;
                         ToolTip = 'Specifies the quantity on the last label. The boxes in between share the remainder equally.';

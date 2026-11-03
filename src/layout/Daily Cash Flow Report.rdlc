@@ -8662,18 +8662,42 @@ durum (TL)</Value>
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
+                <TablixMember>
+                  <Visibility>
+                    <Hidden>=First(Fields!IsINC.Value,"DataSet_Result")=1</Hidden>
+                  </Visibility>
+                </TablixMember>
+                <TablixMember>
+                  <Visibility>
+                    <Hidden>=First(Fields!IsINC.Value,"DataSet_Result")=1</Hidden>
+                  </Visibility>
+                </TablixMember>
+                <TablixMember>
+                  <Visibility>
+                    <Hidden>=First(Fields!IsINC.Value,"DataSet_Result")=1</Hidden>
+                  </Visibility>
+                </TablixMember>
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
+                <TablixMember>
+                  <Visibility>
+                    <Hidden>=First(Fields!IsINC.Value,"DataSet_Result")=1</Hidden>
+                  </Visibility>
+                </TablixMember>
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
-                <TablixMember />
-                <TablixMember />
-                <TablixMember />
-                <TablixMember />
-                <TablixMember />
-                <TablixMember />
+                <TablixMember>
+                  <Visibility>
+                    <Hidden>=First(Fields!IsINC.Value,"DataSet_Result")=1</Hidden>
+                  </Visibility>
+                </TablixMember>
+                <TablixMember>
+                  <Visibility>
+                    <Hidden>=First(Fields!IsINC.Value,"DataSet_Result")=1</Hidden>
+                  </Visibility>
+                </TablixMember>
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
@@ -14345,6 +14369,9 @@ durum (TL)</Value>
         </Field>
         <Field Name="ReportMode">
           <DataField>ReportMode</DataField>
+        </Field>
+        <Field Name="IsINC">
+          <DataField>IsINC</DataField>
         </Field>
         <Field Name="AcikHesapCariOdeme">
           <DataField>AcikHesapCariOdeme</DataField>
