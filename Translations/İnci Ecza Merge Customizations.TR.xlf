@@ -663,6 +663,41 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Bid SAS Invoice Price Control - Control StartDate - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Report 3339731074 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cash Flow Tables Daily Report</source>
+          <target>Nakit Akış Tablosu Günlük Raporu</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report CashFlow Table Daily Rep._Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3339731074 - Control 4022966755 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the cash flow forecast whose entries are used in the report.</source>
+          <target>Raporda kullanılan nakit akış tahminini seçin.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report CashFlow Table Daily Rep._Inc - Control CashFlowForecastNo - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 3339731074 - Control 4022966755 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cash Flow Forecast No.</source>
+          <target>Nakit Akış Tahmini No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report CashFlow Table Daily Rep._Inc - Control CashFlowForecastNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3339731074 - Control 497847406 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the report date to filter the report.</source>
+          <target>Raporu filtrelemek için rapor tarihini seçin.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report CashFlow Table Daily Rep._Inc - Control ReportDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 3339731074 - Control 497847406 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Report Date</source>
+          <target>Rapor Tarihi</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report CashFlow Table Daily Rep._Inc - Control ReportDate - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 1984224290 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Checks Collec. Payment Rep2</source>
           <target>Çek Ödeme ve Tahsilat Raporu</target>
