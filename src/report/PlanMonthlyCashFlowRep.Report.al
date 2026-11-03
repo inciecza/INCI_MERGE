@@ -1,7 +1,7 @@
 report 70826 "Plan. Monthly CashFlow Rep."
 {
     ApplicationArea = All;
-    Caption = 'Planned Monthly Cash Flow Report';
+    Caption = 'Planned Monthly Cash Flow Report - A';
     UsageCategory = ReportsAndAnalysis;
     DefaultLayout = RDLC;
     RDLCLayout = './src/layout/Monthly Cash Flow Report.rdlc';

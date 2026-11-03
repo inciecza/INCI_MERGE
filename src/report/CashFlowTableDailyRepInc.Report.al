@@ -1,7 +1,7 @@
 report 70827 "CashFlow Table Daily Rep._Inc"
 {
     ApplicationArea = All;
-    Caption = 'Cash Flow Tables Daily Report';
+    Caption = 'Cash Flow Tables Daily Report B';
     UsageCategory = ReportsAndAnalysis;
     DefaultLayout = RDLC;
     RDLCLayout = './src/layout/Cash Flow Tables Daily Report.rdlc';

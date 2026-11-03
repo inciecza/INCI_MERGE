@@ -1,7 +1,7 @@
 report 70822 "Plan. Daily CashFlow Rep._Inc"
 {
     ApplicationArea = All;
-    Caption = 'Planned Daily Cash Flow Report';
+    Caption = 'Cash Flow Tables Daily Report A';
     UsageCategory = ReportsAndAnalysis;
     DefaultLayout = RDLC;
     RDLCLayout = './src/layout/Daily Cash Flow Report.rdlc';
