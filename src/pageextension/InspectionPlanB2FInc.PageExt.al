@@ -6,37 +6,68 @@ pageextension 70814 "Inspection Plan-B2F_Inc" extends "Inspection Plan-B2F"
         {
             trigger OnAfterValidate()
             begin
+                // Durum değişmediyse bir şey yapma
+                if Rec.Status = xRec.Status then
+                    exit;
 
-                if (Rec.Status = Rec.Status::Certified) then
+                // Onaylandı'ya geçmeden önce Geliştiriliyor aşamasından geçmeli
+                if Rec.Status = Rec.Status::Certified then
                     if not (xRec.Status = Rec.Status::"Under Development") then
-                        Error('İlk Önce Geliştiriliyor aşamasına almanız gerekiyor.');
+                        Error(NeedUnderDevelopmentFirstErr);
+
+                CheckStatusChangePermission();
+
+                // Durum Geliştiriliyor / Onaylandı olduysa bildirim gönder
                 case Rec.Status of
                     Rec.Status::"Under Development":
-                        RoutingCheckStatus(1);
+                        InciGeneral2.InspectionPlanStatusMailSend(Rec."No.", Rec.Description, 2);
                     Rec.Status::Certified:
-                        RoutingCheckStatus(2);
-
+                        InciGeneral2.InspectionPlanStatusMailSend(Rec."No.", Rec.Description, 3);
                 end;
             end;
         }
-    }
-    local procedure RoutingCheckStatus(StatusType: Integer)
-    var
-        LUserSetup: Record "User Setup";
-    begin
-        Clear(LUserSetup);
-        if LUserSetup.Get(UserId) then
-            case StatusType of
-                1:
-                    if not LUserSetup."Inspection Approved_Inc" then
-                        Error(Err01_Err);
-                2:
-                    if not LUserSetup."Inspection Developing_Inc" then
-                        Error(Err02_Err);
+        modify(Description)
+        {
+            trigger OnAfterValidate()
+            begin
+                // Durum Yeni iken açıklama değiştiyse bildirim gönder
+                if (Rec.Description <> xRec.Description) and (Rec.Status = Rec.Status::New) then
+                    InciGeneral2.InspectionPlanStatusMailSend(Rec."No.", Rec.Description, 1);
             end;
+        }
+    }
+
+    local procedure CheckStatusChangePermission()
+    var
+        UserSetup: Record "User Setup";
+        HasApprovedPermission: Boolean;
+        HasDevelopingPermission: Boolean;
+    begin
+        // Kullanıcı User Setup'ta yoksa iki yetki de yok sayılır
+        if UserSetup.Get(UserId()) then begin
+            HasApprovedPermission := UserSetup."Inspection Approved_Inc";
+            HasDevelopingPermission := UserSetup."Inspection Developing_Inc";
+        end;
+
+        // Onaylandı yapmak veya Onaylandı olan kaydı değiştirmek -> Onay yetkisi
+        if (Rec.Status = Rec.Status::Certified) or (xRec.Status = xRec.Status::Certified) then
+            if not HasApprovedPermission then begin
+                if Rec.Status = Rec.Status::Certified then
+                    Error(CertifiedNotAllowedErr)
+                else
+                    Error(ChangeCertifiedNotAllowedErr);
+            end;
+
+        // Geliştiriliyor yapmak -> Geliştirme yetkisi
+        if Rec.Status = Rec.Status::"Under Development" then
+            if not HasDevelopingPermission then
+                Error(UnderDevelopmentNotAllowedErr);
     end;
 
     var
-        Err01_Err: Label 'You are not allowed to change the status to Under Development.';
-        Err02_Err: Label 'You are not allowed to change the status to Approved.';
+        InciGeneral2: Codeunit "InciGeneral2_Inc";
+        NeedUnderDevelopmentFirstErr: Label 'İlk Önce Geliştiriliyor aşamasına almanız gerekiyor.';
+        UnderDevelopmentNotAllowedErr: Label 'You are not allowed to change the status to Under Development.';
+        CertifiedNotAllowedErr: Label 'You are not allowed to change the status to Certified.';
+        ChangeCertifiedNotAllowedErr: Label 'You are not allowed to change the status of a Certified inspection plan.';
 }

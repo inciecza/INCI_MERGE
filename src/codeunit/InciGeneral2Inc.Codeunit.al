@@ -79,4 +79,73 @@ codeunit 70801 "InciGeneral2_Inc"
         end;
     end;
 
+    #region InspectionPlanStatusMail
+    // pStatusType: 1 = Yeni (IPLN), 2 = Geliştiriliyor (IPLG), 3 = Onaylandı (IPLO)
+    procedure InspectionPlanStatusMailSend(pInspectionCode: Code[20]; pDescription: Text; pStatusType: Integer): Boolean
+    var
+        LMailingGroup: Record "Mailing Group";
+        LInciGeneral: Codeunit InciGeneral_Inc;
+        LBody: TextBuilder;
+        AttchInStream: InStream; // boş, ek yok
+        lSendTo: List of [Text];
+        lCCTo: List of [Text];
+        lBCCTo: List of [Text];
+        LMailGroupCode: Code[10];
+        LSubject: Text[250];
+        LStatusLine: Text;
+        Text_Body1_Lbl: Label 'Merhaba,', Locked = true;
+        Text_Body3_Lbl: Label 'İyi Çalışmalar.', Locked = true;
+        Text_NewSubj_Lbl: Label 'İnceleme Planı Yeni Bilgisi Hk.', Locked = true;
+        Text_DevSubj_Lbl: Label 'İnceleme Planı Geliştiriliyor Bilgisi Hk.', Locked = true;
+        Text_CertSubj_Lbl: Label 'İnceleme Planı Onaylandı Bilgisi Hk.', Locked = true;
+        Text_NewLine_Lbl: Label 'İnceleme Planı Yeni durumundadır.', Locked = true;
+        Text_DevLine_Lbl: Label 'İnceleme Planı Geliştiriliyor durumuna alınmıştır.', Locked = true;
+        Text_CertLine_Lbl: Label 'İnceleme Planı Onaylandı durumuna alınmıştır.', Locked = true;
+        Text_Code_Lbl: Label 'İnceleme Kodu', Locked = true;
+        Text_Desc_Lbl: Label 'İnceleme Açıklaması', Locked = true;
+    begin
+        case pStatusType of
+            1:
+                begin
+                    LMailGroupCode := 'IPLN';
+                    LSubject := Text_NewSubj_Lbl;
+                    LStatusLine := Text_NewLine_Lbl;
+                end;
+            2:
+                begin
+                    LMailGroupCode := 'IPLG';
+                    LSubject := Text_DevSubj_Lbl;
+                    LStatusLine := Text_DevLine_Lbl;
+                end;
+            3:
+                begin
+                    LMailGroupCode := 'IPLO';
+                    LSubject := Text_CertSubj_Lbl;
+                    LStatusLine := Text_CertLine_Lbl;
+                end;
+            else
+                exit(false);
+        end;
+
+        if not LMailingGroup.Get(LMailGroupCode) then
+            exit(false);
+        if LMailingGroup.TO_Inc = '' then
+            exit(false);
+
+        lSendTo := LMailingGroup.TO_Inc.Split(';');
+        if LMailingGroup.CC_Inc <> '' then
+            lCCTo := LMailingGroup.CC_Inc.Split(';');
+        if LMailingGroup.BCC_Inc <> '' then
+            lBCCTo := LMailingGroup.BCC_Inc.Split(';');
+
+        LBody.Append(Text_Body1_Lbl + '<br><br>');
+        LBody.Append('<b>' + Text_Code_Lbl + ':</b> ' + pInspectionCode + '<br>');
+        LBody.Append('<b>' + Text_Desc_Lbl + ':</b> ' + pDescription + '<br><br>');
+        LBody.Append(LStatusLine + '<br><br>');
+        LBody.Append(Text_Body3_Lbl);
+
+        exit(LInciGeneral.SendEmailviaSMTP(lSendTo, lCCTo, lBCCTo, LSubject, LBody.ToText(), AttchInStream, ''));
+    end;
+    #endregion InspectionPlanStatusMail
+
 }

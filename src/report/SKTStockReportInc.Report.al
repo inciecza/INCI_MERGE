@@ -35,7 +35,7 @@ report 70815 "SKT Stock Report_Inc"
             column(Lot_No; "User ID")
             {
             }
-            column(LotKullan; "Invoiced Quantity")
+            column(LotNoMode; LotNo)
             {
             }
 
@@ -89,6 +89,7 @@ report 70815 "SKT Stock Report_Inc"
                         ApplicationArea = All;
                         Caption = 'Location';
                         ToolTip = 'Select the location to filter the report.';
+                        TableRelation = Location;
                     }
 
                     field(LotNo; LotNo)
@@ -125,6 +126,11 @@ report 70815 "SKT Stock Report_Inc"
         LCompany: Record "Company";
         LItem: Record Item;
     begin
+        if LotNo then begin
+            FillTempVLEByLot();
+            exit;
+        end;
+
         Clear(LItem);
         if ItemNo <> '' then
             LItem.Setfilter("No.", ItemNo);
@@ -144,7 +150,7 @@ report 70815 "SKT Stock Report_Inc"
                 LItemLedgerEntry.SetAscending("Expiration Date", true);
                 LItemLedgerEntry.Setfilter("Remaining Quantity", '>0');
                 Clear(LCompany);
-                if not (StartDate = 0D) and (EndDate = 0D) then
+                if (not (StartDate = 0D) and (EndDate = 0D)) Or (not LotNo) then
                     LItemLedgerEntry.SetRange("Expiration Date", StartDate, EndDate);
 
 
@@ -178,6 +184,49 @@ report 70815 "SKT Stock Report_Inc"
                     until LItemLedgerEntry.Next() = 0;
                 TempVLE.Reset();
             until LItem.Next() = 0;
+    end;
+
+    // LotNo seçiliyse: tarih filtresi uygulanmaz, Madde No + Lot No bazında kalan miktar toplanır.
+    local procedure FillTempVLEByLot()
+    var
+        LItemLedgerEntry: Record "Item Ledger Entry";
+        LItem: Record Item;
+    begin
+        if ItemNo <> '' then
+            LItem.SetFilter("No.", ItemNo);
+        if ItemCategory <> '' then
+            LItem.SetFilter("Item Category Code", ItemCategory);
+        if not LItem.FindSet() then
+            exit;
+        repeat
+            LItemLedgerEntry.Reset();
+            LItemLedgerEntry.SetRange("Item No.", LItem."No.");
+            if Location <> '' then
+                LItemLedgerEntry.SetFilter("Location Code", Location);
+            LItemLedgerEntry.SetFilter("Remaining Quantity", '>0');
+            if LItemLedgerEntry.FindSet() then
+                repeat
+                    TempVLE.Reset();
+                    TempVLE.SetRange("Item No.", LItemLedgerEntry."Item No.");
+                    TempVLE.SetRange("User ID", LItemLedgerEntry."Lot No.");
+                    if TempVLE.FindFirst() then begin
+                        TempVLE."Invoiced Quantity" += LItemLedgerEntry."Remaining Quantity";
+                        TempVLE.Modify();
+                    end else begin
+                        LItemLedgerEntry.CalcFields("Item Description");
+                        TempVLE.Init();
+                        i += 1;
+                        TempVLE."Entry No." := i;
+                        TempVLE."Item No." := LItemLedgerEntry."Item No.";
+                        TempVLE."Item Description" := LItemLedgerEntry."Item Description";
+                        TempVLE."User ID" := LItemLedgerEntry."Lot No.";
+                        TempVLE."Source No." := LItemLedgerEntry."Unit of Measure Code";
+                        TempVLE."Invoiced Quantity" := LItemLedgerEntry."Remaining Quantity";
+                        TempVLE.Insert();
+                    end;
+                until LItemLedgerEntry.Next() = 0;
+        until LItem.Next() = 0;
+        TempVLE.Reset();
     end;
 
     local procedure GetManufacturerName(pItemNo: code[20]): text[100]
