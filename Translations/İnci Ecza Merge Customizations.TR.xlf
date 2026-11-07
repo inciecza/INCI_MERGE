@@ -1364,28 +1364,24 @@
           <source>You are not allowed to change the status to Certified.</source>
           <target>Durumu Onaylandı olarak değiştirme izniniz yoktur.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Inspection Plan-B2F_Inc - NamedType CertifiedNotAllowedErr</note>
         </trans-unit>
         <trans-unit id="PageExtension 2097912207 - NamedType 4063597851" size-unit="char" translate="yes" xml:space="preserve" al-object-target="PageExtension 2097912207">
           <source>You are not allowed to change the status of a Certified inspection plan.</source>
           <target>Onaylanmış bir muayene planının durumunu değiştirme izniniz yoktur.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Inspection Plan-B2F_Inc - NamedType ChangeCertifiedNotAllowedErr</note>
         </trans-unit>
         <trans-unit id="PageExtension 2097912207 - NamedType 2301438106" size-unit="char" translate="yes" xml:space="preserve" al-object-target="PageExtension 2097912207">
           <source>İlk Önce Geliştiriliyor aşamasına almanız gerekiyor.</source>
           <target>İlk Önce Geliştiriliyor aşamasına almanız gerekiyor.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Inspection Plan-B2F_Inc - NamedType NeedUnderDevelopmentFirstErr</note>
         </trans-unit>
         <trans-unit id="PageExtension 2097912207 - NamedType 2580271629" size-unit="char" translate="yes" xml:space="preserve" al-object-target="PageExtension 2097912207">
           <source>You are not allowed to change the status to Under Development.</source>
           <target>Geliştiriliyor yapma yetkiniz bulunmuyor</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Inspection Plan-B2F_Inc - NamedType UnderDevelopmentNotAllowedErr</note>
         </trans-unit>
         <trans-unit id="PageExtension 875860813 - Action 2206574990 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3595318222">
@@ -1531,6 +1527,13 @@
           <target>Bütçe Kodu</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension G/L Account_Inc - Field Budget Code_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4052896083 - Field 419070005 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2825951060">
+          <source>Budget Code</source>
+          <target>Bütçe Kodu</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Source has been modified.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension G/L Entry2_Inc - Field Budget Code_Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 1314341212 - Field 926841713 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2199490085">
           <source>Stock Inventory Account Manager Approve</source>

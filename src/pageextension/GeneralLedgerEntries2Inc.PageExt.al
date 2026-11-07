@@ -8,6 +8,10 @@ pageextension 70829 "General Ledger Entries2_Inc" extends "General Ledger Entrie
             {
                 ApplicationArea = All;
             }
+            field("Budget Code_Inc"; Rec."Budget Code_Inc")
+            {
+                ApplicationArea = All;
+            }
 
         }
     }

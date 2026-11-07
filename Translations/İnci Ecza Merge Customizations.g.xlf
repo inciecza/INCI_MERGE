@@ -1273,6 +1273,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension G/L Account_Inc - Field Budget Code_Inc - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 4052896083 - Field 419070005 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2825951060">
+          <source>Budget Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension G/L Entry2_Inc - Field Budget Code_Inc - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 1314341212 - Field 926841713 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2199490085">
           <source>Stock Inventory Account Manager Approve</source>
           <note from="Developer" annotates="general" priority="2"></note>
