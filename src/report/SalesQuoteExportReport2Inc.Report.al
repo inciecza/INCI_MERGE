@@ -210,7 +210,7 @@ report 70808 "Sales Quote Export Report2_Inc"
                 ExcelBuffer,
                 RowNo,
                 CustomerDataTransfer.Inventory,
-                LInciGeneral.GetStock(SalesLine."No.", ''));
+                LInciGeneral.GetStock(SalesLine."No.", SalesLine."Location Code"));
         end;
 
         if CustomerDataTransfer."Line No" <> '' then begin
