@@ -8,9 +8,11 @@ report 70824 "Inc Packaging Label_Inc"
 
     dataset
     {
-        dataitem(ItemLedgerEntry; "Item Ledger Entry")
+        // Item Tracking Lines sayfası geçici (temporary) Tracking Specification kayıtlarıyla çalışır.
+        // Satırlar SetTrackingSpecification ile rapora kopyalanır, Integer üzerinden döngü kurulur.
+        dataitem(TrackingSpecLoop; Integer)
         {
-            DataItemTableView = sorting("Entry No.");
+            DataItemTableView = sorting(Number);
 
             dataitem(BoxLoop; Integer)
             {
@@ -19,9 +21,9 @@ report 70824 "Inc Packaging Label_Inc"
                 column(DocCode; DocCodeTxt) { }
                 column(ItemNo; Item."No.") { }
                 column(ItemDescription; Item.Description) { }
-                column(LotNo; ItemLedgerEntry."Lot No.") { }
+                column(LotNo; TempTrackingSpecification."Lot No.") { }
                 column(ProductionDate; Format(ProductionDate, 0, '<Day,2>.<Month,2>.<Year4>')) { }
-                column(ExpirationDate; Format(ItemLedgerEntry."Expiration Date", 0, '<Day,2>.<Month,2>.<Year4>')) { }
+                column(ExpirationDate; Format(TempTrackingSpecification."Expiration Date", 0, '<Day,2>.<Month,2>.<Year4>')) { }
                 column(BoxNo; Format(Number) + ' / ' + Format(BoxCount)) { }
                 column(InnerQty; Format(InnerQty)) { }
                 column(StorageCondition; StorageConditionTxt) { }
@@ -34,14 +36,19 @@ report 70824 "Inc Packaging Label_Inc"
 
             trigger OnPreDataItem()
             begin
-                if EntryNoToPrint = 0 then
-                    Error(EntryNoRequiredErr);
-                SetRange("Entry No.", EntryNoToPrint);
+                if TempTrackingSpecification.IsEmpty() then
+                    Error(TrackingSpecRequiredErr);
+                SetRange(Number, 1, TempTrackingSpecification.Count());
             end;
 
             trigger OnAfterGetRecord()
             begin
-                if not Item.Get("Item No.") then
+                if Number = 1 then
+                    TempTrackingSpecification.FindFirst()
+                else
+                    TempTrackingSpecification.Next();
+
+                if not Item.Get(TempTrackingSpecification."Item No.") then
                     Clear(Item);
                 StorageConditionTxt := GetStorageCondition(Item."Warehouse Class Code");
             end;
@@ -90,17 +97,23 @@ report 70824 "Inc Packaging Label_Inc"
 
     var
         Item: Record Item;
+        TempTrackingSpecification: Record "Tracking Specification" temporary;
         ProductionDate: Date;
         BoxCount: Integer;
         InnerQty: Decimal;
         StorageConditionTxt: Text;
-        EntryNoToPrint: Integer;
         DocCodeTxt: Label 'KG.PR.024.E34', Locked = true;
-        EntryNoRequiredErr: Label 'Bu rapor Madde Hareketleri sayfasındaki butondan çalıştırılmalıdır.', Locked = true;
+        TrackingSpecRequiredErr: Label 'Bu rapor Madde İzleme Satırları sayfasındaki butondan çalıştırılmalıdır.', Locked = true;
 
-    procedure SetEntryNo(EntryNo: Integer)
+    procedure SetTrackingSpecification(var SourceTrackingSpecification: Record "Tracking Specification" temporary)
     begin
-        EntryNoToPrint := EntryNo;
+        TempTrackingSpecification.Reset();
+        TempTrackingSpecification.DeleteAll();
+        if SourceTrackingSpecification.FindSet() then
+            repeat
+                TempTrackingSpecification := SourceTrackingSpecification;
+                TempTrackingSpecification.Insert();
+            until SourceTrackingSpecification.Next() = 0;
     end;
 
     local procedure GetStorageCondition(WarehouseClassCode: Code[10]): Text

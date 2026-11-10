@@ -20,22 +20,6 @@ pageextension 70825 "Item Ledger Entries2_Inc" extends "Item Ledger Entries"
                     InciGeneral2Inc.CreateSerialNoTxt(Rec."Entry No.", Rec."Entry Type");
                 end;
             }
-            action(PackagingLabel_Inc)
-            {
-                ApplicationArea = All;
-                Caption = 'Print Packaging Label';
-                Promoted = true;
-                PromotedCategory = Process;
-                PromotedIsBig = true;
-                Image = Print;
-                trigger OnAction()
-                var
-                    IncPackagingLabel: Report "Inc Packaging Label_Inc";
-                begin
-                    IncPackagingLabel.SetEntryNo(Rec."Entry No.");
-                    IncPackagingLabel.RunModal();
-                end;
-            }
             action(ItemIdentificationLabel_Inc)
             {
                 ApplicationArea = All;
