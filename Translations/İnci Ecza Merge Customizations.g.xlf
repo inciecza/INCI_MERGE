@@ -1158,15 +1158,20 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Item Ledger Entries2_Inc - Action ItemIdentificationLabel_Inc - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 875860813 - Action 3162499326 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3595318222">
-          <source>Print Packaging Label</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Item Ledger Entries2_Inc - Action PackagingLabel_Inc - Property Caption</note>
-        </trans-unit>
         <trans-unit id="PageExtension 875860813 - Action 2171134367 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3595318222">
           <source>Download QR Code List</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Item Ledger Entries2_Inc - Action QRCode_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 265724322 - Action 3162499326 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4023405129">
+          <source>Prints the packaging label for the selected item tracking lines.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Item Tracking Lines2_Inc - Action PackagingLabel_Inc - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 265724322 - Action 3162499326 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4023405129">
+          <source>Print Packaging Label</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Item Tracking Lines2_Inc - Action PackagingLabel_Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 3221568069 - Control 3167235286 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2309148588">
           <source>Specifies the value of the Bid Final Total field.</source>
@@ -1277,6 +1282,16 @@
           <source>Budget Code</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension G/L Entry2_Inc - Field Budget Code_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1314341212 - Field 3750965008 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2199490085">
+          <source>Document Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Invt. Document Header_Inc - Field Document Type_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1314341212 - Field 3750965008 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2199490085">
+          <source> ,Destruction,Consumption</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Invt. Document Header_Inc - Field Document Type_Inc - Property OptionCaption</note>
         </trans-unit>
         <trans-unit id="TableExtension 1314341212 - Field 926841713 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2199490085">
           <source>Stock Inventory Account Manager Approve</source>

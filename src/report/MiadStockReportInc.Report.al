@@ -96,7 +96,15 @@ report 70814 "Miad Stock Report_Inc"
         LItemLedgerEntry.Reset();
         LItemLedgerEntry.SetCurrentKey("Expiration Date");
         LItemLedgerEntry.SetAscending("Expiration Date", true);
-        LItemLedgerEntry.Setfilter("Location Code", '%1|%2', LIncGenSetup."Private Hospital Bagc.Location", LIncGenSetup."Private Hospital Malt.Location");
+        case LocationType of
+            1:
+                LItemLedgerEntry.Setfilter("Location Code", '%1|%2', LIncGenSetup."Private Hospital Bagc.Location", LIncGenSetup."Private Hospital Malt.Location");
+            2:
+                LItemLedgerEntry.Setfilter("Location Code", '%1|%2', LIncGenSetup."Private Hospital Bagc.Location", LIncGenSetup."Bid Bagc.Location");
+            3:
+                LItemLedgerEntry.Setfilter("Location Code", '%1|%2', LIncGenSetup."Private Hospital Malt.Location", LIncGenSetup."Bid Malt.Location");
+        end;
+
         LItemLedgerEntry.Setfilter("Remaining Quantity", '>0');
         Clear(LCompany);
         if LCompany.Get(CompanyName) then
@@ -156,15 +164,17 @@ report 70814 "Miad Stock Report_Inc"
         exit('');
     end;
 
-    procedure SetParameters(pStartDate: Date; pEndDate: Date)
+    procedure SetParameters(pStartDate: Date; pEndDate: Date; pLocationType: Integer)
     begin
         StartDate := pStartDate;
         EndDate := pEndDate;
+        LocationType := pLocationType;
     end;
 
     var
         i: Integer;
         StartDate: Date;
         EndDate: Date;
+        LocationType: Integer;
 
 }

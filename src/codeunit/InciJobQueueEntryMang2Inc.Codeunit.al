@@ -7,21 +7,43 @@ codeunit 70800 "Inci Job Queue Entry Mang2_Inc"
 
         case Rec."Parameter String" of
             'sendmiadreport':
-                SendMiadReport();
+                SendMiadReport(1);
+            'Bagcsendmiadreport':
+                SendMiadReport(2);
+            'Maltsendmiadreport':
+                SendMiadReport(3);
         end;
     end;
 
 
 
-    local procedure SendMiadReport()
+    local procedure SendMiadReport(pLocationType: Integer)
     var
         LStartDate: Date;
         LEndDate: Date;
     begin
         LStartDate := Today;
-        LEndDate := CalcDate('<+6M>', LStartDate);
-        if CheckMiadData(LStartDate, LEndDate) then
-            SendMiadReportData(LStartDate, LEndDate);
+        case pLocationType of
+            1:
+                begin
+                    LEndDate := CalcDate('<+6M>', LStartDate);
+                    if CheckMiadData(LStartDate, LEndDate) then
+                        SendMiadReportData(LStartDate, LEndDate, pLocationType, 'MIADR');
+                end;
+            2:
+                begin
+                    LEndDate := CalcDate('<+1M>', LStartDate);
+                    if CheckMiadData(LStartDate, LEndDate) then
+                        SendMiadReportData(LStartDate, LEndDate, pLocationType, 'MIADRB');
+                end;
+            3:
+                begin
+                    LEndDate := CalcDate('<+1M>', LStartDate);
+                    if CheckMiadData(LStartDate, LEndDate) then
+                        SendMiadReportData(LStartDate, LEndDate, pLocationType, 'MIADRM');
+                end;
+        end;
+
 
     end;
 
@@ -52,7 +74,7 @@ codeunit 70800 "Inci Job Queue Entry Mang2_Inc"
         exit(false);
     end;
 
-    procedure SendMiadReportData(pStartDate: Date; pEndDate: Date): Boolean
+    procedure SendMiadReportData(pStartDate: Date; pEndDate: Date; pLocationType: Integer; pMailingGroupCode: code[10]): Boolean
     var
         LMailingGroup: Record "Mailing Group";
         LReport: Report "Miad Stock Report_Inc";
@@ -78,7 +100,7 @@ codeunit 70800 "Inci Job Queue Entry Mang2_Inc"
         Text_MailSubject: Label 'Miad Stok Bilgilendirme Raporu';
         LText_FileName_Lbl: Label 'Miad Stok Raporu';
     begin
-        if not LMailingGroup.Get('MIADR') then
+        if not LMailingGroup.Get(pMailingGroupCode) then
             exit(false);
 
         lSendTo := LMailingGroup.TO_Inc.Split(';');
@@ -97,7 +119,7 @@ codeunit 70800 "Inci Job Queue Entry Mang2_Inc"
 
         // Attachment
         BodyBlob2.CreateOutStream(AttchOutStream);
-        LReport.SetParameters(pStartDate, pEndDate);
+        LReport.SetParameters(pStartDate, pEndDate, pLocationType);
         LReport.SaveAs('', ReportFormat::Excel, AttchOutStream);
         BodyBlob2.CreateInStream(AttchInStream);
 

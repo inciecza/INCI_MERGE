@@ -21,6 +21,13 @@ pageextension 70827 "Invt. Shipment_Inc" extends "Invt. Shipment"
                 end;
             }
         }
+        addafter("No.")
+        {
+            field("Document Type_Inc"; Rec."Document Type_Inc")
+            {
+                ApplicationArea = All;
+            }
+        }
     }
     actions
     {
