@@ -1071,6 +1071,20 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control EndDate - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Report 813613792 - Control 2905896334 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select to group the report by customer name. Product details are shown under each customer and can be expanded in Excel.</source>
+          <target>Raporu müşteri adına göre gruplamak için seçin. Ürün detayları her müşterinin altında gösterilir ve Excel'de genişletilebilir.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control GroupViewData - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 813613792 - Control 2905896334 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Group View Data</source>
+          <target>Gruplu Olarak Göster</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pending Order Report_Inc - Control GroupViewData - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 813613792 - Control 41249075 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Select the order document type to filter the report.</source>
           <target>Raporu filtrelemek için sipariş belgesi türünü seçin.</target>

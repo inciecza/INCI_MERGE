@@ -117,6 +117,24 @@ report 70812 "Pending Order Report_Inc"
                         ApplicationArea = All;
                         Caption = 'View Detail Data';
                         ToolTip = 'Select to include View Detail Data in the report.';
+
+                        trigger OnValidate()
+                        begin
+                            if ViewDetailData then
+                                GroupViewData := false;
+                        end;
+                    }
+                    field(GroupViewData; GroupViewData)
+                    {
+                        ApplicationArea = All;
+                        Caption = 'Group View Data';
+                        ToolTip = 'Select to group the report by customer name. Product details are shown under each customer and can be expanded in Excel.';
+
+                        trigger OnValidate()
+                        begin
+                            if GroupViewData then
+                                ViewDetailData := false;
+                        end;
                     }
 
 
@@ -207,8 +225,11 @@ report 70812 "Pending Order Report_Inc"
                     TempVLE."Job Task No." := SegmentCheck(LSalesLine."No.");
                     TempVLE."Order No." := GetSalesRepresentatives(LSalesLine."Responsibility Center", 1); //Merkez Temsilci
                     TempVLE."Item Charge No." := GetSalesRepresentatives(LSalesLine."Responsibility Center", 2); // Saha Temsilci
-                    if viewDetailData then
-                        TempVLE."Document Line No." := 1;
+                    if ViewDetailData then
+                        TempVLE."Document Line No." := 1
+                    else
+                        if GroupViewData then
+                            TempVLE."Document Line No." := 2;
                     TempVLE.Insert();
                 end;
 
@@ -262,6 +283,7 @@ report 70812 "Pending Order Report_Inc"
         EndDate: Date;
         ResponsControl: boolean;
         ViewDetailData: boolean;
+        GroupViewData: boolean;
         OrderDocumentType: code[20];
 
 }
