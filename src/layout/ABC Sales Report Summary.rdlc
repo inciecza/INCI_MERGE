@@ -11,7 +11,7 @@
       <am:Name>MSRB</am:Name>
       <am:Version>15.1.30001.02</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2026-08-18T13:47:52.0436533Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2026-11-13T12:14:55.9612605Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -34,16 +34,17 @@
                 <TablixCornerRow>
                   <TablixCornerCell>
                     <CellContents>
-                      <Textbox Name="Textbox4">
-                        <rd:DefaultName>Textbox4</rd:DefaultName>
+                      <Textbox Name="Textbox2">
+                        <rd:DefaultName>Textbox2</rd:DefaultName>
                         <CanGrow>true</CanGrow>
                         <KeepTogether>true</KeepTogether>
                         <Paragraphs>
                           <Paragraph>
                             <TextRuns>
                               <TextRun>
-                                <Value>BÖLGE</Value>
+                                <Value>Saha Temsilci</Value>
                                 <Style>
+                                  <FontSize>12pt</FontSize>
                                   <Color>White</Color>
                                 </Style>
                               </TextRun>
@@ -77,39 +78,7 @@
                               <TextRun>
                                 <Value>Merkez Temsilci</Value>
                                 <Style>
-                                  <Color>White</Color>
-                                </Style>
-                              </TextRun>
-                            </TextRuns>
-                            <Style />
-                          </Paragraph>
-                        </Paragraphs>
-                        <Style>
-                          <Border>
-                            <Color>LightGrey</Color>
-                            <Style>Solid</Style>
-                          </Border>
-                          <BackgroundColor>MidnightBlue</BackgroundColor>
-                          <PaddingLeft>2pt</PaddingLeft>
-                          <PaddingRight>2pt</PaddingRight>
-                          <PaddingTop>2pt</PaddingTop>
-                          <PaddingBottom>2pt</PaddingBottom>
-                        </Style>
-                      </Textbox>
-                    </CellContents>
-                  </TablixCornerCell>
-                  <TablixCornerCell>
-                    <CellContents>
-                      <Textbox Name="Textbox5">
-                        <rd:DefaultName>Textbox5</rd:DefaultName>
-                        <CanGrow>true</CanGrow>
-                        <KeepTogether>true</KeepTogether>
-                        <Paragraphs>
-                          <Paragraph>
-                            <TextRuns>
-                              <TextRun>
-                                <Value>Saha Temsilci</Value>
-                                <Style>
+                                  <FontSize>12pt</FontSize>
                                   <Color>White</Color>
                                 </Style>
                               </TextRun>
@@ -137,13 +106,13 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1.05208in</Width>
+                  <Width>0.98958in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>0.85417in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>1.07292in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -162,6 +131,7 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!Tutar.Value)</Value>
                                   <Style>
+                                    <FontSize>11pt</FontSize>
                                     <Format>n0</Format>
                                   </Style>
                                 </TextRun>
@@ -197,6 +167,7 @@
                                 <TextRun>
                                   <Value>=Sum(IIF(Fields!Segment.Value = "A GRUBU" OR Fields!Segment.Value = "B GRUBU", CDbl(Fields!Tutar.Value), 0.0))</Value>
                                   <Style>
+                                    <FontSize>11pt</FontSize>
                                     <Format>n0</Format>
                                   </Style>
                                 </TextRun>
@@ -232,6 +203,8 @@
                                 <TextRun>
                                   <Value>=SUm(Fields!Tutar.Value)</Value>
                                   <Style>
+                                    <FontSize>11pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
                                     <Format>n0</Format>
                                     <Color>White</Color>
                                   </Style>
@@ -274,6 +247,7 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!Tutar.Value)</Value>
                                   <Style>
+                                    <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>n0</Format>
                                     <Color>White</Color>
@@ -312,6 +286,7 @@
                                 <TextRun>
                                   <Value>=Sum(IIF(Fields!Segment.Value = "A GRUBU" OR Fields!Segment.Value = "B GRUBU", CDbl(Fields!Tutar.Value), 0.0))</Value>
                                   <Style>
+                                    <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>n0</Format>
                                     <Color>White</Color>
@@ -350,6 +325,7 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!Tutar.Value)</Value>
                                   <Style>
+                                    <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>n0</Format>
                                     <Color>White</Color>
@@ -406,6 +382,7 @@
                               <TextRun>
                                 <Value>=Fields!Segment.Value</Value>
                                 <Style>
+                                  <FontSize>12pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>White</Color>
                                 </Style>
@@ -449,6 +426,7 @@
                               <TextRun>
                                 <Value>AB Toplam</Value>
                                 <Style>
+                                  <FontSize>12pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>White</Color>
                                 </Style>
@@ -489,6 +467,7 @@
                               <TextRun>
                                 <Value>Toplam</Value>
                                 <Style>
+                                  <FontSize>12pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>White</Color>
                                 </Style>
@@ -530,55 +509,22 @@
                       <Value>=Fields!MusteriBolgesi.Value</Value>
                     </SortExpression>
                   </SortExpressions>
-                  <TablixHeader>
-                    <Size>1.13542in</Size>
-                    <CellContents>
-                      <Textbox Name="MusteriBolgesi">
-                        <rd:DefaultName>MusteriBolgesi</rd:DefaultName>
-                        <CanGrow>true</CanGrow>
-                        <KeepTogether>true</KeepTogether>
-                        <Paragraphs>
-                          <Paragraph>
-                            <TextRuns>
-                              <TextRun>
-                                <Value>=Fields!MusteriBolgesi.Value</Value>
-                                <Style>
-                                  <FontWeight>Bold</FontWeight>
-                                  <Color>MidnightBlue</Color>
-                                </Style>
-                              </TextRun>
-                            </TextRuns>
-                            <Style />
-                          </Paragraph>
-                        </Paragraphs>
-                        <Style>
-                          <Border>
-                            <Color>LightGrey</Color>
-                            <Style>Solid</Style>
-                          </Border>
-                          <PaddingLeft>2pt</PaddingLeft>
-                          <PaddingRight>2pt</PaddingRight>
-                          <PaddingTop>2pt</PaddingTop>
-                          <PaddingBottom>2pt</PaddingBottom>
-                        </Style>
-                      </Textbox>
-                    </CellContents>
-                  </TablixHeader>
                   <TablixMembers>
                     <TablixMember>
                       <TablixHeader>
-                        <Size>1.52083in</Size>
+                        <Size>2.26041in</Size>
                         <CellContents>
-                          <Textbox Name="Merkez_Temsilci">
-                            <rd:DefaultName>Merkez_Temsilci</rd:DefaultName>
+                          <Textbox Name="Textbox4">
+                            <rd:DefaultName>Textbox4</rd:DefaultName>
                             <CanGrow>true</CanGrow>
                             <KeepTogether>true</KeepTogether>
                             <Paragraphs>
                               <Paragraph>
                                 <TextRuns>
                                   <TextRun>
-                                    <Value>=Fields!Merkez_Temsilci.Value</Value>
+                                    <Value>=Fields!Saha_Temsilci.Value</Value>
                                     <Style>
+                                      <FontSize>11pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
                                       <Color>MidnightBlue</Color>
                                     </Style>
@@ -603,18 +549,19 @@
                       <TablixMembers>
                         <TablixMember>
                           <TablixHeader>
-                            <Size>1.39583in</Size>
+                            <Size>1.625in</Size>
                             <CellContents>
-                              <Textbox Name="Saha_Temsilci">
-                                <rd:DefaultName>Saha_Temsilci</rd:DefaultName>
+                              <Textbox Name="Merkez_Temsilci">
+                                <rd:DefaultName>Merkez_Temsilci</rd:DefaultName>
                                 <CanGrow>true</CanGrow>
                                 <KeepTogether>true</KeepTogether>
                                 <Paragraphs>
                                   <Paragraph>
                                     <TextRuns>
                                       <TextRun>
-                                        <Value>=Fields!Saha_Temsilci.Value</Value>
+                                        <Value>=Fields!Merkez_Temsilci.Value</Value>
                                         <Style>
+                                          <FontSize>11pt</FontSize>
                                           <FontWeight>Bold</FontWeight>
                                           <Color>MidnightBlue</Color>
                                         </Style>
@@ -636,6 +583,9 @@
                               </Textbox>
                             </CellContents>
                           </TablixHeader>
+                          <TablixMembers>
+                            <TablixMember />
+                          </TablixMembers>
                         </TablixMember>
                       </TablixMembers>
                     </TablixMember>
@@ -643,10 +593,10 @@
                 </TablixMember>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>1.13542in</Size>
+                    <Size>2.26041in</Size>
                     <CellContents>
-                      <Textbox Name="Textbox10">
-                        <rd:DefaultName>Textbox10</rd:DefaultName>
+                      <Textbox Name="Textbox6">
+                        <rd:DefaultName>Textbox6</rd:DefaultName>
                         <CanGrow>true</CanGrow>
                         <KeepTogether>true</KeepTogether>
                         <Paragraphs>
@@ -676,7 +626,7 @@
                   <TablixMembers>
                     <TablixMember>
                       <TablixHeader>
-                        <Size>1.52083in</Size>
+                        <Size>1.625in</Size>
                         <CellContents>
                           <Textbox Name="Textbox3">
                             <rd:DefaultName>Textbox3</rd:DefaultName>
@@ -707,51 +657,18 @@
                         </CellContents>
                       </TablixHeader>
                       <TablixMembers>
-                        <TablixMember>
-                          <TablixHeader>
-                            <Size>1.39583in</Size>
-                            <CellContents>
-                              <Textbox Name="Textbox7">
-                                <rd:DefaultName>Textbox7</rd:DefaultName>
-                                <CanGrow>true</CanGrow>
-                                <KeepTogether>true</KeepTogether>
-                                <Paragraphs>
-                                  <Paragraph>
-                                    <TextRuns>
-                                      <TextRun>
-                                        <Value />
-                                        <Style />
-                                      </TextRun>
-                                    </TextRuns>
-                                    <Style />
-                                  </Paragraph>
-                                </Paragraphs>
-                                <Style>
-                                  <Border>
-                                    <Color>LightGrey</Color>
-                                    <Style>Solid</Style>
-                                  </Border>
-                                  <PaddingLeft>2pt</PaddingLeft>
-                                  <PaddingRight>2pt</PaddingRight>
-                                  <PaddingTop>2pt</PaddingTop>
-                                  <PaddingBottom>2pt</PaddingBottom>
-                                </Style>
-                              </Textbox>
-                            </CellContents>
-                          </TablixHeader>
-                        </TablixMember>
+                        <TablixMember />
                       </TablixMembers>
                     </TablixMember>
                   </TablixMembers>
-                  <KeepWithGroup>Before</KeepWithGroup>
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet_Result</DataSetName>
-            <Top>0.19792in</Top>
-            <Left>0.1875in</Left>
+            <Top>0.1875in</Top>
+            <Left>0.25in</Left>
             <Height>0.75in</Height>
-            <Width>7.10417in</Width>
+            <Width>6.80208in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -759,11 +676,17 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>1.15626in</Height>
+        <Height>0.98958in</Height>
         <Style />
       </Body>
-      <Width>7.36458in</Width>
+      <Width>7.05208in</Width>
       <Page>
+        <PageHeight>8.27in</PageHeight>
+        <PageWidth>11.69in</PageWidth>
+        <LeftMargin>0in</LeftMargin>
+        <RightMargin>0in</RightMargin>
+        <TopMargin>0in</TopMargin>
+        <BottomMargin>0in</BottomMargin>
         <Style />
       </Page>
     </ReportSection>
