@@ -38,5 +38,7 @@ permissionset 70800 "Gen.Permission2_Inc"
         page "Bid Balance Pages_Inc" = X,
         page "Bid Sales Entry Report_Inc" = X,
         page "Bid Sales List_Inc" = X,
+        page "Bid Sales Inv. Status_Inc" = X,
+        tabledata "Sales Invoice Header" = RM,
         page "Joker Cari Satislar API" = X;
 }

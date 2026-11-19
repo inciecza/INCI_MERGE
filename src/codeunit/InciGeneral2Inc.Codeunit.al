@@ -5,6 +5,7 @@ codeunit 70801 "InciGeneral2_Inc"
                   TableData 25 = rimd,
                   TableData 32 = rimd,
                   TableData 45 = rimd,
+                  TableData 112 = rimd,
                   TableData 113 = rimd,
                   TableData 115 = rimd,
                   TableData 123 = rimd,
@@ -148,4 +149,17 @@ codeunit 70801 "InciGeneral2_Inc"
     end;
     #endregion InspectionPlanStatusMail
 
+    procedure SetBidTransactionStatus(pInvoiceNo: Code[20]; pStatus: Boolean): Boolean
+    var
+        LHeader: Record "Sales Invoice Header";
+    begin
+        if not LHeader.Get(pInvoiceNo) then
+            exit(false);
+        if LHeader."Bid Transaction Status_Inc" = pStatus then
+            exit(false);
+
+        LHeader."Bid Transaction Status_Inc" := pStatus;
+        LHeader.Modify(true);
+        exit(true);
+    end;
 }

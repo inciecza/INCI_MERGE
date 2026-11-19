@@ -258,6 +258,161 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Entry Report_Inc - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 704757465 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bid Sales Invoices Statement</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 704757465 - NamedType 2963323015" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Do you want to update the Processed status of the posted sales invoices?</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - NamedType ConfirmUpdateQst</note>
+        </trans-unit>
+        <trans-unit id="Page 704757465 - NamedType 4182279705" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Start Date cannot be greater than End Date.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - NamedType DateOrderErr</note>
+        </trans-unit>
+        <trans-unit id="Page 704757465 - NamedType 2065106392" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 invoice(s) updated.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - NamedType UpdatedMsg</note>
+        </trans-unit>
+        <trans-unit id="Page 704757465 - Control 284195533 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Filters</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control Filters - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 704757465 - Control 2704670121 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the customer number to filter by. Leave empty to show all customers.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control CustomerNoFilterField - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 704757465 - Control 2704670121 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control CustomerNoFilterField - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 704757465 - Control 2511629851 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the last invoice date to include.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control EndDateFilterField - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 704757465 - Control 2511629851 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>End Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control EndDateFilterField - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 704757465 - Control 3393203954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the first invoice date to include.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control StartDateFilterField - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 704757465 - Control 3393203954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Start Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control StartDateFilterField - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 704757465 - Control 57442530 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether to show all invoices, only processed invoices or only invoices that are not processed yet.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control StatusFilterField - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 704757465 - Control 57442530 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Transaction Status</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control StatusFilterField - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 704757465 - Control 57442530 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>All,Processed,Not Processed</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control StatusFilterField - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 704757465 - Control 386236585 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether the bid invoice has been processed. Use the Update Invoices action to write the changes to the posted sales invoices.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control BidTransactionStatus - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 704757465 - Control 386236585 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Processed</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control BidTransactionStatus - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 704757465 - Control 1881986821 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control CustomerName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 704757465 - Control 3689535207 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control CustomerNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 704757465 - Control 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 704757465 - Control 2258386815 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invoice Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control InvoiceDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 704757465 - Control 1966382748 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invoice No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control InvoiceNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 704757465 - Control 3465500804 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Month</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control Month - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 704757465 - Control 467047333 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Region Manager</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control RegionManager - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 704757465 - Control 1585314946 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ship-to City</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control ShipToCity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 704757465 - Control 2138512914 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ship-to Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control ShipToName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 704757465 - Control 588318770 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Amount</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control TotalAmount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 704757465 - Control 2832340769 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Year</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control Year - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 704757465 - Action 2026913255 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reloads the invoices using the selected filters. Unsaved changes are discarded.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Action Refresh - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 704757465 - Action 2026913255 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Refresh</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Action Refresh - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 704757465 - Action 1712269373 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Writes the Processed values shown on this page to the posted sales invoices.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Action UpdateInvoices - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 704757465 - Action 1712269373 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Update Invoices</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Action UpdateInvoices - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 4288774954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>General Bid List</source>
           <note from="Developer" annotates="general" priority="2"></note>
