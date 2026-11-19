@@ -33,7 +33,10 @@ permissionset 70800 "Gen.Permission2_Inc"
         report "SKT Stock Report_Inc" = X,
         codeunit "Inci Job Queue Entry Mang2_Inc" = X,
         codeunit InciGeneral2_Inc = X,
+        tabledata "Bid Sales List Buffer_Inc" = RIMD,
+        table "Bid Sales List Buffer_Inc" = X,
         page "Bid Balance Pages_Inc" = X,
         page "Bid Sales Entry Report_Inc" = X,
+        page "Bid Sales List_Inc" = X,
         page "Joker Cari Satislar API" = X;
 }

@@ -3,6 +3,11 @@
   <file datatype="xml" source-language="en-US" target-language="en-US" original="İnci Ecza Merge Customizations">
     <body>
       <group id="body">
+        <trans-unit id="Table 616513330 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General Bid List</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Bid Sales List Buffer_Inc - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 2529585740 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Joker Cari Satislar Buffer</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -252,6 +257,16 @@
           <source>Bid Sales Entry Report</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Entry Report_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4288774954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General Bid List</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales List_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3830784638 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bid Sales Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Report_Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1661655205 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Joker Cari Satislar API</source>

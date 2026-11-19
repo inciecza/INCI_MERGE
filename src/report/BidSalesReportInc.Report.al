@@ -1,10 +1,10 @@
 report 70816 "Bid Sales Report_Inc"
 {
-    ApplicationArea = All;
     Caption = 'Bid Sales Report';
     UsageCategory = ReportsAndAnalysis;
     DefaultLayout = RDLC;
     RDLCLayout = './src/layout/Bid Sales Report.rdlc';
+    //kapatılmıştır
     dataset
     {
         dataitem(TempVLE; "Value Entry")
