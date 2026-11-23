@@ -313,217 +313,186 @@
           <source>Bid Sales Invoices Statement</source>
           <target>İhale Satış Faturaları Dökümü</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 704757465 - NamedType 2963323015" size-unit="char" translate="yes" xml:space="preserve">
           <source>Do you want to update the Processed status of the posted sales invoices?</source>
           <target>Yayınlanmış satış faturalarının İşlenmiş durumunu güncellemek istiyor musunuz?</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - NamedType ConfirmUpdateQst</note>
         </trans-unit>
         <trans-unit id="Page 704757465 - NamedType 4182279705" size-unit="char" translate="yes" xml:space="preserve">
           <source>Start Date cannot be greater than End Date.</source>
           <target>Başlangıç Tarihi, Bitiş Tarihinden büyük olamaz.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - NamedType DateOrderErr</note>
         </trans-unit>
         <trans-unit id="Page 704757465 - NamedType 2065106392" size-unit="char" translate="yes" xml:space="preserve">
           <source>%1 invoice(s) updated.</source>
           <target>%1 fatura(lar) güncellendi.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - NamedType UpdatedMsg</note>
         </trans-unit>
         <trans-unit id="Page 704757465 - Control 284195533 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Filters</source>
           <target>Filtreler</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control Filters - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 704757465 - Control 2704670121 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the customer number to filter by. Leave empty to show all customers.</source>
           <target>Filtrelemek için müşteri numarasını belirtir. Tüm müşterileri göstermek için boş bırakın.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control CustomerNoFilterField - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 704757465 - Control 2704670121 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Customer No.</source>
           <target>Müşteri No</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control CustomerNoFilterField - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 704757465 - Control 2511629851 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the last invoice date to include.</source>
           <target>Dahil edilecek son fatura tarihini belirtir.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control EndDateFilterField - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 704757465 - Control 2511629851 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>End Date</source>
           <target>Bitiş Tarihi</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control EndDateFilterField - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 704757465 - Control 3393203954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the first invoice date to include.</source>
           <target>Dahil edilecek ilk fatura tarihini belirtir.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control StartDateFilterField - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 704757465 - Control 3393203954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Start Date</source>
           <target>Başlangıç Tarihi</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control StartDateFilterField - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 704757465 - Control 57442530 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies whether to show all invoices, only processed invoices or only invoices that are not processed yet.</source>
           <target>Tüm faturaları, yalnızca işlenmiş faturaları veya henüz işlenmemiş faturaları gösterip göstermeyeceğini belirtir.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control StatusFilterField - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 704757465 - Control 57442530 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Transaction Status</source>
           <target>İşlem Durumu</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control StatusFilterField - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 704757465 - Control 57442530 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
           <source>All,Processed,Not Processed</source>
           <target>Tümü,İşleme Alındı,İşleme Alınmadı</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control StatusFilterField - Property OptionCaption</note>
         </trans-unit>
         <trans-unit id="Page 704757465 - Control 386236585 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies whether the bid invoice has been processed. Use the Update Invoices action to write the changes to the posted sales invoices.</source>
           <target>Teklif faturalarının işlenip işlenmediğini belirtir. Yapılan değişiklikleri kaydedilmiş satış faturalarına yazmak için Faturaları Güncelle eylemini kullanın.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control BidTransactionStatus - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 704757465 - Control 386236585 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Processed</source>
           <target>İşlem Durumu</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control BidTransactionStatus - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 704757465 - Control 1881986821 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Customer Name</source>
           <target>Müşteri Adı</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control CustomerName - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 704757465 - Control 3689535207 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Customer No.</source>
           <target>Müşteri No</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control CustomerNo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 704757465 - Control 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description</source>
           <target>Açıklama</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control Description - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 704757465 - Control 2258386815 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Invoice Date</source>
           <target>Fatura Tarihi</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control InvoiceDate - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 704757465 - Control 1966382748 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Invoice No.</source>
           <target>Fatura No</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control InvoiceNo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 704757465 - Control 3465500804 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Month</source>
           <target>Ay</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control Month - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 704757465 - Control 467047333 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Region Manager</source>
           <target>Bölge Müdürü</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control RegionManager - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 704757465 - Control 1585314946 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Ship-to City</source>
           <target>Alıcı Şehir</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control ShipToCity - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 704757465 - Control 2138512914 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Ship-to Name</source>
           <target>Alıcı Adı</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control ShipToName - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 704757465 - Control 588318770 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total Amount</source>
           <target>Toplam Tutar</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control TotalAmount - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 704757465 - Control 2832340769 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Year</source>
           <target>Yıl</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Control Year - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 704757465 - Action 2026913255 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Reloads the invoices using the selected filters. Unsaved changes are discarded.</source>
           <target>Seçilen filtreleri kullanarak faturaları yeniden yükler. Kaydedilmemiş değişiklikler iptal edilir.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Action Refresh - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 704757465 - Action 2026913255 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Refresh</source>
           <target>Yenile</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Action Refresh - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 704757465 - Action 1712269373 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Writes the Processed values shown on this page to the posted sales invoices.</source>
           <target>Bu sayfada gösterilen İşlenmiş değerleri kaydedilmiş satış faturalarına yazar.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Action UpdateInvoices - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 704757465 - Action 1712269373 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Update Invoices</source>
           <target>Faturaları Güncelle</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Bid Sales Inv. Status_Inc - Action UpdateInvoices - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4288774954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
