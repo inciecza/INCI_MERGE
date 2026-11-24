@@ -315,9 +315,11 @@ codeunit 70800 "Inci Job Queue Entry Mang2_Inc"
         LWSL: Record "Warehouse Shipment Line";
         LWSH: Record "Warehouse Shipment Header";
         LCustomer: Record Customer;
+        LSalesHeader: Record "Sales Header";
         TransferHeader: record "Transfer Header";
         LItemQuant: Decimal;
         LItemCount: Decimal;
+        LUrgent: Boolean;
     begin
         LWSH.Init();
         LWSH.SetRange("Field Update_Inc", false);
@@ -345,13 +347,21 @@ codeunit 70800 "Inci Job Queue Entry Mang2_Inc"
                 end;
                 Clear(LItemQuant);
                 Clear(LItemCount);
+                LUrgent := false;
                 Clear(LWSL);
                 LWSL.SetRange("No.", LWSH."No.");
                 if LWSL.FindSet() then
                     repeat
                         LItemQuant += LWSL.Quantity;
                         LItemCount += 1;
+                        // Bağlı satış siparişi acil ise sevkiyat da acil olmalı
+                        if (not LUrgent) and (LWSL."Source Document" = LWSL."Source Document"::"Sales Order") then
+                            if LSalesHeader.Get(LSalesHeader."Document Type"::Order, LWSL."Source No.") then
+                                LUrgent := LSalesHeader.Urgent_Inc;
                     until LWSL.Next() = 0;
+
+                if LUrgent then
+                    LWSH.Urgent_Inc := true;
 
                 LWSH."Total Item Count_Inc" := LItemCount;
                 LWSH."Total Item Quantity_Inc" := LItemQuant;
