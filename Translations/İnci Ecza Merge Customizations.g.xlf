@@ -1418,6 +1418,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Warehouse Shipment2_Inc - Action Separate Shipments_Inc - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 2816604711 - Field 4076848532 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3961115970">
+          <source>Customer No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Bank Integ. Entry-B2F_Inc - Field Customer No._Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2816604711 - Field 2521939484 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3961115970">
+          <source>Vendor No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Bank Integ. Entry-B2F_Inc - Field Vendor No._Inc - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 76648678 - Field 3167235286 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3556015035">
           <source>Bid Final Total</source>
           <note from="Developer" annotates="general" priority="2"></note>
