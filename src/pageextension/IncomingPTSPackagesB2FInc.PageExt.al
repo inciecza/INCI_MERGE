@@ -7,22 +7,37 @@ pageextension 70811 "Incoming PTS Packages-B2F_Inc" extends "Incoming PTS Packag
             trigger OnBeforeAction()
             var
                 LVendor: Record Vendor;
+                LCustomer: Record Customer;
             begin
 
                 Clear(LVendor);
+                Clear(LCustomer);
                 case rec.sourceGLN of
                     '8680406000020':
                         if LVendor.Get('ST00101001') then begin
                             LVendor.GLN := '8680406000020';
                             LVendor.Modify();
                             Commit();
+                        end else begin
+                            if LCustomer.Get('MC00101999') then begin
+                                LCustomer.GLN := '8680406000020';
+                                LCustomer.Modify();
+                                Commit();
+                            end;
                         end;
                     '8680406000037':
                         if LVendor.Get('ST00101001') then begin
                             LVendor.GLN := '8680406000037';
                             LVendor.Modify();
                             Commit();
-                        end;
+                        end else begin
+                            if LCustomer.Get('MC00101999') then begin
+                                LCustomer.GLN := '8680406000037';
+                                LCustomer.Modify();
+                                Commit();
+                            end;
+                        end
+
                 end;
             end;
         }

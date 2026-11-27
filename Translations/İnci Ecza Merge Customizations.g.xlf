@@ -1418,10 +1418,20 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Warehouse Shipment2_Inc - Action Separate Shipments_Inc - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 2816604711 - Field 4058673189 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3961115970">
+          <source>CustomerIBAN</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Bank Integ. Entry-B2F_Inc - Field Customer Iban_Inc - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 2816604711 - Field 4076848532 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3961115970">
           <source>Customer No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension Bank Integ. Entry-B2F_Inc - Field Customer No._Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2816604711 - Field 57875901 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3961115970">
+          <source>Vendor IBAN</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Bank Integ. Entry-B2F_Inc - Field Vendor Iban_Inc - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 2816604711 - Field 2521939484 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3961115970">
           <source>Vendor No.</source>
@@ -1512,6 +1522,11 @@
           <source>Private hospital</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension Item Category_Inc - Field Private hospital_Inc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3213911206 - Field 3810959726 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3399585325">
+          <source>Customer Region Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Salesperson/Purchaser2_Inc - Field Customer Region Code_Inc - Property Caption</note>
         </trans-unit>
       </group>
     </body>
